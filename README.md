@@ -1,2 +1,3 @@
 # Algorithm
-알고리즘 공부
+Hobby  
+Let's study algorithm!
