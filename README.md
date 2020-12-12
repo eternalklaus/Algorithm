@@ -1,3 +1,2 @@
 # Algorithm
-Hobby  
-Let's study algorithm!
+Studing algorithm just for fun!
