@@ -23,7 +23,7 @@ class Solution(object):
                 if area > maxarea:
                     maxarea = area
 
-        return maxarea
+        return maxarea 
 
 sl = Solution()
 print sl.maxArea( [1,0,0,0,0,0,0,2,2])
