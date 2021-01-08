@@ -17,7 +17,6 @@ class Solution(object):
             rlength = len(water)
             llength = len(water)
             
-            
             for j in range(0, i):
                 
                 idx2 = sortedidx[j]
@@ -29,7 +28,7 @@ class Solution(object):
                         rlength = idx2 - idx
                         continue
                 
-                # nearist on levt side
+                # --- nearist on left side --- 
                 if idx2 < idx:
                     if idx - idx2 < llength:
                         lclosei = idx2
