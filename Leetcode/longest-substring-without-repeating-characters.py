@@ -1,43 +1,32 @@
+
+'''
+    * Lesson: Don't use DAC(devide and conquer) method when outer value could effect on inner value.
+    *     ex) [ABCD]ZBK <- ZBK's B could effect on ABCD. 
+'''
 class Solution(object):
-    maxlen = 0
-    memoization = {}
-    def lengthOfLongestSubstring(self, s):
+    def lengthOfLongestSubstring(self, s):     
+        def calcmaxlen(s):
+            maxlen = 0
+            i = j = 0
+            while i<len(s) and j<len(s):
+                if s[j] in s[i:j]: 
+                    # update i to the first appearance
+                    offset = s[i:j].index(s[j])
+                    i = i + offset + 1
+
+                else:
+                    maxlen = max(maxlen, (j + 1) -i)
+                    j += 1
+            
+            return maxlen
         
-        """
-        :type s: str
-        :rtype: int
-        """
-        def splitstr(substr): 
-            if len(substr) <= self.maxlen:
-                return 0 
-            if substr in self.memoization.keys(): # already calculated
-                return self.memoization[substr]
+        return calcmaxlen(s)
+                
 
-            # TODO: add another constraint in order to fasten proceeding time.
-            for i in range(len(substr)):
-                idx = substr.rfind(substr[i]) 
-                if idx != i: # i'm not the only char 
-                    substr1 = substr[:idx]
-                    substr2 = substr[i:idx]
-                    substr3 = substr[i+1:]
-                    # print substr1, substr2, substr3
-                    
-                    max1 = splitstr(substr1)
-                    max2 = splitstr(substr2)
-                    max3 = splitstr(substr3)
 
-                    _maxlen = max(max1, max2, max3)
-                    ### update memoization
-                    self.memoization[substr] = _maxlen 
-                    ### update maxlen
-                    self.maxlen = _maxlen if _maxlen > self.maxlen else self.maxlen
-                    
-                    return _maxlen
 
-            return len(substr) # if all chars are the only accurence, return len(substr)
-        return splitstr(s)
-        
 
 sl = Solution()
-print sl.lengthOfLongestSubstring("abcd")
+print sl.lengthOfLongestSubstring(" ")
+# print sl.lengthOfLongestSubstring("abcdacda")
 # on the server, it returns 0. IDK why.
