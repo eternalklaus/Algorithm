@@ -23,5 +23,7 @@ class Solution(object):
         return ispalindrome(strip(s))
     
 
+
+
 s = Solution()
-print s.isPalindrome("A man, a plan, a canal: Panama")
+print s.validPalindrome("aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga")
