@@ -1,29 +1,16 @@
 class Solution(object):
-    def isPalindrome(self, s):
-        def strip(s):
-            salpha = ""
-            for c in s:
-                if '0' <= c and c <= '9':
-                    salpha += c 
-                elif 'a' <= c and c <= 'z':
-                    salpha += c 
-                elif 'A' <= c and c <= 'Z':
-                    salpha += c.lower()
-            return salpha
-        
-        def ispalindrome(s):
-            length = len(s)
-            for i in range(length):
-                print i
-                if i > length - 1 - i: break 
-                if s[i] != s[length - 1 - i]: return False
-            
-            return True
-        
-        return ispalindrome(strip(s))
-    
 
+    ### compare with reverse: Runtime: 96 ms
+    def isPalindrome(self, s):
+        s_filtered          = filter(lambda ch:ch.isalnum(),s)
+        s_filtered_lower    = map(lambda ch:ch.lower(),  s_filtered)
+        
+        s_filtered_lower_reverse = s_filtered_lower[::-1]
+        print s_filtered_lower_reverse
+        print s_filtered_lower
+
+        return s_filtered_lower == s_filtered_lower_reverse
 
 
 s = Solution()
-print s.validPalindrome("aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga")
+print s.isPalindrome("A man, a plan, a canal: Panama")
