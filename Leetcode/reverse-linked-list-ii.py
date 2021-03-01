@@ -1,45 +1,34 @@
-# https://leetcode.com/problems/reverse-linked-list-ii/
-
 # Definition for singly-linked list.
 # class ListNode(object):
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-
 class Solution(object):
+    def reversenode(self, head, num):
+        prevnode = None # TODO 
+        node = head
+
+        for i in xrange(num - 1):
+            nextnode = node.nextπ
+            node.next = prevnode
+
+            # setting for next for loop
+            prevnode = node
+            node = nextnode
+
+        return prevnode, head, nextnode
+
+
+
     def reverseBetween(self, head, m, n):
-        m = m-1
-        n = n-1
-
-        def changenum(left, li, ri):
-            # set node1
-            node1 = left 
-            node2 = None 
-            movenum = ri - li
-
-            # get node2
-            node = node1 
-            for i in xrange(movenum):
-                node = node.next
-            node2 = node
-            
-            # swap
-            tmp = node1.val 
-            node1.val = node2.val 
-            node2.val = tmp 
-        
-        # move node until the very first swap node
-        left = head 
+        node = head 
         for i in xrange(m):
-            left = left.next 
+            node= node.next
 
-        for i in range(m, n):
-            li = i 
-            ri = (m + n) - li 
-            if li >= ri: break 
-
-            changenum(left, li, ri)
-            left = left.next
-
-        return head 
+        _revhead, _revtail, _restnodes = self.reversenode(node, n - m + 1)
         
+        node.next = _revhead
+        _revtail.next = _restnodes
+
+        return head
+            
