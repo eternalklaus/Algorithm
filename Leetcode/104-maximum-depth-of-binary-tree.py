@@ -10,5 +10,5 @@ class Solution(object):
         max(ldepth, rdepth)
 
     def maxDepth(self, root):
-        return self.getdepth(root)
+        return self.getdepth(root) 
         
