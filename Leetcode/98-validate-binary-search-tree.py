@@ -5,20 +5,22 @@
 #         self.left = left
 #         self.right = right
 class Solution(object):
-    self.leftmostval    = -(2 ** 31) - 1
-    self.rightmostval   = 2 ** 31
-    def dfscheck(self, node, bottom, top):
-        if node is None: 
-            return 
-        if bottom < node.val < top:
-            self.dfscheck(node.left,  bottom,   node.val)
-            self.dfscheck(node.right, node.val, top)
-        else:
-            return False
+    bottom = -(2**31)-1
+    def inorder(self, node):
+        lresult = mresult = rresult = True 
+        
+        if node.left is not None:
+            lresult = self.inorder(node.left)
+        
+        mresult = self.bottom < node.val 
+        self.bottom = node.val
+        
+        if node.right is not None:
+            rresult = self.inorder(node.right)
+
+        return lresult & mresult & rresult
 
     def isValidBST(self, root):
-        """
-        :type root: TreeNode
-        :rtype: bool
-        """
+        return self.inorder(root) 
+
         
