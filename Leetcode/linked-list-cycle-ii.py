@@ -5,23 +5,41 @@
 #         self.next = None
 
 class Solution(object):
-    cache = set()
 
     def detectCycle(self, head):
         """
         :type head: ListNode
         :rtype: ListNode
         """
-        node = head 
-        
+        tortoise = head 
+        hare = head 
+
         while True:
-            ### case 1: cycle not exist
-            if node == None: 
+            ### 0st exception handling 
+            if head == None:
                 return None 
+
+            ### Move and 1st exception handling 
+            tortoise = tortoise.next 
+            hare = hare.next 
+            if tortoise == None or hare == None: return None 
             
-            ### case 2: found circle!
-            if node in self.cache:
-                return node
-            
-            self.cache.add(node)
+            ### Move and 2nd exception handling 
+            hare = hare.next 
+            if hare == None: return None 
+
+            ### They finally meet!
+            if tortoise == hare: 
+                break 
+        
+        ### get meeting spot 
+        intersect   = tortoise 
+        node        = head # walk from first node 
+
+        while True:
+            if intersect == node:
+                return node 
+            ### We don't need exception handling since the existence of circle is already proved at above. 
+            intersect = intersect.next 
             node = node.next 
+
