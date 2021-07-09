@@ -3,7 +3,7 @@ Studing algorithm just for fun!
 
 | Index | Difficulty | Question | Type | Solution |
 |-------| ---------- | -------- | -----| -------- |
-|1      | Easy     |[Link](https://leetcode.com/problems/valid-palindrome/)| String Manipulation | 💭 |
+|1      | Easy     |[Link](https://leetcode.com/problems/valid-palindrome/)| String Manipulation | [Python](/Leetcode/125-valid-palindrome.py) |
 |2      | Easy     |[Link](https://leetcode.com/problems/reverse-string/)| String Manipulation | 💭 |
 |3      | Easy     |[Link](https://leetcode.com/problems/reorder-data-in-log-files/)| String Manipulation | 💭 |
 |4      | Easy     |[Link](https://leetcode.com/problems/most-common-word/)| String Manipulation | 💭 |
