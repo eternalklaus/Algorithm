@@ -9,7 +9,7 @@ Studing algorithm just for fun!
 |4      | Easy     |[Link](https://leetcode.com/problems/most-common-word/)| String Manipulation | 💭 |
 |5      | Medium   |[Link](https://leetcode.com/problems/group-anagrams/)| String Manipulation | 💭 |
 |6      | Medium   |[Link](https://leetcode.com/problems/longest-palindromic-substring/)| String Manipulation | 💭 |
-|7      | Easy     |[Link](https://leetcode.com/problems/two-sum/)| Array | 💭 |
+|7      | Easy     |[Link](https://leetcode.com/problems/two-sum/)| Array | [Python](/Leetcode/1-two-sum.py) |
 |8      | Hard     |[Link](https://leetcode.com/problems/trapping-rain-water/)| Array | 💭 |
 |9      | Medium   |[Link](https://leetcode.com/problems/3sum/)| Array | 💭 |
 |10     | Easy     |[Link](https://leetcode.com/problems/array-partition-i/)| Array | 💭 |
@@ -21,7 +21,7 @@ Studing algorithm just for fun!
 |16     | Medium   |[Link](https://leetcode.com/problems/add-two-numbers/)| Linked List | 💭 |
 |17     | Medium   |[Link](https://leetcode.com/problems/swap-nodes-in-pairs/)| Linked List | 💭 |
 |18     | Medium   |[Link](https://leetcode.com/problems/odd-even-linked-list/)| Linked List | 💭 |
-|19     | Medium   |[Link](https://leetcode.com/problems/reverse-linked-list-ii/)| Linked List | 💭 |
+|19     | Medium   |[Link](https://leetcode.com/problems/reverse-linked-list-ii/)| Linked List | [Python](/Leetcode/92-reverse-linked-list-ii.py) |
 |20     | Easy     |[Link](https://leetcode.com/problems/valid-parentheses/)| Stack/Queue | 💭 |
 |21     | Medium   |[Link](https://leetcode.com/problems/remove-duplicate-letters/)| Stack/Queue | 💭 |
 |22     | Medium   |[Link](https://leetcode.com/problems/daily-temperatures/)| Stack/Queue | 💭 |
@@ -32,7 +32,7 @@ Studing algorithm just for fun!
 |27     | Hard     |[Link](https://leetcode.com/problems/merge-k-sorted-lists/)| Deque/Priority Queue | 💭 |
 |28     | Easy     |[Link](https://leetcode.com/problems/design-hashmap/)| Hash Table | 💭 |
 |29     | Easy     |[Link](https://leetcode.com/problems/jewels-and-stones/)| Hash Table | 💭 |
-|30     | Medium   |[Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Hash Table | 💭 |
+|30     | Medium   |[Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Hash Table | [Python](/Leetcode/3-longest-substring-without-repeating-characters.py)|
 |31     | Medium   |[Link](https://leetcode.com/problems/top-k-frequent-elements/)| Hash Table | 💭 |
 |32     | Medium   |[Link](https://leetcode.com/problems/number-of-islands/)| NonLinear Structure | 💭 |
 |33     | Medium   |[Link](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)| NonLinear Structure | 💭 |
