@@ -34,7 +34,7 @@ Studing algorithm just for fun!
 |29     | Easy     |[Link](https://leetcode.com/problems/jewels-and-stones/)| Hash Table | 💭 |
 |30     | Medium   |[Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Hash Table | [Python](/Leetcode/3-longest-substring-without-repeating-characters.py)|
 |31     | Medium   |[Link](https://leetcode.com/problems/top-k-frequent-elements/)| Hash Table | 💭 |
-|32     | Medium   |[Link](https://leetcode.com/problems/number-of-islands/)| NonLinear Structure | 💭 |
+|32     | Medium   |[Link](https://leetcode.com/problems/number-of-islands/)| NonLinear Structure | [Python](/Leetcode/200-number-of-islands.py) <br> [Solution](https://blog.naver.com/eternalklaus/222290041528)|
 |33     | Medium   |[Link](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)| NonLinear Structure | 💭 |
 |34     | Medium   |[Link](https://leetcode.com/problems/permutations/)| NonLinear Structure | 💭 |
 |35     | Medium   |[Link](https://leetcode.com/problems/combinations/)| NonLinear Structure | 💭 |
