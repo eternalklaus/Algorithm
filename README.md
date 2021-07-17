@@ -45,7 +45,7 @@ Studing algorithm just for fun!
 |40     | Medium   |[Link](https://leetcode.com/problems/network-delay-time/)| Shortest Path | 💭 |
 |41     | Medium   |[Link](https://leetcode.com/problems/cheapest-flights-within-k-stops/)| Shortest Path | 💭 |
 |42     | Easy     |[Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/)| Tree | [Python](/Leetcode/104-maximum-depth-of-binary-tree.py)  |
-|43     | Easy     |[Link](https://leetcode.com/problems/diameter-of-binary-tree/)| Tree | [Python](/Leetcode/543-diameter-of-binary-tree.py) [Solotion](https://blog.naver.com/eternalklaus/222434804556)|
+|43     | Easy     |[Link](https://leetcode.com/problems/diameter-of-binary-tree/)| Tree | [Python](/Leetcode/543-diameter-of-binary-tree.py) <br> [Solotion](https://blog.naver.com/eternalklaus/222434804556)|
 |44     | Medium   |[Link](https://leetcode.com/problems/longest-univalue-path/)| Tree | 💭 |
 |45     | Easy     |[Link](https://leetcode.com/problems/invert-binary-tree/)| Tree | 💭 |
 |46     | Easy     |[Link](https://leetcode.com/problems/merge-two-binary-trees/)| Tree | 💭 |
