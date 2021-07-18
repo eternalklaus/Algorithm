@@ -36,7 +36,7 @@ Studing algorithm just for fun!
 |31     | Medium   |[Link](https://leetcode.com/problems/top-k-frequent-elements/)| Hash Table | 💭 |
 |32     | Medium   |[Link](https://leetcode.com/problems/number-of-islands/)| NonLinear Structure | [Python](/Leetcode/200-number-of-islands.py) <br> [Solution](https://blog.naver.com/eternalklaus/222290041528)|
 |33     | Medium   |[Link](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)| NonLinear Structure | [Python](/Leetcode/17-letter-combinations-of-a-phone-number.py) <br> [Solution](https://blog.naver.com/eternalklaus/222428690375) |
-|34     | Medium   |[Link](https://leetcode.com/problems/permutations/)| NonLinear Structure | 💭 |
+|34     | Medium   |[Link](https://leetcode.com/problems/permutations/)| NonLinear Structure | [Python](/Leetcode/46-permutations.py) <br> [Solution](https://blog.naver.com/eternalklaus/222435877270)|
 |35     | Medium   |[Link](https://leetcode.com/problems/combinations/)| NonLinear Structure | 💭 |
 |36     | Medium   |[Link](https://leetcode.com/problems/combination-sum/)| NonLinear Structure | 💭 |
 |37     | Medium   |[Link](https://leetcode.com/problems/subsets/)| NonLinear Structure | 💭 |
