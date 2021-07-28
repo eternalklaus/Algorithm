@@ -60,7 +60,7 @@ Studing algorithm just for fun!
 |55     | Medium   |[Link](https://leetcode.com/problems/kth-largest-element-in-an-array/)| Heap | 💭 |
 |56     | Medium   |[Link](https://leetcode.com/problems/implement-trie-prefix-tree/)| Trie | 💭 |
 |57     | Hard     |[Link](https://leetcode.com/problems/palindrome-pairs/)| Trie | 💭 |
-|58     | Medium   |[Link](https://leetcode.com/problems/sort-list/)| Sorting | 💭 |
+|58     | Medium   |[Link](https://leetcode.com/problems/sort-list/)| Sorting | 🤯 |
 |59     | Medium   |[Link](https://leetcode.com/problems/merge-intervals/)| Sorting | 💭 |
 |60     | Medium   |[Link](https://leetcode.com/problems/insertion-sort-list/)| Sorting | 💭 |
 |61     | Medium   |[Link](https://leetcode.com/problems/largest-number/)| Sorting | 💭 |
