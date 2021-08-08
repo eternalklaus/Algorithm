@@ -93,9 +93,12 @@ Studing algorithm just for fun!
 |88     | Medium   |[Link](https://leetcode.com/problems/house-robber/)| Dynamic Programming | 💭 |
 
 
+<br>
+Other quiz
 
-
-
+| Index | Difficulty | Question | Type | Solution |
+|-------| ---------- | -------- | -----| -------- |
+|1963  | Medium   |[Link](https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/)| Greedy| [Python](Leetcode/1963-minimum-number-of-swaps-to-make-the-string-balanced.py) <br> [Solution](https://blog.naver.com/eternalklaus/222462470257)|
 
 
 
