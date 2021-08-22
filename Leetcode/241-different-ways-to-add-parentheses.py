@@ -1,28 +1,34 @@
 class Solution:
-    import operator
     def diffWaysToCompute(self, expression: str) -> List[int]:
-        ops = {'+': operator.add, '-':operator.sub, '*':operator.mul}
+        import operator    
+        ops = {
+            '+': operator.add,
+            '-': operator.sub,
+            '*': operator.mul
+        }
 
-        def calc(list1, list2, exp):
-            computedvals = [] # // computedvals = set()
-            if not(list1 and list2): return list1 or list2
-            for v1 in list1: 
-                for v2 in list2: 
-                    computedvals.append(ops[exp](v1, v2))
-            return computedvals
+        result = []
 
-        @cache
-        def getval(lo, hi): 
-            if lo>hi:  return [] 
-
-            computedvals = []
-            for i in range(lo, hi):
-                if expression[i] in '+-*':
-                    list1 = getval(lo, i)
-                    list2 = getval(i+1, hi)
-                    computedvals += calc(list1, list2, expression[i])
+        
+        def calc(list1, op, list2):
+            result = []
+            for i in list1:
+                for j in list2:
+                    result.append(ops[op](i, j))
+            return result
+        
+        @cache 
+        def dac(exp): # devide and conquar
+            result = []
+            for i, c in enumerate(exp):
+                if c in '+-*':
+                   result += (calc(dac(exp[:i]), exp[i], dac(exp[i+1:])))
             
-            if computedvals: return computedvals
-            else: return [int(expression[lo:hi])]  # if nothing in computedvals it means *-+ isn't in expression[lo:hi]
+            if not result: # '+-*' not in exp
+                result.append(int(exp))
+            
+            return result
+        
 
-        return getval(0, len(expression))
+
+        return dac(expression)
