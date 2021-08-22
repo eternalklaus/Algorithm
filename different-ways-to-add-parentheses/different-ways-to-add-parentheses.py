@@ -9,13 +9,15 @@ class Solution:
 
         result = []
 
+        
         def calc(list1, op, list2):
             result = []
             for i in list1:
                 for j in list2:
                     result.append(ops[op](i, j))
             return result
-
+        
+        @cache 
         def dac(exp): # devide and conquar
             result = []
             for i, c in enumerate(exp):
