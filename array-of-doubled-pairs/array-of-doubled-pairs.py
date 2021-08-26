@@ -1,20 +1,17 @@
 class Solution:
     def canReorderDoubled(self, arr: List[int]) -> bool:
         from collections import Counter
-        counter = Counter(arr)
-        
+        cnt, total = Counter(arr), len(arr)
         for n in sorted(arr, key=abs):
-            if n == 0:
-                if counter[n] >= 2:
-                    counter[n] -= 2
-            elif counter[n] > 0 and counter[2*n] > 0:
-                counter[n] -= 1
-                counter[2*n] -= 1
+            if cnt[n] == 0: continue
+            if cnt[2*n] < cnt[n]: return False
+            
+            if total == 0: break
+            total -= 2*cnt[n]
+            cnt[2*n] -= cnt[n]
+            cnt[n] = 0
         
-        for v in counter.values():
-            if v is not 0: return False 
         return True
             
                 
-                
-                
+            
