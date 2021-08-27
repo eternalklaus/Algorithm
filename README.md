@@ -31,7 +31,7 @@ Studing algorithm just for fun!
 |26     | Medium   |[Link](https://leetcode.com/problems/design-circular-deque/)| Deque/Priority Queue | 💭 |
 |27     | Hard     |[Link](https://leetcode.com/problems/merge-k-sorted-lists/)| Deque/Priority Queue | 💭 |
 |28     | Easy     |[Link](https://leetcode.com/problems/design-hashmap/)| Hash Table | 💭 |
-|29     | Easy     |[Link](https://leetcode.com/problems/jewels-and-stones/)| Hash Table | 💭 |
+|29     | Easy     |[Link](https://leetcode.com/problems/jewels-and-stones/)| Hash Table | [Python](jewels-and-stones/jewels-and-stones.py) [Solution](https://blog.naver.com/eternalklaus/222486409825) |
 |30     | Medium   |[Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Hash Table | [Python](/Leetcode/3-longest-substring-without-repeating-characters.py)|
 |31     | Medium   |[Link](https://leetcode.com/problems/top-k-frequent-elements/)| Hash Table | 💭 |
 |32     | Medium   |[Link](https://leetcode.com/problems/number-of-islands/)| NonLinear Structure | [Python](/Leetcode/200-number-of-islands.py) <br> [Solution](https://blog.naver.com/eternalklaus/222290041528)|
