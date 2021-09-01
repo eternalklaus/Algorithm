@@ -1,29 +1,26 @@
 class Solution:
     def minSessions(self, tasks: List[int], sessionTime: int) -> int:
-        session = [] # save time in here
-        mintotal = float('inf')
-        def dfs(idx):
-            nonlocal session, mintotal
-            if idx == len(tasks):
-                mintotal = min(mintotal, len(session))
-                return
-            
-            # add optimization 
-            if len(session) > mintotal:
-                return 
-
-            # 1) try add on existing bins
-            for i, time in enumerate(session):
-                 if session[i] + tasks[idx] <= sessionTime: # if tasks[idx] is packable
-                        session[i] += tasks[idx] # pack
-                        dfs(idx+1)
-                        session[i] -= tasks[idx] # unpack
-            
-            # 2) add standalone bin
-            session.append(tasks[idx])
-            dfs(idx+1)
-            session.pop()
+        tasks.sort(reverse=True)
+        total = len(tasks)
         
-        dfs(0)
-        return mintotal
+        @cache
+        def dfs(bitmask, remaintime):
+            minbinsize = bitmask.count('1')
+            if minbinsize == 0: return 0
+            
+            for idx, bit in enumerate(bitmask):
+                if bit == '0': continue
+                newbitmask = bitmask[:idx] + '0' + bitmask[idx+1:]
+                
+                if remaintime - tasks[idx] >= 0: # absorb into exising bin
+                    minbinsize = min(minbinsize, dfs(newbitmask, remaintime - tasks[idx]))
+                else: # create new bin and start new bincounting
+                    minbinsize = min(minbinsize, dfs(newbitmask, sessionTime - tasks[idx]) + 1)
+            
+            return minbinsize
+    
+        bitmask = bin(2**total - 1)[2:]
+        return dfs(bitmask, 0)
+            
+            
             
