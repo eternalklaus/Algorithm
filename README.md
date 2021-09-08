@@ -12,7 +12,7 @@ Studing algorithm just for fun!
 |7      | Easy     |[Link](https://leetcode.com/problems/two-sum/)| Array | [Python](/Leetcode/1-two-sum.py) |
 |8      | Hard     |[Link](https://leetcode.com/problems/trapping-rain-water/)| Array | 💭 |
 |9      | Medium   |[Link](https://leetcode.com/problems/3sum/)| Array | 💭 |
-|10     | Easy     |[Link](https://leetcode.com/problems/array-partition-i/)| Array | 💭 |
+|10     | Easy     |[Link](https://leetcode.com/problems/array-partition-i/)| Array | [Python](array-partition-i/array-partition-i.py) |
 |11     | Medium   |[Link](https://leetcode.com/problems/product-of-array-except-self/)| Array | 💭 |
 |12     | Easy     |[Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)| Array | 💭 |
 |13     | Easy     |[Link](https://leetcode.com/problems/palindrome-linked-list/)| Linked List | 💭 |
