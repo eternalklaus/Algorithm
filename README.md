@@ -33,7 +33,7 @@ Studing algorithm just for fun!
 |28     | Easy     |[Link](https://leetcode.com/problems/design-hashmap/)| Hash Table | [Python](design-hashmap/design-hashmap.py) <br> [Solution](https://blog.naver.com/eternalklaus/222499168284) |
 |29     | Easy     |[Link](https://leetcode.com/problems/jewels-and-stones/)| Hash Table | [Python](jewels-and-stones/jewels-and-stones.py) <br> [Solution](https://blog.naver.com/eternalklaus/222486409825) |
 |30     | Medium   |[Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Hash Table | [Python](/Leetcode/3-longest-substring-without-repeating-characters.py)|
-|31     | Medium   |[Link](https://leetcode.com/problems/top-k-frequent-elements/)| Hash Table | 💭 |
+|31     | Medium   |[Link](https://leetcode.com/problems/top-k-frequent-elements/)| Hash Table | [Python](top-k-frequent-elements/top-k-frequent-elements.py) <br> [Solution - uploading..] |
 |32     | Medium   |[Link](https://leetcode.com/problems/number-of-islands/)| NonLinear Structure | [Python](/Leetcode/200-number-of-islands.py) <br> [Solution](https://blog.naver.com/eternalklaus/222290041528)|
 |33     | Medium   |[Link](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)| NonLinear Structure | [Python](/Leetcode/17-letter-combinations-of-a-phone-number.py) <br> [Solution](https://blog.naver.com/eternalklaus/222428690375) |
 |34     | Medium   |[Link](https://leetcode.com/problems/permutations/)| NonLinear Structure | [Python](/Leetcode/46-permutations.py) <br> [Solution](https://blog.naver.com/eternalklaus/222435877270)|
