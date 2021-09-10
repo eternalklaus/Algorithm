@@ -1,29 +1,24 @@
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        N = len(nums)
+        N, zeros, product = len(nums), nums.count(0), 1
         output = [0 for x in range(N)]
         
-        if nums.count(0) >= 2:
+        # if more then 2 zeros, all would be zero
+        if zeros >= 2:
             return output
         
-        if nums.count(0) == 1:
-            product = 1
-            
+        # if 1 zero exist, all output except for output[nums.index(0)] would be zero
+        elif zeros == 1:
             for n in nums:
                 if n == 0: continue
                 product *= n
-            
-            idx = nums.index(0)
-            output[idx] = product
-
+            output[nums.index(0)] = product
             return output
         
+        # else, lets get output by (multiplication of all) / nums[i]
         else: 
-            product = 1
             for n in nums:
-                product *= n
-            
+                product *= n    
             for idx, k in enumerate(output):
                 output[idx] = int(product / nums[idx])
-            
             return output
