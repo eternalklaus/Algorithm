@@ -13,7 +13,7 @@ Studing algorithm just for fun!
 |8      | Hard     |[Link](https://leetcode.com/problems/trapping-rain-water/)| Array | 💭 |
 |9      | Medium   |[Link](https://leetcode.com/problems/3sum/)| Array | 💭 |
 |10     | Easy     |[Link](https://leetcode.com/problems/array-partition-i/)| Array | [Python](array-partition-i/array-partition-i.py) |
-|11     | Medium   |[Link](https://leetcode.com/problems/product-of-array-except-self/)| Array | 💭 |
+|11     | Medium   |[Link](https://leetcode.com/problems/product-of-array-except-self/)| Array | [Python](roduct-of-array-except-self/product-of-array-except-self.py) |
 |12     | Easy     |[Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)| Array | 💭 |
 |13     | Easy     |[Link](https://leetcode.com/problems/palindrome-linked-list/)| Linked List | 💭 |
 |14     | Easy     |[Link](https://leetcode.com/problems/merge-two-sorted-lists/)| Linked List | 💭 |
@@ -51,7 +51,7 @@ Studing algorithm just for fun!
 |46     | Easy     |[Link](https://leetcode.com/problems/merge-two-binary-trees/)| Tree | 💭 |
 |47     | Hard     |[Link](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)| Tree | 💭 |
 |48     | Easy     |[Link](https://leetcode.com/problems/balanced-binary-tree/)| Tree | 💭 |
-|49     | Medium   |[Link](https://leetcode.com/problems/minimum-height-trees/)| Tree | 💭 |
+|49     | Medium   |[Link](https://leetcode.com/problems/minimum-height-trees/)| Tree | [Python](minimum-height-trees/minimum-height-trees.py) <br> [Solution](https://blog.naver.com/eternalklaus/222512172066) |
 |50     | Easy     |[Link](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)| Tree | 💭 |
 |51     | Medium   |[Link](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)| Tree | 💭 |
 |52     | Easy     |[Link](https://leetcode.com/problems/range-sum-of-bst/)| Tree | 💭 |
