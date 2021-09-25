@@ -87,7 +87,7 @@ Studing algorithm just for fun!
 |82     | Easy     |[Link](https://leetcode.com/problems/assign-cookies/)| Greedy Algorithm | 💭 |
 |83     | Easy     |[Link](https://leetcode.com/problems/majority-element/)| Divide and Conquer | 💭 |
 |84     | Medium   |[Link](https://leetcode.com/problems/different-ways-to-add-parentheses/)| Divide and Conquer | [Python](https://github.com/eternalklaus/Algorithm/tree/master/different-ways-to-add-parentheses) <br> [Solution](https://blog.naver.com/eternalklaus/222479914336) |
-|85     | Easy     |[Link](https://leetcode.com/problems/fibonacci-number/)| Dynamic Programming | 💭 |
+|85     | Easy     |[Link](https://leetcode.com/problems/fibonacci-number/)| Dynamic Programming | [Python](fibonacci-number) |
 |86     | Easy     |[Link](https://leetcode.com/problems/maximum-subarray/)| Dynamic Programming | 💭 |
 |87     | Easy     |[Link](https://leetcode.com/problems/climbing-stairs/)| Dynamic Programming | 💭 |
 |88     | Medium   |[Link](https://leetcode.com/problems/house-robber/)| Dynamic Programming | 💭 |
