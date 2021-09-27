@@ -82,7 +82,7 @@ Studing algorithm just for fun!
 |77     | Medium   |[Link](https://leetcode.com/problems/longest-repeating-character-replacement/)| Sliding Window | 💭 |
 |78     | Easy     |[Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| Greedy Algorithm | 💭 |
 |79     | Medium   |[Link](https://leetcode.com/problems/queue-reconstruction-by-height/)| Greedy Algorithm | 💭 |
-|80     | Medium   |[Link](https://leetcode.com/problems/task-scheduler/)| Greedy Algorithm | 💭 |
+|80     | Medium   |[Link](https://leetcode.com/problems/task-scheduler/)| Greedy Algorithm | [Python](task-scheduler) <br> [Solution](https://blog.naver.com/eternalklaus/222518478483) |
 |81     | Medium   |[Link](https://leetcode.com/problems/gas-station/)| Greedy Algorithm | 💭 |
 |82     | Easy     |[Link](https://leetcode.com/problems/assign-cookies/)| Greedy Algorithm | 💭 |
 |83     | Easy     |[Link](https://leetcode.com/problems/majority-element/)| Divide and Conquer | 💭 |
@@ -101,5 +101,6 @@ Other quiz
 |1963  | Medium   |[Link](https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/)| Greedy| [Python](Leetcode/1963-minimum-number-of-swaps-to-make-the-string-balanced.py) <br> [Solution](https://blog.naver.com/eternalklaus/222462470257)|
 |1969  | Medium   |[Link](https://leetcode.com/problems/minimum-non-zero-product-of-the-array-elements/)| Divide and Conquer | [Python](Leetcode/1969-minimum-non-zero-product-of-the-array-elements.py) <br> [Solution](https://blog.naver.com/eternalklaus/222471960684)|
 |954  | Medium   |[Link](https://leetcode.com/problems/array-of-doubled-pairs/)| Greedy | [Python](array-of-doubled-pairs/array-of-doubled-pairs.py) <br> [Solution](https://blog.naver.com/eternalklaus/222485224244)|
+|767  | Medium   |[Link](https://leetcode.com/problems/reorganize-string/)| Greedy | [Python](reorganize-string) <br> [Solution](https://blog.naver.com/eternalklaus/222519160915)|
 
 ...And [here](https://leetcode.com/explore/interview/card/top-interview-questions-medium/) would be another good source to get well-designed questions!
