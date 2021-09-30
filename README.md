@@ -48,9 +48,9 @@ Studing algorithm just for fun!
 |43     | Easy     |[Link](https://leetcode.com/problems/diameter-of-binary-tree/)| Tree | [Python](/Leetcode/543-diameter-of-binary-tree.py) <br> [Solotion](https://blog.naver.com/eternalklaus/222434804556)|
 |44     | Medium   |[Link](https://leetcode.com/problems/longest-univalue-path/)| Tree | 💭 |
 |45     | Easy     |[Link](https://leetcode.com/problems/invert-binary-tree/)| Tree | 💭 |
-|46     | Easy     |[Link](https://leetcode.com/problems/merge-two-binary-trees/)| Tree | 💭 |
+|46     | Easy     |[Link](https://leetcode.com/problems/merge-two-binary-trees/)| Tree | [Python](merge-two-binary-trees) <br> [Solution](https://blog.naver.com/eternalklaus/222522700947)  |
 |47     | Hard     |[Link](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)| Tree | 💭 |
-|48     | Easy     |[Link](https://leetcode.com/problems/balanced-binary-tree/)| Tree | [Python](balanced-binary-tree) <br> [Solution - Uploading] |
+|48     | Easy     |[Link](https://leetcode.com/problems/balanced-binary-tree/)| Tree | [Python](balanced-binary-tree) <br> [Solution](https://blog.naver.com/eternalklaus/222520767844) |
 |49     | Medium   |[Link](https://leetcode.com/problems/minimum-height-trees/)| Tree | [Python](minimum-height-trees/minimum-height-trees.py) <br> [Solution](https://blog.naver.com/eternalklaus/222512172066) |
 |50     | Easy     |[Link](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)| Tree | 💭 |
 |51     | Medium   |[Link](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)| Tree | 💭 |
