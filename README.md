@@ -57,7 +57,7 @@ Studing algorithm just for fun!
 |52     | Easy     |[Link](https://leetcode.com/problems/range-sum-of-bst/)| Tree | [Python](range-sum-of-bst)<br> [Solution](https://blog.naver.com/eternalklaus/222522735417) |
 |53     | Easy     |[Link](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)| Tree | 💭 |
 |54     | Medium   |[Link](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| Tree | 💭 |
-|55     | Medium   |[Link](https://leetcode.com/problems/kth-largest-element-in-an-array/)| Heap | 💭 |
+|55     | Medium   |[Link](https://leetcode.com/problems/kth-largest-element-in-an-array/)| Heap | [Python](kth-largest-element-in-an-array) |
 |56     | Medium   |[Link](https://leetcode.com/problems/implement-trie-prefix-tree/)| Trie | 💭 |
 |57     | Hard     |[Link](https://leetcode.com/problems/palindrome-pairs/)| Trie | 💭 |
 |58     | Medium   |[Link](https://leetcode.com/problems/sort-list/)| Sorting | [Python](/Leetcode/148-sort-list.py) <br> [Solution(1)](https://blog.naver.com/eternalklaus/222447000036) <br> [Solution(2)](https://blog.naver.com/eternalklaus/222460546893)|
