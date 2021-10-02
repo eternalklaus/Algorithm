@@ -54,7 +54,7 @@ Studing algorithm just for fun!
 |49     | Medium   |[Link](https://leetcode.com/problems/minimum-height-trees/)| Tree | [Python](minimum-height-trees/minimum-height-trees.py) <br> [Solution](https://blog.naver.com/eternalklaus/222512172066) |
 |50     | Easy     |[Link](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)| Tree | 💭 |
 |51     | Medium   |[Link](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)| Tree | 💭 |
-|52     | Easy     |[Link](https://leetcode.com/problems/range-sum-of-bst/)| Tree | 💭 |
+|52     | Easy     |[Link](https://leetcode.com/problems/range-sum-of-bst/)| Tree | [Python](range-sum-of-bst)<br> [Solution](https://blog.naver.com/eternalklaus/222522735417) |
 |53     | Easy     |[Link](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)| Tree | 💭 |
 |54     | Medium   |[Link](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| Tree | 💭 |
 |55     | Medium   |[Link](https://leetcode.com/problems/kth-largest-element-in-an-array/)| Heap | 💭 |
@@ -73,7 +73,7 @@ Studing algorithm just for fun!
 |68     | Easy     |[Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Binary Search | 💭 |
 |69     | Medium   |[Link](https://leetcode.com/problems/search-a-2d-matrix-ii/)| Binary Search | 💭 |
 |70     | Easy     |[Link](https://leetcode.com/problems/single-number/)| Bit Manipulation | 💭 |
-|71     | Easy     |[Link](https://leetcode.com/problems/hamming-distance/)| Bit Manipulation | 💭 |
+|71     | Easy     |[Link](https://leetcode.com/problems/hamming-distance/)| Bit Manipulation | [Python](hamming-distance) <br> [Solution](https://blog.naver.com/eternalklaus/222523951658) |
 |72     | Medium   |[Link](https://leetcode.com/problems/sum-of-two-integers/)| Bit Manipulation | 💭 |
 |73     | Medium   |[Link](https://leetcode.com/problems/utf-8-validation/)| Bit Manipulation | 💭 |
 |74     | Easy     |[Link](https://leetcode.com/problems/number-of-1-bits/)| Bit Manipulation | 💭 |
