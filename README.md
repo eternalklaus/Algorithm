@@ -7,7 +7,7 @@ Studing algorithm just for fun!
 |2      | Easy     |[Link](https://leetcode.com/problems/reverse-string/)| String Manipulation | 💭 |
 |3      | Easy     |[Link](https://leetcode.com/problems/reorder-data-in-log-files/)| String Manipulation | 💭 |
 |4      | Easy     |[Link](https://leetcode.com/problems/most-common-word/)| String Manipulation | 💭 |
-|5      | Medium   |[Link](https://leetcode.com/problems/group-anagrams/)| String Manipulation | 💭 |
+|5      | Medium   |[Link](https://leetcode.com/problems/group-anagrams/)| String Manipulation | [Python](group-anagrams) <br> [Solution](https://blog.naver.com/eternalklaus/222524185765) |
 |6      | Medium   |[Link](https://leetcode.com/problems/longest-palindromic-substring/)| String Manipulation | 💭 |
 |7      | Easy     |[Link](https://leetcode.com/problems/two-sum/)| Array | [Python](/Leetcode/1-two-sum.py) |
 |8      | Hard     |[Link](https://leetcode.com/problems/trapping-rain-water/)| Array | 💭 |
