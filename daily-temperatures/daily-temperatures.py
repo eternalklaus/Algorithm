@@ -6,16 +6,17 @@ class Solution:
         output = [0 for _ in range(total)]
         
         for i in range(total-1, -1, -1): # reversed order
-            diff = 0
+            day1, day2 = i, i
             while stack:
-                pt, pi = stack.pop() # previous t, previous i
-                if pt > temperatures[i]:
-                    diff = pi - i
-                    stack.append((pt, pi)) # re-push most warm day into stack
+                d = stack.pop() 
+                if temperatures[d] > temperatures[day1]:
+                    day2 = d
+                    stack.append(day2) # re-push most warm day into stack
+                    print ("%d(%dC) > %d(%dC)" % (day1, temperatures[day1], day2, temperatures[day2]))
                     break
             
-            stack.append((temperatures[i], i)) # push current day into stack
-            output[i] = diff
+            stack.append(day1) # push current day into stack
+            output[i] = day2 - day1
         return output
                     
                 
