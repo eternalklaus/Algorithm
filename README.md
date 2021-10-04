@@ -25,7 +25,7 @@ Studing algorithm just for fun!
 |20     | Easy     |[Link](https://leetcode.com/problems/valid-parentheses/)| Stack/Queue | [Python](valid-parentheses) |
 |21     | Medium   |[Link](https://leetcode.com/problems/remove-duplicate-letters/)| Stack/Queue | [Python](/Leetcode/316-remove-duplicate-letters.py)<br> [Solution](https://blog.naver.com/eternalklaus/222478954814) |
 |22     | Medium   |[Link](https://leetcode.com/problems/daily-temperatures/)| Stack/Queue | [Python](daily-temperatures) <br> [Solution](https://blog.naver.com/eternalklaus/222524970987) |
-|23     | Easy     |[Link](https://leetcode.com/problems/implement-stack-using-queues/)| Stack/Queue | 💭 |
+|23     | Easy     |[Link](https://leetcode.com/problems/implement-stack-using-queues/)| Stack/Queue | [Python](implement-stack-using-queues) |
 |24     | Easy     |[Link](https://leetcode.com/problems/implement-queue-using-stacks/)| Stack/Queue | 💭 |
 |25     | Medium   |[Link](https://leetcode.com/problems/design-circular-queue/)| Stack/Queue | 💭 |
 |26     | Medium   |[Link](https://leetcode.com/problems/design-circular-deque/)| Deque/Priority Queue | 💭 |
