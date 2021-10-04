@@ -22,7 +22,7 @@ Studing algorithm just for fun!
 |17     | Medium   |[Link](https://leetcode.com/problems/swap-nodes-in-pairs/)| Linked List | 💭 |
 |18     | Medium   |[Link](https://leetcode.com/problems/odd-even-linked-list/)| Linked List | 💭 |
 |19     | Medium   |[Link](https://leetcode.com/problems/reverse-linked-list-ii/)| Linked List | [Python](/Leetcode/92-reverse-linked-list-ii.py) |
-|20     | Easy     |[Link](https://leetcode.com/problems/valid-parentheses/)| Stack/Queue | 💭 |
+|20     | Easy     |[Link](https://leetcode.com/problems/valid-parentheses/)| Stack/Queue | [Python](valid-parentheses) |
 |21     | Medium   |[Link](https://leetcode.com/problems/remove-duplicate-letters/)| Stack/Queue | [Python](/Leetcode/316-remove-duplicate-letters.py)<br> [Solution](https://blog.naver.com/eternalklaus/222478954814) |
 |22     | Medium   |[Link](https://leetcode.com/problems/daily-temperatures/)| Stack/Queue | [Python](daily-temperatures) <br> [Solution](https://blog.naver.com/eternalklaus/222524970987) |
 |23     | Easy     |[Link](https://leetcode.com/problems/implement-stack-using-queues/)| Stack/Queue | 💭 |
