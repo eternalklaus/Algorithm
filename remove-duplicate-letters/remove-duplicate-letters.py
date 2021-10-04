@@ -1,18 +1,18 @@
 class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
-        from collections import Counter 
-        cnt, output, input = Counter(s), '1', s
-
-        while input:
-            c, input = input[0], input[1:]
+        stack = []
+        for i, c in enumerate(s): # if bigger then previous list, eat them
+            remain = s[i+1:]
+            if c in stack: continue
+            while stack and stack[-1] >= c: # c is stronger
+                if stack[-1] in remain: 
+                    stack.pop()
+                else:
+                    break
+            stack.append(c)
+            # stronger(smaller) alaphabet eats previous weaker chars
+            # if previous weaker char is duplicated, cannot avoid attack
+            # else, can avoid attack
+        return ''.join(stack)
             
-            # c is already exist in output
-            if c in output:
-                continue
             
-            # c is smaller then before
-            while output[-1] in input and output[-1] >= c:
-                output = output[:-1]
-            output += c
-
-        return output[1:]
