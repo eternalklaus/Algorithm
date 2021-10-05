@@ -27,7 +27,7 @@ Studing algorithm just for fun!
 |22     | Medium   |[Link](https://leetcode.com/problems/daily-temperatures/)| Stack/Queue | [Python](daily-temperatures) <br> [Solution](https://blog.naver.com/eternalklaus/222524970987) |
 |23     | Easy     |[Link](https://leetcode.com/problems/implement-stack-using-queues/)| Stack/Queue | [Python](implement-stack-using-queues) |
 |24     | Easy     |[Link](https://leetcode.com/problems/implement-queue-using-stacks/)| Stack/Queue | 💭 |
-|25     | Medium   |[Link](https://leetcode.com/problems/design-circular-queue/)| Stack/Queue | 💭 |
+|25     | Medium   |[Link](https://leetcode.com/problems/design-circular-queue/)| Stack/Queue | [Python](design-circular-queue) <br> [Solution - Uploading..]() |
 |26     | Medium   |[Link](https://leetcode.com/problems/design-circular-deque/)| Deque/Priority Queue | 💭 |
 |27     | Hard     |[Link](https://leetcode.com/problems/merge-k-sorted-lists/)| Deque/Priority Queue | 💭 |
 |28     | Easy     |[Link](https://leetcode.com/problems/design-hashmap/)| Hash Table | [Python](design-hashmap/design-hashmap.py) <br> [Solution](https://blog.naver.com/eternalklaus/222499168284) |
