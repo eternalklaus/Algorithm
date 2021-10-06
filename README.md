@@ -64,7 +64,7 @@ Studing algorithm just for fun!
 |59     | Medium   |[Link](https://leetcode.com/problems/merge-intervals/)| Sorting | 💭 |
 |60     | Medium   |[Link](https://leetcode.com/problems/insertion-sort-list/)| Sorting | 💭 |
 |61     | Medium   |[Link](https://leetcode.com/problems/largest-number/)| Sorting | 💭 |
-|62     | Easy     |[Link](https://leetcode.com/problems/valid-anagram/)| Sorting | 💭 |
+|62     | Easy     |[Link](https://leetcode.com/problems/valid-anagram/)| Sorting | [Python](valid-anagram) |
 |63     | Medium   |[Link](https://leetcode.com/problems/sort-colors/)| Sorting | 💭 |
 |64     | Medium   |[Link](https://leetcode.com/problems/k-closest-points-to-origin/)| Sorting | 💭 |
 |65     | Easy     |[Link](https://leetcode.com/problems/binary-search/)| Binary Search | 💭 |
