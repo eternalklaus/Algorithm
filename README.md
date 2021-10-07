@@ -63,7 +63,7 @@ Studing algorithm just for fun!
 |58     | Medium   |[Link](https://leetcode.com/problems/sort-list/)| Sorting | [Python](/Leetcode/148-sort-list.py) <br> [Solution(1)](https://blog.naver.com/eternalklaus/222447000036) <br> [Solution(2)](https://blog.naver.com/eternalklaus/222460546893)|
 |59     | Medium   |[Link](https://leetcode.com/problems/merge-intervals/)| Sorting | 💭 |
 |60     | Medium   |[Link](https://leetcode.com/problems/insertion-sort-list/)| Sorting | 💭 |
-|61     | Medium   |[Link](https://leetcode.com/problems/largest-number/)| Sorting | 💭 |
+|61     | Medium   |[Link](https://leetcode.com/problems/largest-number/)| Sorting | [Python](largest-number) |
 |62     | Easy     |[Link](https://leetcode.com/problems/valid-anagram/)| Sorting | [Python](valid-anagram) |
 |63     | Medium   |[Link](https://leetcode.com/problems/sort-colors/)| Sorting | 💭 |
 |64     | Medium   |[Link](https://leetcode.com/problems/k-closest-points-to-origin/)| Sorting | 💭 |
