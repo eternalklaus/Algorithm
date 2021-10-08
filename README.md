@@ -102,5 +102,6 @@ Other quiz
 |1969  | Medium   |[Link](https://leetcode.com/problems/minimum-non-zero-product-of-the-array-elements/)| Divide and Conquer | [Python](Leetcode/1969-minimum-non-zero-product-of-the-array-elements.py) <br> [Solution](https://blog.naver.com/eternalklaus/222471960684)|
 |954  | Medium   |[Link](https://leetcode.com/problems/array-of-doubled-pairs/)| Greedy | [Python](array-of-doubled-pairs/array-of-doubled-pairs.py) <br> [Solution](https://blog.naver.com/eternalklaus/222485224244)|
 |767  | Medium   |[Link](https://leetcode.com/problems/reorganize-string/)| Greedy | [Python](reorganize-string) <br> [Solution](https://blog.naver.com/eternalklaus/222519160915)|
+|500  | Easy   |[Link](https://leetcode.com/problems/keyboard-row/)| Hash Table | [Python](keybpard-row) |
 
 ...And [here](https://leetcode.com/explore/interview/card/top-interview-questions-medium/) would be another good source to get well-designed questions!
