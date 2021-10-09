@@ -103,5 +103,7 @@ Other quiz
 |954  | Medium   |[Link](https://leetcode.com/problems/array-of-doubled-pairs/)| Greedy | [Python](array-of-doubled-pairs/array-of-doubled-pairs.py) <br> [Solution](https://blog.naver.com/eternalklaus/222485224244)|
 |767  | Medium   |[Link](https://leetcode.com/problems/reorganize-string/)| Greedy | [Python](reorganize-string) <br> [Solution](https://blog.naver.com/eternalklaus/222519160915)|
 |500  | Easy   |[Link](https://leetcode.com/problems/keyboard-row/)| Hash Table | [Python](keybpard-row) |
+|115  | Hard   |[Link](https://leetcode.com/problems/distinct-subsequences/)| Dynamic Programming | [Python](distinct-subsequences) |
+
 
 ...And [here](https://leetcode.com/explore/interview/card/top-interview-questions-medium/) would be another good source to get well-designed questions!
