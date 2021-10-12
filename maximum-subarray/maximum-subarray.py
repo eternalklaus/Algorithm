@@ -1,20 +1,21 @@
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         maxsum = -1 * float('inf')
-        
-        @cache
-        def getmaxsum(idx):
-            nonlocal maxsum
-            
-            if idx == -1: return 0
-            
-            a = getmaxsum(idx-1) + nums[idx]
-            b = nums[idx] 
-            output = max(a, b)
-            maxsum = max(maxsum, output)
-            return output
-        
-        for idx, _ in enumerate(nums):
-            getmaxsum(idx)
+
+        '''
+        for idx, num in enumerate(nums):
+            if idx == 0: 
+                currentmax = nums[idx]
+                maxsum = nums[idx]
+            else:
+                currentmax = max(currentmax + nums[idx], nums[idx])
+                maxsum = max(maxsum, currentmax)
         
         return maxsum
+        '''        
+        for i in range(1, len(nums)):
+            if nums[i-1] > 0:
+                nums[i] = nums[i-1] + nums[i]
+            else:
+                nums[i] = nums[i]
+        return max(nums)
