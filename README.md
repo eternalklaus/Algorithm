@@ -104,6 +104,8 @@ Other quiz
 |767  | Medium   |[Link](https://leetcode.com/problems/reorganize-string/)| Greedy | [Python](reorganize-string) <br> [Solution](https://blog.naver.com/eternalklaus/222519160915)|
 |500  | Easy   |[Link](https://leetcode.com/problems/keyboard-row/)| Hash Table | [Python](keybpard-row) |
 |115  | Hard   |[Link](https://leetcode.com/problems/distinct-subsequences/)| Dynamic Programming | [Python](distinct-subsequences) |
+|2034 | Medium |[Link](https://leetcode.com/problems/stock-price-fluctuation/)| Heap (Priority Queue) | [Python](stock-price-fluctuation) |
+
 
 
 ...And [here](https://leetcode.com/explore/interview/card/top-interview-questions-medium/) would be another good source to get well-designed questions!
