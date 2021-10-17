@@ -28,7 +28,7 @@ Studing algorithm just for fun!
 |23     | Easy     |[Link](https://leetcode.com/problems/implement-stack-using-queues/)| Stack/Queue | [Python](implement-stack-using-queues) |
 |24     | Easy     |[Link](https://leetcode.com/problems/implement-queue-using-stacks/)| Stack/Queue | [Python](implement-queue-using-stacks) |
 |25     | Medium   |[Link](https://leetcode.com/problems/design-circular-queue/)| Stack/Queue | [Python](design-circular-queue) <br> [Solution - Uploading..]() |
-|26     | Medium   |[Link](https://leetcode.com/problems/design-circular-deque/)| Deque/Priority Queue | 💭 |
+|26     | Medium   |[Link](https://leetcode.com/problems/design-circular-deque/)| Deque/Priority Queue | [Python](design-circular-deque) <br> [Solution](https://blog.naver.com/eternalklaus/222539396888) |
 |27     | Hard     |[Link](https://leetcode.com/problems/merge-k-sorted-lists/)| Deque/Priority Queue | 💭 |
 |28     | Easy     |[Link](https://leetcode.com/problems/design-hashmap/)| Hash Table | [Python](design-hashmap/design-hashmap.py) <br> [Solution](https://blog.naver.com/eternalklaus/222499168284) |
 |29     | Easy     |[Link](https://leetcode.com/problems/jewels-and-stones/)| Hash Table | [Python](jewels-and-stones/jewels-and-stones.py) <br> [Solution](https://blog.naver.com/eternalklaus/222486409825) |
