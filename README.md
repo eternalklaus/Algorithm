@@ -1,6 +1,8 @@
 # Algorithm
 Studing algorithm just for fun!
 
+# Python Algorithm Interview Questions
+
 | Index | Difficulty | Question | Type | Solution |
 |-------| ---------- | -------- | -----| -------- |
 |1      | Easy     |[Link](https://leetcode.com/problems/valid-palindrome/)| String Manipulation | [Python](/Leetcode/125-valid-palindrome.py) |
@@ -27,7 +29,7 @@ Studing algorithm just for fun!
 |22     | Medium   |[Link](https://leetcode.com/problems/daily-temperatures/)| Stack/Queue | [Python](daily-temperatures) <br> [Solution](https://blog.naver.com/eternalklaus/222524970987) |
 |23     | Easy     |[Link](https://leetcode.com/problems/implement-stack-using-queues/)| Stack/Queue | [Python](implement-stack-using-queues) |
 |24     | Easy     |[Link](https://leetcode.com/problems/implement-queue-using-stacks/)| Stack/Queue | [Python](implement-queue-using-stacks) |
-|25     | Medium   |[Link](https://leetcode.com/problems/design-circular-queue/)| Stack/Queue | [Python](design-circular-queue) <br> [Solution - Uploading..]() |
+|25     | Medium   |[Link](https://leetcode.com/problems/design-circular-queue/)| Stack/Queue | [Python](design-circular-queue) <br> [Solution](https://blog.naver.com/eternalklaus/222527120615) |
 |26     | Medium   |[Link](https://leetcode.com/problems/design-circular-deque/)| Deque/Priority Queue | [Python](design-circular-deque) <br> [Solution](https://blog.naver.com/eternalklaus/222539396888) |
 |27     | Hard     |[Link](https://leetcode.com/problems/merge-k-sorted-lists/)| Deque/Priority Queue | 💭 |
 |28     | Easy     |[Link](https://leetcode.com/problems/design-hashmap/)| Hash Table | [Python](design-hashmap/design-hashmap.py) <br> [Solution](https://blog.naver.com/eternalklaus/222499168284) |
@@ -92,9 +94,11 @@ Studing algorithm just for fun!
 |87     | Easy     |[Link](https://leetcode.com/problems/climbing-stairs/)| Dynamic Programming | 💭 |
 |88     | Medium   |[Link](https://leetcode.com/problems/house-robber/)| Dynamic Programming | 💭 |
 
-
 <br>
-Other quiz
+# Top Amazon 
+<br>
+
+# Weekly Challenge
 
 | Index | Difficulty | Question | Type | Solution |
 |-------| ---------- | -------- | -----| -------- |
