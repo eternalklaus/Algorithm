@@ -95,8 +95,6 @@ Studing algorithm just for fun!
 |88     | Medium   |[Link](https://leetcode.com/problems/house-robber/)| Dynamic Programming | 💭 |
 
 <br>
-# Top Amazon 
-<br>
 
 # Weekly Challenge
 
@@ -111,5 +109,22 @@ Studing algorithm just for fun!
 |2034 | Medium |[Link](https://leetcode.com/problems/stock-price-fluctuation/)| Heap (Priority Queue) | [Python](stock-price-fluctuation) |
 
 
+<br>
 
-...And [here](https://leetcode.com/explore/interview/card/top-interview-questions-medium/) would be another good source to get well-designed questions!
+# Top Amazon Challenge
+
+<br>
+
+# Checked but not solved yet
+Try this when you feel specially strong today.  
+| Index | Difficulty | Question | Type | Solution |
+|-------| ---------- | -------- | -----| -------- |
+|34|Medium|[Link](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|💭|💭|
+|743|Medium|[Link](https://leetcode.com/problems/network-delay-time/)|💭|💭|
+|1982|Hard|[Link](https://leetcode.com/problems/find-array-given-subset-sums/)|💭|💭|
+|2003|Hard|[Link](https://leetcode.com/problems/smallest-missing-genetic-value-in-each-subtree/)|💭|💭|
+|2030|Hard|[Link](https://leetcode.com/problems/smallest-k-length-subsequence-with-occurrences-of-a-letter/)|💭|💭|
+|2039|Medium|[Link](https://leetcode.com/problems/the-time-when-the-network-becomes-idle/)|💭|💭|
+|2044| Medium|[Link](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)|💭|💭|
+|2045|Hard|[Link](https://leetcode.com/problems/second-minimum-time-to-reach-destination/)|💭|💭|
+
