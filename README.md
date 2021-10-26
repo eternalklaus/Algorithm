@@ -78,7 +78,7 @@ Studing algorithm just for fun!
 |71     | Easy     |[Link](https://leetcode.com/problems/hamming-distance/)| Bit Manipulation | [Python](hamming-distance) <br> [Solution](https://blog.naver.com/eternalklaus/222523951658) |
 |72     | Medium   |[Link](https://leetcode.com/problems/sum-of-two-integers/)| Bit Manipulation | 💭 |
 |73     | Medium   |[Link](https://leetcode.com/problems/utf-8-validation/)| Bit Manipulation | 💭 |
-|74     | Easy     |[Link](https://leetcode.com/problems/number-of-1-bits/)| Bit Manipulation | 💭 |
+|74     | Easy     |[Link](https://leetcode.com/problems/number-of-1-bits/)| Bit Manipulation | [Python](number-of-1-bits) |
 |75     | Hard     |[Link](https://leetcode.com/problems/sliding-window-maximum/)| Sliding Window | 💭 |
 |76     | Hard     |[Link](https://leetcode.com/problems/minimum-window-substring/)| Sliding Window | 💭 |
 |77     | Medium   |[Link](https://leetcode.com/problems/longest-repeating-character-replacement/)| Sliding Window | 💭 |
@@ -128,3 +128,10 @@ Try this when you feel specially strong today.
 |2044| Medium|[Link](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)|💭|💭|
 |2045|Hard|[Link](https://leetcode.com/problems/second-minimum-time-to-reach-destination/)|💭|💭|
 
+
+개인 프로젝트
+마이크로서비스 
+도커
+AWS
+애자일 혹은 스크럼 방법으로 일해봤는가?
+AWS 개인프로젝트? 
