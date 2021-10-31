@@ -55,7 +55,7 @@ Studing algorithm just for fun!
 |48     | Easy     |[Link](https://leetcode.com/problems/balanced-binary-tree/)| Tree | [Python](balanced-binary-tree) <br> [Solution](https://blog.naver.com/eternalklaus/222520767844) |
 |49     | Medium   |[Link](https://leetcode.com/problems/minimum-height-trees/)| Tree | [Python](minimum-height-trees/minimum-height-trees.py) <br> [Solution](https://blog.naver.com/eternalklaus/222512172066) |
 |50     | Easy     |[Link](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)| Tree | 💭 |
-|51     | Medium   |[Link](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)| Tree | 💭 |
+|51     | Medium   |[Link](https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/)| Tree | [Python](binary-search-tree-to-greater-sum-tree) |
 |52     | Easy     |[Link](https://leetcode.com/problems/range-sum-of-bst/)| Tree | [Python](range-sum-of-bst)<br> [Solution](https://blog.naver.com/eternalklaus/222522735417) |
 |53     | Easy     |[Link](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)| Tree | 💭 |
 |54     | Medium   |[Link](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)| Tree | 💭 |
