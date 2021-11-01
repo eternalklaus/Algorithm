@@ -1,20 +1,25 @@
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
         from collections import defaultdict
-        graph = defaultdict(list)
-        weight = [float('inf') for _ in range(n+1)]
-        weight[k] = 0 # starts from k
-        for [u, v, w] in times:
-            graph[u].append([v, w])
+        weight = defaultdict(list)
+        delay = [float('inf') for _ in range(n+1)]
+        delay[k] = 0
+
+        for (u, v, w) in times:
+            weight[u].append((w, v))
         
+        def queuedist(src):
+            wgt = delay[src]
+            for (w, v) in weight[src]:
+                if wgt + w < delay[v]: # found shorter path
+                    delay[v] = wgt + w 
+                    queuedist(v)
         
-        def djkstra(u):
-            for [v, w] in graph[u]:
-                wgt = weight[u] + w
-                if wgt < weight[v]:
-                    weight[v] = wgt # update shortest path
-                    djkstra(v) # djkstra from v
+        queuedist(k)
+        # print (delay)
+        output = max(delay[1:])
         
-        djkstra(k)
-        output = max(weight[1:])
-        return -1 if output == float('inf') else output
+        if output == float('inf'): return -1
+        return output
+
+        
