@@ -72,7 +72,8 @@ Studing algorithm just for fun!
 |65     | Easy     |[Link](https://leetcode.com/problems/binary-search/)| Binary Search | 💭 |
 |66     | Medium   |[Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)| Binary Search | 💭 |
 |67     | Easy     |[Link](https://leetcode.com/problems/intersection-of-two-arrays/)| Binary Search | 💭 |
-|68     | Easy     |[Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Binary Search | [Python](two-sum-ii-input-array-is-sorted) <br> [Solution](https://blog.naver.com/eternalklaus/222556684067)|
+|68     | Easy     |[Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Binary Search | [Python](two-sum-iii-data-structure-design) <br> [Solution](https://blog.naver.com/eternalklaus/222558080931)|
+|+     | Medium     |[Link](https://leetcode.com/problems/two-sum-iii-data-structure-design/)| Binary Search | [Python]() <br> [Solution](https://blog.naver.com/eternalklaus/222556684067)|
 |69     | Medium   |[Link](https://leetcode.com/problems/search-a-2d-matrix-ii/)| Binary Search | 💭 |
 |70     | Easy     |[Link](https://leetcode.com/problems/single-number/)| Bit Manipulation | 💭 |
 |71     | Easy     |[Link](https://leetcode.com/problems/hamming-distance/)| Bit Manipulation | [Python](hamming-distance) <br> [Solution](https://blog.naver.com/eternalklaus/222523951658) |
