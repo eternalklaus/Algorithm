@@ -44,7 +44,7 @@ Studing algorithm just for fun!
 |37     | Medium   |[Link](https://leetcode.com/problems/subsets/)| NonLinear Structure | [Python](subsets/subsets.py) <br> [Solution](https://blog.naver.com/eternalklaus/222479914336)|
 |38     | Medium   |[Link](https://leetcode.com/problems/reconstruct-itinerary/)| NonLinear Structure | [Python](/Leetcode/332-reconstruct-itinerary) <br> [Solution1](https://blog.naver.com/eternalklaus/222469889295)|
 |39     | Medium   |[Link](https://leetcode.com/problems/course-schedule/)| NonLinear Structure | 💭 |
-|40     | Medium   |[Link](https://leetcode.com/problems/network-delay-time/)| Shortest Path | [Python](network-delay-time) <br> [Solution-Uploading...]|
+|40     | Medium   |[Link](https://leetcode.com/problems/network-delay-time/)| Shortest Path | [Python](network-delay-time) <br> [Solution](https://blog.naver.com/eternalklaus/222555045491)|
 |41     | Medium   |[Link](https://leetcode.com/problems/cheapest-flights-within-k-stops/)| Shortest Path | 💭 |
 |42     | Easy     |[Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/)| Tree | [Python](/Leetcode/104-maximum-depth-of-binary-tree.py)  |
 |43     | Easy     |[Link](https://leetcode.com/problems/diameter-of-binary-tree/)| Tree | [Python](/Leetcode/543-diameter-of-binary-tree.py) <br> [Solotion](https://blog.naver.com/eternalklaus/222434804556)|
