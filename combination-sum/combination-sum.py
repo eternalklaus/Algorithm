@@ -4,22 +4,22 @@ class Solution:
         output = set()
         total = len(candidates)
         
-        def find(idx, current):
+        def find(idx, current, totalsum):
             nonlocal output
             # terminate condition
-            if sum(current) == target:
+            if totalsum == target:
                 output.add(tuple(current.copy())) 
                 return
-            if sum(current) > target: # we do not need to combinate the further component
+            if totalsum > target: # we do not need to combinate the further component
                 return
-            if idx >= total: 
+            if idx >= total:
                 return
             
-            find(idx + 1, current)
+            find(idx + 1, current, totalsum)
             current.append(candidates[idx])
-            find(idx, current) # same number may be chosen an unlimited number of times
-            find(idx + 1, current) # next number is chosen
+            find(idx, current, totalsum + candidates[idx]) # same number may be chosen an unlimited number of times
+            find(idx + 1, current, totalsum + candidates[idx]) # next number is chosen
             current.pop()
         
-        find(0, [])
+        find(0, [], 0)
         return output
