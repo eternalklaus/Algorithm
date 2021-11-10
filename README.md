@@ -6,7 +6,7 @@ Studing algorithm just for fun!
 | Index | Difficulty | Question | Type | Solution |
 |-------| ---------- | -------- | -----| -------- |
 |1      | Easy     |[Link](https://leetcode.com/problems/valid-palindrome/)| String Manipulation | [Python](/Leetcode/125-valid-palindrome.py) |
-|2      | Easy     |[Link](https://leetcode.com/problems/reverse-string/)| String Manipulation | 💭 |
+|2      | Easy     |[Link](https://leetcode.com/problems/reverse-string/)| String Manipulation | [Python](reverse-string) |
 |3      | Easy     |[Link](https://leetcode.com/problems/reorder-data-in-log-files/)| String Manipulation | 💭 |
 |4      | Easy     |[Link](https://leetcode.com/problems/most-common-word/)| String Manipulation | 💭 |
 |5      | Medium   |[Link](https://leetcode.com/problems/group-anagrams/)| String Manipulation | [Python](group-anagrams) <br> [Solution](https://blog.naver.com/eternalklaus/222524185765) |
