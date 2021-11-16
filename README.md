@@ -70,7 +70,7 @@ Studing algorithm just for fun!
 |63     | Medium   |[Link](https://leetcode.com/problems/sort-colors/)| Sorting | 💭 |
 |64     | Medium   |[Link](https://leetcode.com/problems/k-closest-points-to-origin/)| Sorting | [Solution](k-closest-points-to-origin) |
 |65     | Easy     |[Link](https://leetcode.com/problems/binary-search/)| Binary Search | 💭 |
-|66     | Medium   |[Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)| Binary Search | 💭 |
+|66     | Medium   |[Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)| Binary Search | [Python](search-in-rotated-sorted-arra) |
 |67     | Easy     |[Link](https://leetcode.com/problems/intersection-of-two-arrays/)| Binary Search | 💭 |
 |68     | Easy     |[Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Binary Search | [Python](two-sum-iii-data-structure-design) <br> [Solution](https://blog.naver.com/eternalklaus/222558080931)|
 |+     | Medium     |[Link](https://leetcode.com/problems/two-sum-iii-data-structure-design/)| Binary Search | [Python]() <br> [Solution](https://blog.naver.com/eternalklaus/222556684067)|
