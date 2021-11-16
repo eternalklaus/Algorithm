@@ -42,7 +42,7 @@ Studing algorithm just for fun!
 |35     | Medium   |[Link](https://leetcode.com/problems/combinations/)| NonLinear Structure | [Python](combinations) <br> [Solution](https://blog.naver.com/eternalklaus/222552335194)|
 |36     | Medium   |[Link](https://leetcode.com/problems/combination-sum/)| NonLinear Structure | 💭 |
 |37     | Medium   |[Link](https://leetcode.com/problems/subsets/)| NonLinear Structure | [Python](subsets/subsets.py) <br> [Solution](https://blog.naver.com/eternalklaus/222479914336)|
-|38     | Medium   |[Link](https://leetcode.com/problems/reconstruct-itinerary/)| NonLinear Structure | [Python](/Leetcode/332-reconstruct-itinerary) <br> [Solution1](https://blog.naver.com/eternalklaus/222469889295)|
+|38     | Medium   |[Link](https://leetcode.com/problems/reconstruct-itinerary/)| NonLinear Structure | [Python](/Leetcode/332-reconstruct-itinerary) <br> [Solution](https://blog.naver.com/eternalklaus/222469889295)|
 |39     | Medium   |[Link](https://leetcode.com/problems/course-schedule/)| NonLinear Structure | 💭 |
 |40     | Medium   |[Link](https://leetcode.com/problems/network-delay-time/)| Shortest Path | [Python](network-delay-time) <br> [Solution](https://blog.naver.com/eternalklaus/222555045491)|
 |41     | Medium   |[Link](https://leetcode.com/problems/cheapest-flights-within-k-stops/)| Shortest Path | 💭 |
