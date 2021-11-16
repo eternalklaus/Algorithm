@@ -82,7 +82,7 @@ Studing algorithm just for fun!
 |74     | Easy     |[Link](https://leetcode.com/problems/number-of-1-bits/)| Bit Manipulation | [Python](number-of-1-bits) |
 |75     | Hard     |[Link](https://leetcode.com/problems/sliding-window-maximum/)| Sliding Window | 💭 |
 |76     | Hard     |[Link](https://leetcode.com/problems/minimum-window-substring/)| Sliding Window | 💭 |
-|77     | Medium   |[Link](https://leetcode.com/problems/longest-repeating-character-replacement/)| Sliding Window | 💭 |
+|77     | Medium   |[Link](https://leetcode.com/problems/longest-repeating-character-replacement/)| Sliding Window | [Python](longest-repeating-character-replacement) <br> [Solution](https://blog.naver.com/eternalklaus/222569490147)|
 |78     | Easy     |[Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| Greedy Algorithm | 💭 |
 |79     | Medium   |[Link](https://leetcode.com/problems/queue-reconstruction-by-height/)| Greedy Algorithm | 💭 |
 |80     | Medium   |[Link](https://leetcode.com/problems/task-scheduler/)| Greedy Algorithm | [Python](task-scheduler) <br> [Solution](https://blog.naver.com/eternalklaus/222518478483) |
