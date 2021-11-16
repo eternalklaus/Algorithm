@@ -19,7 +19,7 @@ Studing algorithm just for fun!
 |12     | Easy     |[Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)| Array | 💭 |
 |13     | Easy     |[Link](https://leetcode.com/problems/palindrome-linked-list/)| Linked List | [Python](palindrome-linked-list)|
 |14     | Easy     |[Link](https://leetcode.com/problems/merge-two-sorted-lists/)| Linked List | 💭 |
-|15     | Easy     |[Link](https://leetcode.com/problems/reverse-linked-list/)| Linked List | 💭 |
+|15     | Easy     |[Link](https://leetcode.com/problems/reverse-linked-list/)| Linked List | [Python](reverse-linked-list) <br> [Solution - Uploading...]()|
 |16     | Medium   |[Link](https://leetcode.com/problems/add-two-numbers/)| Linked List | 💭 |
 |17     | Medium   |[Link](https://leetcode.com/problems/swap-nodes-in-pairs/)| Linked List | 💭 |
 |18     | Medium   |[Link](https://leetcode.com/problems/odd-even-linked-list/)| Linked List | 💭 |
