@@ -88,7 +88,7 @@ Studing algorithm just for fun!
 |80     | Medium   |[Link](https://leetcode.com/problems/task-scheduler/)| Greedy Algorithm | [Python](task-scheduler) <br> [Solution](https://blog.naver.com/eternalklaus/222518478483) |
 |81     | Medium   |[Link](https://leetcode.com/problems/gas-station/)| Greedy Algorithm | [Python](gas-station) <br> [Solution - Uploaing..]()|
 |82     | Easy     |[Link](https://leetcode.com/problems/assign-cookies/)| Greedy Algorithm | 💭 |
-|83     | Easy     |[Link](https://leetcode.com/problems/majority-element/)| Divide and Conquer | 💭 |
+|83     | Easy     |[Link](https://leetcode.com/problems/majority-element/)| Divide and Conquer | [Python](majority-element) <br> [Solution](https://blog.naver.com/eternalklaus/222576834476)|
 |84     | Medium   |[Link](https://leetcode.com/problems/different-ways-to-add-parentheses/)| Divide and Conquer | [Python](different-ways-to-add-parentheses) <br> [Solution](https://blog.naver.com/eternalklaus/222479914336) |
 |85     | Easy     |[Link](https://leetcode.com/problems/fibonacci-number/)| Dynamic Programming | [Python](fibonacci-number) |
 |86     | Easy     |[Link](https://leetcode.com/problems/maximum-subarray/)| Dynamic Programming | [Python](maximum-subarray) <br> [Solution](https://blog.naver.com/eternalklaus/222535368968) |
