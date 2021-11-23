@@ -86,7 +86,7 @@ Studing algorithm just for fun!
 |78     | Easy     |[Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)| Greedy Algorithm | 💭 |
 |79     | Medium   |[Link](https://leetcode.com/problems/queue-reconstruction-by-height/)| Greedy Algorithm | 💭 |
 |80     | Medium   |[Link](https://leetcode.com/problems/task-scheduler/)| Greedy Algorithm | [Python](task-scheduler) <br> [Solution](https://blog.naver.com/eternalklaus/222518478483) |
-|81     | Medium   |[Link](https://leetcode.com/problems/gas-station/)| Greedy Algorithm | [Python](gas-station) <br> [Solution - Uploaing..]()|
+|81     | Medium   |[Link](https://leetcode.com/problems/gas-station/)| Greedy Algorithm | [Python](gas-station) <br> [Solution](https://blog.naver.com/eternalklaus/222576234135)|
 |82     | Easy     |[Link](https://leetcode.com/problems/assign-cookies/)| Greedy Algorithm | 💭 |
 |83     | Easy     |[Link](https://leetcode.com/problems/majority-element/)| Divide and Conquer | [Python](majority-element) <br> [Solution](https://blog.naver.com/eternalklaus/222576834476)|
 |84     | Medium   |[Link](https://leetcode.com/problems/different-ways-to-add-parentheses/)| Divide and Conquer | [Python](different-ways-to-add-parentheses) <br> [Solution](https://blog.naver.com/eternalklaus/222479914336) |
