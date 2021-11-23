@@ -71,7 +71,7 @@ Studing algorithm just for fun!
 |64     | Medium   |[Link](https://leetcode.com/problems/k-closest-points-to-origin/)| Sorting | [Solution](k-closest-points-to-origin) |
 |65     | Easy     |[Link](https://leetcode.com/problems/binary-search/)| Binary Search | 💭 |
 |66     | Medium   |[Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)| Binary Search | [Python](search-in-rotated-sorted-arra) |
-|67     | Easy     |[Link](https://leetcode.com/problems/intersection-of-two-arrays/)| Binary Search | [Python](intersection-of-two-arrays) <br> [Solution - Uploading..]()|
+|67     | Easy     |[Link](https://leetcode.com/problems/intersection-of-two-arrays/)| Binary Search | [Python](intersection-of-two-arrays) <br> [Solution](https://blog.naver.com/eternalklaus/222576529999)|
 |68     | Easy     |[Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)| Binary Search | [Python](two-sum-iii-data-structure-design) <br> [Solution](https://blog.naver.com/eternalklaus/222558080931)|
 |+     | Medium     |[Link](https://leetcode.com/problems/two-sum-iii-data-structure-design/)| Binary Search | [Python]() <br> [Solution](https://blog.naver.com/eternalklaus/222556684067)|
 |69     | Medium   |[Link](https://leetcode.com/problems/search-a-2d-matrix-ii/)| Binary Search | 💭 |
