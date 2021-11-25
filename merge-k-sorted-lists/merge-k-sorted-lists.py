@@ -5,21 +5,27 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        # Gather all nodes - O(N) 
-        output = []
-        for l in lists:
-            while l:
-                output.append(l)
-                l = l.next 
+        def merge2nodes(node1, node2):
+            node1, node2 = node1, node2
+            root = ListNode(0)
+            node3 = root
+            
+            while node1 and node2:
+                if node1.val <= node2.val:
+                    node3.next = node1 
+                    node1 = node1.next 
+                    node3 = node3.next
+                else:
+                    node3.next = node2
+                    node2 = node2.next
+                    node3 = node3.next
+                
+            node3.next = node1 or node2 
+            return root.next 
         
-        # Sort all nodes - O(NlogN) 
-        output.sort(key=lambda x:x.val)    
+        while len(lists) >= 2:
+            l1 = lists.pop(0)
+            l2 = lists.pop(0)
+            lists.append(merge2nodes(l1, l2))
         
-        # Create linked list - O(N)
-        for i, o in enumerate(output):
-            if i == len(output) - 1: # last component
-                o.next = None 
-            else:
-                o.next = output[i+1]
-        
-        return output[0] if output else None
+        return lists[0] if lists else None
