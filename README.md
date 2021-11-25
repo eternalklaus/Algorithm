@@ -31,7 +31,7 @@ Studing algorithm just for fun!
 |24     | Easy     |[Link](https://leetcode.com/problems/implement-queue-using-stacks/)| Stack/Queue | [Python](implement-queue-using-stacks) |
 |25     | Medium   |[Link](https://leetcode.com/problems/design-circular-queue/)| Stack/Queue | [Python](design-circular-queue) <br> [Solution](https://blog.naver.com/eternalklaus/222527120615) |
 |26     | Medium   |[Link](https://leetcode.com/problems/design-circular-deque/)| Deque/Priority Queue | [Python](design-circular-deque) <br> [Solution](https://blog.naver.com/eternalklaus/222539396888) |
-|27     | Hard     |[Link](https://leetcode.com/problems/merge-k-sorted-lists/)| Deque/Priority Queue | 💭 |
+|27     | Hard     |[Link](https://leetcode.com/problems/merge-k-sorted-lists/)| Deque/Priority Queue | [Python](merge-k-sorted-lists) <br> [Solution-Uploading..]() |
 |28     | Easy     |[Link](https://leetcode.com/problems/design-hashmap/)| Hash Table | [Python](design-hashmap/design-hashmap.py) <br> [Solution](https://blog.naver.com/eternalklaus/222499168284) |
 |29     | Easy     |[Link](https://leetcode.com/problems/jewels-and-stones/)| Hash Table | [Python](jewels-and-stones/jewels-and-stones.py) <br> [Solution](https://blog.naver.com/eternalklaus/222486409825) |
 |30     | Medium   |[Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| Hash Table | [Python](/Leetcode/3-longest-substring-without-repeating-characters.py)|
