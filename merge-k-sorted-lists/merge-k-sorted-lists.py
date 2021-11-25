@@ -5,22 +5,21 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        # gather all nodes
+        # Gather all nodes - O(N) 
         output = []
         for l in lists:
             while l:
                 output.append(l)
                 l = l.next 
         
-        output.sort(key=lambda x:x.val)
+        # Sort all nodes - O(NlogN) 
+        output.sort(key=lambda x:x.val)    
+        
+        # Create linked list - O(N)
         for i, o in enumerate(output):
             if i == len(output) - 1: # last component
                 o.next = None 
             else:
                 o.next = output[i+1]
         
-        if output:
-            return output[0]
-        else:
-            return None
-            
+        return output[0] if output else None
