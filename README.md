@@ -93,7 +93,7 @@ Studing algorithm just for fun!
 |85     | Easy     |[Link](https://leetcode.com/problems/fibonacci-number/)| Dynamic Programming | [Python](fibonacci-number) |
 |86     | Easy     |[Link](https://leetcode.com/problems/maximum-subarray/)| Dynamic Programming | [Python](maximum-subarray) <br> [Solution](https://blog.naver.com/eternalklaus/222535368968) |
 |87     | Easy     |[Link](https://leetcode.com/problems/climbing-stairs/)| Dynamic Programming | 💭 |
-|88     | Medium   |[Link](https://leetcode.com/problems/house-robber/)| Dynamic Programming | 💭 |
+|88     | Medium   |[Link](https://leetcode.com/problems/house-robber/)| Dynamic Programming | [Python](house-robber) <br> [Solution - uploading..]()|
 
 <br>
 
