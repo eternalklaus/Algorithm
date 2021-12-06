@@ -124,6 +124,8 @@ Studing algorithm just for fun!
 |12/2| 328 | Medium |[Link](https://leetcode.com/problems/odd-even-linked-list/)|💭| [Python](odd-even-linked-list) |
 |12/3| 152 | Medium |[Link](https://leetcode.com/problems/maximum-product-subarray/)|💭| [Python](maximum-product-subarray) <br> [Solution - TODO]() |
 |12/4| 1032|  Hard  |[Link](https://leetcode.com/problems/stream-of-characters/)| Trie | [Python](stream-of-characters) <br> [Solution](https://blog.naver.com/eternalklaus/222587236221)|
+|12/5| 1032| Medium |[Link](https://leetcode.com/problems/house-robber-iii/)| Greedy | [Python](house-robber-iii) <br> [Solution](https://blog.naver.com/eternalklaus/222587961105)|
+
 <br>
 
 # Checked but not solved yet
