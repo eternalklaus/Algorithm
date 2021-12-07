@@ -126,6 +126,7 @@ Studing algorithm just for fun!
 |12/4| 1032|  Hard  |[Link](https://leetcode.com/problems/stream-of-characters/)| Trie | [Python](stream-of-characters) <br> [Solution](https://blog.naver.com/eternalklaus/222587236221)|
 |12/5| 1032| Medium |[Link](https://leetcode.com/problems/house-robber-iii/)| Greedy | [Python](house-robber-iii) <br> [Solution](https://blog.naver.com/eternalklaus/222587961105)|
 |12/6| 1217|  Easy  |[Link](https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position/)| Array | [Python](minimum-cost-to-move-chips-to-the-same-position)|
+|12/7| 1290|  Easy  |[Link](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)| Linked List | [Python](onvert-binary-number-in-a-linked-list-to-integer)|
 
 
 <br>
