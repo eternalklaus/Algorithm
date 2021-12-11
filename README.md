@@ -129,6 +129,8 @@ Studing algorithm just for fun!
 |12/7| 1290|  Easy  |[Link](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)| Linked List | [Python](convert-binary-number-in-a-linked-list-to-integer)|
 |12/8| 563 |  Easy  |[Link](https://leetcode.com/problems/binary-tree-tilt/)| Tree | [Python](binary-tree-tilt) <br> [Solution](https://blog.naver.com/eternalklaus/222589910388)|
 |12/9| 1306| Medium |[Link](https://leetcode.com/problems/jump-game-iii/)| BFS/DFS | [Python](jump-game-iii) <br> [Solution](https://blog.naver.com/eternalklaus/222590775018)|
+|12/10| 790| Medium |[Link](https://leetcode.com/problems/domino-and-tromino-tiling/)| Greedy | [Python](domino-and-tromino-tiling)|
+|12/11| 878| Hard |[Link](https://leetcode.com/problems/nth-magical-number/)| Math | [Python](nth-magical-number)|
 
 
 <br>
