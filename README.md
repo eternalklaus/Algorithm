@@ -131,6 +131,16 @@ Studing algorithm just for fun!
 |12/9| 1306| Medium |[Link](https://leetcode.com/problems/jump-game-iii/)| BFS/DFS | [Python](jump-game-iii) <br> [Solution](https://blog.naver.com/eternalklaus/222590775018)|
 |12/10| 790| Medium |[Link](https://leetcode.com/problems/domino-and-tromino-tiling/)| Greedy | [Python](domino-and-tromino-tiling)|
 |12/11| 878| Hard |[Link](https://leetcode.com/problems/nth-magical-number/)| Math | [Python](nth-magical-number)|
+|12/12| 416 |Medium|[Link](https://leetcode.com/problems/partition-equal-subset-sum/)| DP | [Python](partition-equal-subset-sum)|
+|12/13| 1446| Easy |[Link](https://leetcode.com/problems/consecutive-characters/)| String | [Python](consecutive-characters)|
+|12/14| 938 | Easy |[Link](https://leetcode.com/problems/range-sum-of-bst/)| Tree | [Python](range-sum-of-bst)|
+|12/15| 147 |Medium|[Link](https://leetcode.com/problems/insertion-sort-list/)| Sort | [Python](insertion-sort-list)|
+|12/16| 310 |Medium|[Link](https://leetcode.com/problems//)| Topology Sort | [Python](minimum-height-trees)|
+|12/17| 221 |Medium|[Link](https://leetcode.com/problems/maximal-square/)| DP | [Python](maximal-square)|
+|12/18| 902 | Hard |[Link](https://leetcode.com/problems/numbers-at-most-n-given-digit-set/)| DP | [Python](numbers-at-most-n-given-digit-set)|
+|12/19| 394 |Medium|[Link](https://leetcode.com/problems/decode-string/)| Stack | [Python](decode-string)|
+|12/20| 1200| Easy |[Link](https://leetcode.com/problems/minimum-absolute-difference/)| Sort | [Python](minimum-absolute-difference)|
+|12/21| 231 | Easy |[Link](https://leetcode.com/problems/power-of-two/)| Math | [Python](power-of-two)|
 
 
 <br>
