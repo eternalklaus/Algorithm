@@ -16,7 +16,7 @@ class Solution:
             if cache[c1] != c2:
                 return False 
         
-        
+        '''
         # condition 2 - no cycle 
         if len(set(cache.values())) < 26: # no need to check because enough temporary char exist
             return True
@@ -36,5 +36,12 @@ class Solution:
             while stack:
                 c = stack.pop() 
                 cache[c] = LASTC
-        return True
+        '''
+        
+        if str1 == str2:
+            return True 
+        if len(set(cache.values())) == 26:
+            return False
+        else:
+            return True
                 
