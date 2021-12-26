@@ -1,14 +1,22 @@
-class Solution:
-    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
-        Q = []
-        for [x, y] in points:
-            heappush(Q, ((x**2+y**2), x, y))
+class Solution(object):
+    def kClosest(self, points, k):
+        """
+        :type points: List[List[int]]
+        :type k: int
+        :rtype: List[List[int]]
+        """
+        dists = {}
+        
+        for [x,y] in points:
+            dist = x**2 + y**2
+            if dist not in dists: 
+                dists[dist] = []
+            dists[dist].append([x,y])
         
         output = []
-        while k > 0:
-            (dist, x, y) = heappop(Q)
-            output.append([x,y])
-            k -= 1
-        
-        return output
+        for dist in sorted(dists.keys()):
+            output += dists[dist]
+            if len(output) >= k: break
+        return output[:k]
+                
             
