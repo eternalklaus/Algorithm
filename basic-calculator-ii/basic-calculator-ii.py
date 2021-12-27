@@ -1,24 +1,37 @@
-class Solution(object):
-    def calculate(self, s):
-        if not s:
-            return "0"
-        stack, num, sign = [], 0, "+"
-        for i in xrange(len(s)):
-            if s[i].isdigit():
-                num = num*10+ord(s[i])-ord("0")
-            if (not s[i].isdigit() and not s[i].isspace()) or i == len(s)-1:
-                if sign == "-":
-                    stack.append(-num)
-                elif sign == "+":
-                    stack.append(num)
-                elif sign == "*":
-                    stack.append(stack.pop()*num)
+class Solution:
+    def calculate(self, s: str) -> int:
+        import math
+        stack = []
+        def update(num, opr):
+            if opr == '+':
+                stack.append(num)
+            elif opr == '-':
+                stack.append(-num)
+            elif opr == '*':
+                a = stack.pop()
+                b = num 
+                stack.append(a*b)
+            elif opr == '/':
+                a = stack.pop()
+                b = num 
+                result = a / b 
+                if result > 0:
+                    stack.append(math.floor(result))
                 else:
-                    tmp = stack.pop()
-                    if tmp//num < 0 and tmp%num != 0:
-                        stack.append(tmp//num+1)
-                    else:
-                        stack.append(tmp//num)
-                sign = s[i]
-                num = 0
+                    stack.append(math.ceil(result))
+            
+        num = 0
+        prevnum, prevopr = 0, '+'
+
+        for c in s:
+            if c in ['+', '-', '*', '/']:
+                # calculate previous operation
+                update(prevnum, prevopr)
+                prevnum = 0 
+                prevopr = c 
+            elif c.isdigit():
+                prevnum = prevnum * 10 + int(c)
+        
+        update(prevnum, prevopr) # last update 
+        
         return sum(stack)
