@@ -1,11 +1,34 @@
 class Solution:
     def atMostNGivenDigitSet(self, digits: List[str], n: int) -> int:
-        N = str(n)
-        n = len(N)
-        res = sum(len(digits) ** i for i in range(1, n))
-        i = 0
-        while i < len(N):
-            res += sum(c < N[i] for c in digits) * (len(digits) ** (n - i - 1))
-            if N[i] not in digits: break
-            i += 1
-        return res + (i == n)
+        output = 0
+        maxnum = []
+        numbers = digits
+        while n:
+            i = str(n % 10)
+            n = n // 10 
+            maxnum.insert(0, str(i))
+        
+        # base case
+        for i in range(1, len(maxnum)):
+            output += len(numbers) ** i 
+
+        def calcit(idx, leftdigit):
+            # base case
+            # if leftdigit == 0: => still we have to count the 3,4,7
+            if leftdigit == -1:
+                return 1
+
+            maxval = maxnum[idx]
+            output = 0
+            for num in numbers:
+                if num < maxval: 
+                    output += len(numbers) ** leftdigit  
+                elif num == maxval: # identical number 
+                    output += calcit(idx+1, leftdigit-1)
+                else: # num becomes bigger then boundary number
+                    break 
+            return output 
+                
+        # boundary case 
+        output += calcit(0, len(maxnum)-1) # first index is 0
+        return output
