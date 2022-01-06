@@ -1,7 +1,10 @@
+✅: Passed  
+️️️☑️: Passed with solution
+
 # Blind 
 | Index | Difficulty | Question | Status |
 |-------| ---------- | -------- | -------- |
-|  1  |   Med	| [Link](https://leetcode.com/problems/product-of-array-except-self/)| 💭 |
+|  1  |   Med	| [Link](https://leetcode.com/problems/product-of-array-except-self/)| ✅ |
 |  2  |   Med	| [Link](https://leetcode.com/problems/maximum-product-subarray/)| 💭 |
 |  3  |   Med	| [Link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)| 💭 |
 |  4  |   Med	| [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)| 💭 |
