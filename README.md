@@ -1,15 +1,15 @@
 # Blind 
-✔: Passed  
-✅: Passed with solution
+✅ : Passed  
+🌿 : Passed with solution
 
 | Index | Difficulty | Question | Status |
 |-------| ---------- | -------- | -------- |
-|  1  |   Med	| [Link](https://leetcode.com/problems/product-of-array-except-self/)| ✔ |
-|  2  |   Med	| [Link](https://leetcode.com/problems/maximum-product-subarray/)| ️️️✅ |
-|  3  |   Med	| [Link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)| ️️️️️️️️ |
+|  1  |   Med	| [Link](https://leetcode.com/problems/product-of-array-except-self/)| ✅ |
+|  2  |   Med	| [Link](https://leetcode.com/problems/maximum-product-subarray/)| ️️️🌿 |
+|  3  |   Med	| [Link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)| ️️️️️️️️💭 |
 |  4  |   Med	| [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)| 💭 |
 |  5  |   Med	| [Link](https://leetcode.com/problems/3sum/)| 💭 |
-|  6  |   Med	| [Link](https://leetcode.com/problems/container-with-most-water/)| 💭 |
+|  6  |   Med	| [Link](https://leetcode.com/problems/container-with-most-water/)| ✅ |
 |  7  |   Med	| [Link](https://leetcode.com/problems/insert-interval/)| 💭 |
 |  8  |   Med	| [Link](https://leetcode.com/problems/merge-intervals/)| 💭 |
 |  9  |   Med	| [Link](https://leetcode.com/problems/non-overlapping-intervals/)| 💭 |
