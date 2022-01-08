@@ -65,7 +65,10 @@
 |  59 |   Hard	| [Link](https://leetcode.com/problems/find-median-from-data-stream/)| 💭 |
 
 # Google 
-TODO. 
+| Index | Difficulty | Question | Status |
+|-------| ---------- | -------- | -------- |
+|    1  |   Hard	    | [465. Optimal Account Balancing](https://leetcode.com/problems/optimal-account-balancing/)| 🌿 |
+
 # Python Algorithm Interview Questions  
 
 | Index | Difficulty | Question | Type | Solution |
