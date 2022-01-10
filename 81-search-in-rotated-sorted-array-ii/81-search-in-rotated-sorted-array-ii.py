@@ -7,35 +7,35 @@ class Solution:
             if nums[mi] == target: 
                 return True 
             
-            # left is rotated
+            # [case 1] left is rotated
             if nums[lo] > nums[mi]:
                 if target >= nums[lo] or target < nums[mi]:
                     hi = mi - 1
                 else:
                     lo = mi + 1
             
-            # right is rotated
+            # [case 2] right is rotated
             elif nums[mi] > nums[hi]: 
                 if target > nums[mi] or target <= nums[hi]:
                     lo = mi + 1
                 else:
                     hi = mi - 1
             
-            # left is straightforward
+            # [case 3] left is straightforward
             elif nums[lo] < nums[mi]:
                 if nums[lo] <= target < nums[mi]:
                     hi = mi - 1
                 else: 
                     lo = mi + 1
             
-            # right is straighforward
+            # [case 4] right is straighforward
             elif nums[mi] < nums[hi]:
                 if nums[mi] < target <= nums[hi]:
                     lo = mi + 1
                 else:
                     hi = mi - 1
 
-            # cannot be defined!!!
+            # [case 5] cannot be defined!!!
             # ex) 1 0 [1] 1 1
             #     -    -    -
             #     lo   mi   hi
