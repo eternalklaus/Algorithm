@@ -13,6 +13,6 @@ class Solution:
                 num0 += 1
             if nums[i-1] == 0: # passed component was 0.. bye..
                 num0 -= 1
-                output = min(num0, output)
+            output = min(num0, output)
         return output
             
