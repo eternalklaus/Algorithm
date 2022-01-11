@@ -17,11 +17,13 @@ class Solution:
             endi = i
             intervals = intervals[:starti] + [interval] + intervals[endi:]
             
-        # O(n)    
+        # O(n) in enumerate all the intervals
         for i in range(len(intervals)):
             if isoverlapped(newInterval, intervals[i]): # overlapped gap exist
                 merge(i)
                 break 
+        
+        # O(nlogn) in sort
         else:
             intervals.append(newInterval)
             intervals.sort()
