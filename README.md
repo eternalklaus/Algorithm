@@ -10,7 +10,7 @@
 |  4  |   Med	| [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)| 🌿 |
 |  5  |   Med	| [Link](https://leetcode.com/problems/3sum/)| 🌿 |
 |  6  |   Med	| [Link](https://leetcode.com/problems/container-with-most-water/)| ✅ |
-|  7  |   Med	| [Link](https://leetcode.com/problems/insert-interval/)| 💭 |
+|  7  |   Med	| [Link](https://leetcode.com/problems/insert-interval/)| ✅ |
 |  8  |   Med	| [Link](https://leetcode.com/problems/merge-intervals/)| 💭 |
 |  9  |   Med	| [Link](https://leetcode.com/problems/non-overlapping-intervals/)| 💭 |
 |  10 |   Med	| [Link](https://leetcode.com/problems/meeting-rooms-ii/)| 💭 |
