@@ -14,7 +14,7 @@
 |  8  |   Med	| [merge-intervals](https://leetcode.com/problems/merge-intervals/)| 💭 |
 |  9  |   Med	| [non-overlapping-intervals](https://leetcode.com/problems/non-overlapping-intervals/)| 💭 |
 |  10 |   Med	| [meeting-rooms-ii](https://leetcode.com/problems/meeting-rooms-ii/)| 💭 |
-|  11 |   Med	| [set-matrix-zeroes](https://leetcode.com/problems/set-matrix-zeroes/)| 💭 |
+|  11 |   Med	| [set-matrix-zeroes](https://leetcode.com/problems/set-matrix-zeroes/)| 🌿 |
 |  12 |   Med	| [spiral-matrix](https://leetcode.com/problems/spiral-matrix/)| 💭 |
 |  13 |   Med	| [rotate-image](https://leetcode.com/problems/rotate-image/)| 💭 |
 |  14 |   Med	| [word-search](https://leetcode.com/problems/word-search/)| 💭 |
