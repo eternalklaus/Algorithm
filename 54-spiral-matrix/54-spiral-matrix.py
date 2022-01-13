@@ -3,48 +3,28 @@ class Solution:
         # 0,0 0,1 0,2 ... 1,n 2,n
         i, j = 0, 0
         COL, ROW = len(matrix), len(matrix[0])
-        checked = [[False for j in range(ROW)] for i in range(COL)]
         
+        # initialize output array with the first place
         output = [matrix[0][0]]
-        checked[0][0] = True 
+        matrix[0][0] = 101 # check it's visited
+        # moving step. novel!
+        gogo = {'right':[0, 1], 'down':[1, 0], 'left':[0, -1], 'up':[-1, 0]}
         
-        def move(direction):
-            result = False 
-            nonlocal output, i, j
-            if direction == 'right':
-                i, j = i, j+1 
-                while j < ROW and not checked[i][j]:
-                    output.append(matrix[i][j])
-                    checked[i][j] = True 
-                    j += 1
-                    result = True 
-                j -= 1
-            elif direction == 'left':
-                i, j = i, j-1 
-                while j >= 0 and not checked[i][j]:
-                    output.append(matrix[i][j])
-                    checked[i][j] = True 
-                    j -= 1
-                    result = True 
-                j += 1
-            elif direction == 'down':
-                i, j = i+1, j
-                while i < COL and not checked[i][j]:
-                    output.append(matrix[i][j])
-                    checked[i][j] = True 
-                    i += 1
-                    result = True 
-                i -= 1
-            elif direction == 'up':
-                i, j = i-1, j
-                while i < COL and not checked[i][j]:
-                    output.append(matrix[i][j])
-                    checked[i][j] = True 
-                    i -= 1
-                    result = True 
-                i += 1
-            return result 
+        def move(way):
+            nonlocal i, j, output 
+            i, j = i + gogo[way][0], j + gogo[way][1]
+            result = False
             
+            while (0 <= i < COL and 0 <= j < ROW) and matrix[i][j] != 101:
+                output.append(matrix[i][j])
+                matrix[i][j] = 101 ### TODO: check this value 
+                result = True
+                i, j = i + gogo[way][0], j + gogo[way][1]
+            
+            i, j = i - gogo[way][0], j - gogo[way][1]
+            return result
+                
+        
         result = True
         while result:
             ### remember that the place i'm in is already checked^^;
