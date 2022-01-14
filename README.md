@@ -15,9 +15,9 @@
 |  9  |   Med	| [non-overlapping-intervals](https://leetcode.com/problems/non-overlapping-intervals/)| 💭 |
 |  10 |   Med	| [meeting-rooms-ii](https://leetcode.com/problems/meeting-rooms-ii/)| 💭 |
 |  11 |   Med	| [set-matrix-zeroes](https://leetcode.com/problems/set-matrix-zeroes/)| 🌿 |
-|  12 |   Med	| [spiral-matrix](https://leetcode.com/problems/spiral-matrix/)| 💭 |
-|  13 |   Med	| [rotate-image](https://leetcode.com/problems/rotate-image/)| 💭 |
-|  14 |   Med	| [word-search](https://leetcode.com/problems/word-search/)| 💭 |
+|  12 |   Med	| [spiral-matrix](https://leetcode.com/problems/spiral-matrix/)| 🌿 |
+|  13 |   Med	| [rotate-image](https://leetcode.com/problems/rotate-image/)| 🌿 |
+|  14 |   Med	| [word-search](https://leetcode.com/problems/word-search/)| ✅ |
 |  15 |   Med	| [longest-substring-without-repeating-characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| 💭 |
 |  16 |   Med	| [group-anagrams](https://leetcode.com/problems/group-anagrams/)| 💭 |
 |  17 |   Med	| [longest-palindromic-substring](https://leetcode.com/problems/longest-palindromic-substring/)| 💭 |
