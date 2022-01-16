@@ -4,13 +4,15 @@ class Solution:
         
         def allocateroom(start, end):
             nonlocal rooms
+            
             # insert this range in existing room. 
-            for i, room_end in enumerate(rooms):
-                if start >= room_end: ### identical "=" symbol is nessasary!
-                    rooms[i] = end # update end time 
-                    return 
+            if rooms and rooms[0] <= start: # ended already before start
+                heappop(rooms)
+                heappush(rooms, end)
+                return
+            
             # allocate another room. 
-            rooms.append(end)
+            heappush(rooms, end)
             return 
         
         intervals.sort()
