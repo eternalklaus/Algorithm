@@ -1,14 +1,8 @@
 class Solution:
     def reverseBits(self, n: int) -> int:
-        from math import log
-        # 5 -> 101 so log2(4) + 1
-        output, rounds = 0, 0
-        
-        for rounds in range(32): # 32!32!
-            lowermostbit = n % 2
-            output |= (lowermostbit << (32-rounds-1))
-            
-            n = n // 2
-            rounds += 1
+        output = 0
+        for _ in range(32):
+            output *= 2
+            output |= n % 2
+            n = n >> 1
         return output 
-            
