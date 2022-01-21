@@ -1,22 +1,17 @@
 class Solution:
     def minMeetingRooms(self, intervals: List[List[int]]) -> int:
-        rooms = [] # the end time would be saved in each component of the rooms. 
-        
-        def allocateroom(start, end):
+        rooms = []
+        def insertroom(interval):
             nonlocal rooms
-            
-            # insert this range in existing room. 
-            if rooms and rooms[0] <= start: # ended already before start
-                heappop(rooms)
-                heappush(rooms, end)
-                return
-            
-            # allocate another room. 
-            heappush(rooms, end)
-            return 
-        
+            for i, endtime in enumerate(rooms):
+                if endtime <= interval[0]: # room is already empty
+                    rooms[i] = interval[1]
+                    return True 
+            return False 
+                
         intervals.sort()
-        for [start, end] in intervals:
-            allocateroom(start, end)
-        return len(rooms)
+        for interval in intervals:
+            if insertroom(interval) == False:
+                rooms.append(interval[1])
         
+        return len(rooms)
