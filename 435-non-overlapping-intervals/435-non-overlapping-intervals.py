@@ -1,33 +1,13 @@
 class Solution:
     def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
-        '''
-        ------     ----  ---
-           ------    ---
-        '''
-        '''
-             prevend 
-             |
-             v
-        ------
-           ----
-           ^
-           |
-          start
-        '''
+        intervals.sort() 
+        counter = 0 
+        prevend = -5 * 10**4 - 1 
         
-        intervals.sort()
-        
-        prevend = -5 * 10**4 - 1
-        remove = 0
-        
-        
-        for [start, end] in intervals:
-            if start < prevend: 
-                remove += 1
-                prevend = min(end, prevend)
-            else:
-                prevend = end 
-        
-        return remove
-                
-        
+        for interval in intervals:
+            if prevend <= interval[0]: 
+                prevend = interval[1]
+            else: # overlap
+                prevend = min(interval[1], prevend)
+                counter += 1
+        return counter 
