@@ -1,6 +1,6 @@
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-        overlap_start, overlap_end = 0, -1
+        overlap_start, overlap_end = 0, len(intervals)
         
         for i, interval in enumerate(intervals):
             if interval[1] < newInterval[0]: # before the overlapping range
