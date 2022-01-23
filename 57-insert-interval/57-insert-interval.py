@@ -1,31 +1,18 @@
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-        def isoverlapped(itv1, itv2):
-            if itv1[0] > itv2[1]: # ...itv2...itv1... 
-                return False 
-            if itv2[0] > itv1[1]: # ...itv1...itv2... 
-                return False
-            return True
+        overlap_start, overlap_end = 0, -1
         
-        def merge(i):
-            nonlocal intervals
-            starti = i
-            interval = newInterval
-            while i < len(intervals) and isoverlapped(interval, intervals[i]):
-                interval = [min(interval[0], intervals[i][0]), max(interval[1], intervals[i][1])]
-                i += 1
-            endi = i
-            intervals = intervals[:starti] + [interval] + intervals[endi:]
-            
-        # O(n) in enumerate all the intervals
-        for i in range(len(intervals)):
-            if isoverlapped(newInterval, intervals[i]): # overlapped gap exist
-                merge(i)
+        for i, interval in enumerate(intervals):
+            if interval[1] < newInterval[0]: # before the overlapping range
+                overlap_start = i + 1
+                overlap_end = i
+            elif interval[0] > newInterval[1]: # passed the overlapping range
+                overlap_end = i - 1
                 break 
+            else:
+                newInterval[0] = min(newInterval[0], interval[0])
+                newInterval[1] = max(newInterval[1], interval[1])
+                overlap_end = i 
         
-        # O(nlogn) in sort
-        else:
-            intervals.append(newInterval)
-            intervals.sort()
-            
-        return intervals
+        return intervals[:overlap_start] + [newInterval] + intervals[overlap_end+1:]
+                
