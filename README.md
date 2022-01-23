@@ -19,7 +19,7 @@
 |  13 |   Med	| [rotate-image](https://leetcode.com/problems/rotate-image/)| 🌿 |
 |  14 |   Med	| [word-search](https://leetcode.com/problems/word-search/)| ✅ |
 |  15 |   Med	| [longest-substring-without-repeating-characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)| 💭 |
-|  16 |   Med	| [group-anagrams](https://leetcode.com/problems/group-anagrams/)| 💭 |
+|  16 |   Med	| [group-anagrams](https://leetcode.com/problems/group-anagrams/)| ✅ |
 |  17 |   Med	| [longest-palindromic-substring](https://leetcode.com/problems/longest-palindromic-substring/)| 💭 |
 |  18 |   Med	| [palindromic-substrings](https://leetcode.com/problems/palindromic-substrings/)|✅ |
 |  19 |   Med	| [encode-and-decode-strings](https://leetcode.com/problems/encode-and-decode-strings/)| 💭 |
