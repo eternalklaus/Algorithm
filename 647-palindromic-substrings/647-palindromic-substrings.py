@@ -1,9 +1,10 @@
 class Solution:
     def countSubstrings(self, s: str) -> int:
         output, L = 0, len(s)
-        @cache # <- prevents duplicated calculation 
+        # @cache # <- prevents duplicated calculation 
         def expand_palindrom(first, last):
             nonlocal output 
+            
             # base cases
             if first < 0 or last >= L: 
                 return 
