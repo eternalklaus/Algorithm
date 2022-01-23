@@ -14,6 +14,4 @@ class Solution:
                 if c_open not in bracket or bracket[c_open] != c_close:
                     return False 
         
-        if stack: return False 
-        return True 
-        
+        return not stack
