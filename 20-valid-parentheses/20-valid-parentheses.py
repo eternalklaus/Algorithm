@@ -3,7 +3,7 @@ class Solution:
         stack = []
         bracket = {'(':')', '[':']', '{':'}'}
         for c in s:
-            if c in '([{':
+            if c in bracket:
                 stack.append(c)
             else:
                 if not stack: 
