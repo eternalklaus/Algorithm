@@ -11,9 +11,9 @@
 |  5  |   Med	| [3sum](https://leetcode.com/problems/3sum/)| 🌿 |
 |  6  |   Med	| [container-with-most-water](https://leetcode.com/problems/container-with-most-water/)| ✅ |
 |  7  |   Med	| [insert-interval](https://leetcode.com/problems/insert-interval/)| ✅ |
-|  8  |   Med	| [merge-intervals](https://leetcode.com/problems/merge-intervals/)| 💭 |
-|  9  |   Med	| [non-overlapping-intervals](https://leetcode.com/problems/non-overlapping-intervals/)| 💭 |
-|  10 |   Med	| [meeting-rooms-ii](https://leetcode.com/problems/meeting-rooms-ii/)| 💭 |
+|  8  |   Med	| [merge-intervals](https://leetcode.com/problems/merge-intervals/)| ✅ |
+|  9  |   Med	| [non-overlapping-intervals](https://leetcode.com/problems/non-overlapping-intervals/)| ✅  |
+|  10 |   Med	| [meeting-rooms-ii](https://leetcode.com/problems/meeting-rooms-ii/)| 🌿 |
 |  11 |   Med	| [set-matrix-zeroes](https://leetcode.com/problems/set-matrix-zeroes/)| 🌿 |
 |  12 |   Med	| [spiral-matrix](https://leetcode.com/problems/spiral-matrix/)| 🌿 |
 |  13 |   Med	| [rotate-image](https://leetcode.com/problems/rotate-image/)| 🌿 |
@@ -25,11 +25,11 @@
 |  19 |   Med	| [encode-and-decode-strings](https://leetcode.com/problems/encode-and-decode-strings/)| 💭 |
 |  20 |   Med	| [longest-repeating-character-replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)| 💭 |
 |  21 |   Hard	| [minimum-window-substring](https://leetcode.com/problems/minimum-window-substring/)| 💭 |
-|  22 |   Easy	| [number-of-1-bits](https://leetcode.com/problems/number-of-1-bits/)| 💭 |
-|  23 |   Easy	| [counting-bits](https://leetcode.com/problems/counting-bits/)| 💭 |
-|  24 |   Easy	| [missing-number](https://leetcode.com/problems/missing-number/)| 💭 |
-|  25 |   Easy	| [reverse-bits](https://leetcode.com/problems/reverse-bits/)| 💭 |
-|  26 |   Med	| [sum-of-two-integers](https://leetcode.com/problems/sum-of-two-integers/)| 💭 |
+|  22 |   Easy	| [number-of-1-bits](https://leetcode.com/problems/number-of-1-bits/)| ✅ |
+|  23 |   Easy	| [counting-bits](https://leetcode.com/problems/counting-bits/)|✅ |
+|  24 |   Easy	| [missing-number](https://leetcode.com/problems/missing-number/)| ✅ |
+|  25 |   Easy	| [reverse-bits](https://leetcode.com/problems/reverse-bits/)| ✅ |
+|  26 |   Med	| [sum-of-two-integers](https://leetcode.com/problems/sum-of-two-integers/)| 🌿 |
 |  27 |   Med	| [remove-nth-node-from-end-of-list](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)| 💭 |
 |  28 |   Med	| [reorder-list](https://leetcode.com/problems/reorder-list/)| 💭 |
 |  29 |   Hard	| [merge-k-sorted-lists](https://leetcode.com/problems/merge-k-sorted-lists/)| 💭 |
