@@ -1,28 +1,22 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        L = len(s)
-        def getlongestpal(idx):
-            li, ri = idx, idx 
-            str1, str2 = s[idx], s[idx]
-            while li >= 0 and ri < L and s[li] == s[ri]:
-                str1 = s[li:ri+1]
-                li -= 1
-                ri += 1
-            
-            li, ri = idx-1, idx 
-            while li >= 0 and ri < L and s[li] == s[ri]:
-                str2 = s[li:ri+1]
-                li -= 1
-                ri += 1
-            
-            if len(str1) > len(str2):
-                return str1 
-            return str2
-                
+        # update only when longer then longest length
         
-        output = ''
-        for i in range(L):
-            palindrom = getlongestpal(i)
-            if len(palindrom) > len(output):
-                output = palindrom
-        return output 
+        L = len(s)
+        MAXLEN = 1
+        START = 0
+        for iend in range(L+1): # not include 
+            # try longer odd len
+            istart = iend - MAXLEN - 1
+            if istart >= 0 and s[istart:iend] == s[istart:iend][::-1]:
+                START = istart
+                MAXLEN = MAXLEN + 1
+                
+            # try longer even len
+            istart = iend - MAXLEN - 2
+            if istart >= 0 and s[istart:iend] == s[istart:iend][::-1]:
+                START = istart 
+                MAXLEN = MAXLEN + 2
+        
+        return s[START:START+MAXLEN]
+                
