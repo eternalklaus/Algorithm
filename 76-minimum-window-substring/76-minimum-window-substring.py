@@ -5,38 +5,27 @@ class Solution:
         output = s+'a'
         counter = Counter(t)
         
-        def increase(c):
-            nonlocal counter
-            if c in counter: 
-                counter[c] += 1
-        
-        def decrease(c):
-            nonlocal counter
-            if c in counter: 
-                counter[c] -= 1
-        
+        # O(1) 
         def allzeroed():
-            for v in counter.values():
-                if v > 0: return False 
+            for c in counter: ### be careful not "c in t"
+                if counter[c] > 0: return False 
             return True 
             
-        decrease(s[0]) # initialize
-        
+        counter[s[0]] -= 1 # initialize!!!
         while True:
-            # decrease window with moving first --> last
+            # decrease window with moving [first --> last]
             if allzeroed():
-                # update output 
-                if last - first + 1< len(output):
+                if last - first + 1< len(output): # update output 
                     output = s[first:last+1]
                 # move first
-                increase(s[first])
+                if s[first] in counter: counter[s[first]] += 1
                 first += 1 
                 
-            # increase window with moving first last -->
+            # increase window with moving [first last -->]
             else:
                 last += 1
                 if last >= L: break 
-                decrease(s[last])
+                if s[last] in counter: counter[s[last]] -= 1
         
         if len(output) > len(s):
             return ''
