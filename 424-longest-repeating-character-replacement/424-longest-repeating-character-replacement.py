@@ -1,8 +1,10 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         from collections import Counter 
-        # first, last, L, output = 0, k-1, len(s), 0
-        first, last, L, output = 0, 1, len(s), 0
+        first, last, L, output = 0, k-1, len(s), 0
+        if k == 0:
+            last = 1
+        # first, last, L, output = 0, 1, len(s), 0
         counter = Counter(s[first:last+1])
         virus = k
         
