@@ -1,8 +1,9 @@
-class Solution:
+class Solution: #TODO: 이거 토대로 풀이 올리기 
     def minWindow(self, s: str, t: str) -> str:
         
         first, last, L = 0, 0, len(s)
         output = s+'a'
+        outputlen = len(output)
         counter = Counter(t)
         
         def increase(c):
@@ -26,8 +27,9 @@ class Solution:
             # decrease window with moving first --> last
             if allzeroed():
                 # update output 
-                if last - first + 1< len(output):
+                if last - first + 1 < outputlen: # if last - first + 1< len(output):
                     output = s[first:last+1]
+                    outputlen = len(output)
                 # move first
                 increase(s[first])
                 first += 1 
@@ -38,6 +40,6 @@ class Solution:
                 if last >= L: break 
                 decrease(s[last])
         
-        if len(output) > len(s):
+        if outputlen > len(s):
             return ''
         return output 
