@@ -1,46 +1,36 @@
-class Solution: #TODO: 이거 토대로 풀이 올리기 
+class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        
+        # t including dupliate
         first, last, L = 0, 0, len(s)
-        output = s+'a'
-        outputlen = len(output)
-        counter = Counter(t)
-        toclear = len(counter) ### unique chars to be cleared!
+        leftcnt, match = Counter(t), 0
         
-        def increase(c):
-            nonlocal counter
-            if c in counter: ### O(1), if it's comparing with list, O(n) 
-                counter[c] += 1
+        INTC = set(t) # interested char
+        NINTC = len(INTC) # number of interested char
         
-        def decrease(c):
-            nonlocal counter
-            if c in counter: 
-                counter[c] -= 1
-
-
-        if counter[s[0]] == 1: toclear -= 1
-        decrease(s[0]) # initialize        
-
-        while True:
-            # decrease window with moving [first --> last]
-            if toclear == 0:
+        output, outputlen = s+'$', len(s)+1
+        
+        # increase window size
+        for last in range(L):
+            c = s[last]
+            leftcnt[c] -= 1
+            # update match num
+            if c in INTC and leftcnt[c] == 0: # newbie in zero! 
+                match += 1
+            
+            while match == NINTC: # if all chars collected, decrease window size
                 # update output 
-                if last - first + 1 < outputlen: ### O(1), if last - first + 1< len(output):
+                if last-first+1 < outputlen:
                     output = s[first:last+1]
-                    outputlen = len(output)
-                # move first
-                increase(s[first])
-                if counter[s[first]] == 1: toclear += 1 # zero -> one increased
-                first += 1 
-                
-            # increase window with moving [first last] -->
-            else: 
-                last += 1
-                if last >= L: break 
-                if counter[s[last]] == 1: toclear -= 1 
-                decrease(s[last])
-                # if counter[s[last]] == 0: toclear -= 1 # 여기다하면 원래 0인놈들과 구분이 안되니 안돼!
+                    outputlen = last-first+1
+                # decrease window size 
+                c = s[first]
+                leftcnt[c] += 1
+                first += 1
+                # update match num
+                if c in INTC and leftcnt[c] == 1: # c is no more matched char...bye.. 
+                    match -= 1
         
         if outputlen > len(s):
             return ''
         return output 
+                
