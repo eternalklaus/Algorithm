@@ -1,26 +1,25 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
-        from collections import Counter 
-        first, last, L, output = 0, k-1, len(s), 0
-        if k == 0:
-            last = 1
-        # first, last, L, output = 0, 1, len(s), 0
-        counter = Counter(s[first:last+1])
-        virus = k
+        first, last, L = 0, 0, len(s)
+        counter = Counter()
+        output = 0
         
-        while True:
-            window = last - first + 1
-            [ch_zombie, cnt_zombie] = counter.most_common(1)[0]
-            cnt_human = window - cnt_zombie
+        # increase window size
+        for last in range(L):
+            counter[s[last]]+=1
+            most_common = counter.most_common(1)[0][1] # most num of superial char 
+            total_length = last - first + 1
+            tochange = total_length - most_common 
             
-            if cnt_human > virus: # too many humans.. decrease window size..
-                counter[s[first]] -= 1
-                first += 1
+            if tochange <= k: # valid
+                output = max(output, total_length)
             
-            elif cnt_human <= virus:
-                output = max(output, window)
-                last += 1
-                if last == L: break 
-                counter[s[last]] += 1
-                
+            # decrease window size
+            else: # invalid
+                while tochange > k: # while invalid, decrease window size
+                    counter[s[first]]-=1
+                    first += 1
+                    most_common = counter.most_common(1)[0][1]
+                    total_length = last-first+1
+                    tochange = total_length - most_common
         return output 
