@@ -1,25 +1,34 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
-        first, last, L = 0, 0, len(s)
+        '''
+        AAABBBBBC -> 9 - 5 = 4 B, 5
+        '''
+        # start, end s[start:end]
+        first, last = 0, 0 # s[first:last+1]
+        L = len(s)
         counter = Counter()
         output = 0
         
-        # increase window size
         for last in range(L):
-            counter[s[last]]+=1
-            most_common = counter.most_common(1)[0][1] # most num of superial char 
-            total_length = last - first + 1
-            tochange = total_length - most_common 
+            c = s[last]
+            counter[c] += 1
+            windowsize = last - first + 1
+            many = counter.most_common(1)[0][1]
+            tochange = windowsize - many
             
-            if tochange <= k: # valid
-                output = max(output, total_length)
-            
+            if tochange <= k: 
+                output = max(output, windowsize)
+                continue 
             # decrease window size
-            else: # invalid
-                while tochange > k: # while invalid, decrease window size
-                    counter[s[first]]-=1
+            # first -> . . . . last 
+            else: 
+                while tochange > k:
+                    c = s[first]
+                    counter[c] -= 1
                     first += 1
-                    most_common = counter.most_common(1)[0][1]
-                    total_length = last-first+1
-                    tochange = total_length - most_common
+                    windowsize = last - first + 1
+                    many = counter.most_common(1)[0][1]
+                    tochange = windowsize - many
+        
         return output 
+        
