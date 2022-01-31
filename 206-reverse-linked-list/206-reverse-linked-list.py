@@ -5,20 +5,19 @@
 #         self.next = next
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        # deal empty list 
-        if not head: return head 
+        node = head 
+        head = None 
         
-        node = head.next 
-        head.next = None # end of node
-        
-        # get node from back, and insert it into the very front 
+        # Idea: get node from back, and insert it into the very front 
         while node:
+            # 1) backup next node 
             nextnode = node.next 
            
-            # insert node into the front of linked list 
+            # 2) insert node into the front of linked list 
             node.next = head
             head = node 
             
+            # 3) restore next node 
             node = nextnode 
         
         return head
