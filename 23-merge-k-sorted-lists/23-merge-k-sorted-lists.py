@@ -16,9 +16,9 @@ class Solution:
         # 2. Interleave all element of list into one large linked list 
         fakehead = ListNode(0)
         prevnode = fakehead 
+        lists.sort(key=lambda x:x.val)
         
-        while lists:
-            lists.sort(key=lambda x:x.val)
+        while lists:    
             # pop least value node and append it into output 
             node = lists.pop(0)
             prevnode.next = node
@@ -26,6 +26,16 @@ class Solution:
             prevnode = node 
             
             if node.next: # Repush node into lists only if node has next.
-                lists.append(node.next)
+                # push node in the right place 
+                node = node.next 
+                for i, l in enumerate(lists):
+                    if node.val < l.val: # node's value became less then the lists value 
+                        lists.insert(i, node)
+                        node = None # Flag
+                        break 
+                if node:
+                    lists.append(node)
+                
+                        
         
         return fakehead.next 
