@@ -5,37 +5,23 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        ### [[]] is different from []
+        from heapq import heappush, heappop, heapify
+        heap = [(node.val, idx) for idx, node in enumerate(lists) if node]
+        heapify(heap)
         
-        # 1. Remove empty list from lists
-        L = len(lists)
-        for i in range(L-1, -1, -1):
-            if not lists[i]:
-                lists.pop(i)
-        
-        # 2. Interleave all element of list into one large linked list 
-        fakehead = ListNode(0)
-        prevnode = fakehead 
-        lists.sort(key=lambda x:x.val)
-        
-        while lists:    
-            # pop least value node and append it into output 
-            node = lists.pop(0)
-            prevnode.next = node
-            # move prevnode
-            prevnode = node 
+        fakehead = ListNode()
+        prev = fakehead 
+        while heap:
+            (_, idx) = heappop(heap)
+            node = lists[idx]
             
-            if node.next: # Repush node into lists only if node has next.
-                # push node in the right place 
-                node = node.next 
-                for i, l in enumerate(lists):
-                    if node.val < l.val: # node's value became less then the lists value 
-                        lists.insert(i, node)
-                        node = None # Flag
-                        break 
-                if node:
-                    lists.append(node)
-                
-                        
+            prev.next = node 
+            prev = node 
+            
+            if node.next:
+                lists[idx] = node.next ### 중요!move it
+                heappush(heap, (node.next.val, idx)) # idx = borned social hierarchy. it keeps.
         
         return fakehead.next 
+        
+            
