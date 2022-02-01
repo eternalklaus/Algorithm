@@ -8,27 +8,28 @@ class Solution:
         """
         Do not return anything, modify head in-place instead.
         """
-        # change order? how to make beautiful code?
-        nodelist = []
-        node = head
+        # 1. Make it linked list -> list
+        nodes, node = [], head 
         while node:
-            nodelist.append(node)
+            nodes.append(node)
             node = node.next 
         
-        orderedlist, L = [], len(nodelist)
+        # 2. Order list
+        ordered, L = [], len(nodes)
         li, ri = 0, L-1
         while li < ri:
-            orderedlist.append(nodelist[li])
-            orderedlist.append(nodelist[ri])
+            ordered.append(nodes[li])
+            ordered.append(nodes[ri])
             li += 1
             ri -= 1
-        # append last node 
+        # 2.2 append last node 
         if li == ri:
-            orderedlist.append(nodelist[li])
+            ordered.append(nodes[li])
         
+        # 3. Reconnect nodes
         i = -1 
         for i in range(L-1):
-            orderedlist[i].next = orderedlist[i+1]
-        orderedlist[i+1].next = None 
+            ordered[i].next = ordered[i+1]
+        ordered[i+1].next = None 
             
             
