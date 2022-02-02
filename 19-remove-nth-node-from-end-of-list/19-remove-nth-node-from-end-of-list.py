@@ -6,19 +6,15 @@
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
         fakehead = ListNode(0, head)
-        slow, fast = fakehead, fakehead
         
-        # n times of cycle is needed to fill the gap
+        slow, fast = fakehead, fakehead 
         cycle = 0
-        while fast.next: ###<= 
-            if cycle >= n: 
+        
+        while fast.next:
+            if cycle >= n:
                 slow = slow.next 
-                fast = fast.next 
-            else:
-                fast = fast.next 
+            fast = fast.next 
             cycle += 1
         
-        # [[1]]
         slow.next = slow.next.next 
-        return fakehead.next
-            
+        return fakehead.next  
