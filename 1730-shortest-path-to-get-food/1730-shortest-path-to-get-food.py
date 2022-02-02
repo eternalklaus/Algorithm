@@ -11,7 +11,7 @@ class Solution:
                 continue 
                 
             if grid[i][j] == '#':
-                outputs.append(steps)
+                return steps
                 
             grid[i][j] = 'X' # mark visited location(this is cheapest way to reach here)
             heappush(queue, (steps+1, i+1, j))
@@ -19,8 +19,4 @@ class Solution:
             heappush(queue, (steps+1, i, j+1))
             heappush(queue, (steps+1, i, j-1))
         
-        print (outputs)
-        if not outputs: 
-            return -1
-        return min(outputs)
-            
+        return -1
