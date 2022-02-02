@@ -1,39 +1,35 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
-        # track all possible route
-        C, R = len(grid), len(grid[0])
-        INF = float('inf')
+        # Tip: manhatan distance
+        life = k
+        C, R, INF = len(grid), len(grid[0]), float('inf')
         
-        if k >= C+R-2:
-            return C+R-2
-        
-        # Route can be up/left, not only down/right
         @cache
-        def gogo(i, j, k, step): # i, j = current location / step = steps until reaching current location
-            if not 0<=i<C: return INF
-            if not 0<=j<R: return INF
-            # same place
-            if grid[i][j] == -1: return INF
-            # it's obstacle. can I overcome it? 
+        def gogo(i, j, life, steps):
+            # base case
+            if not 0<=i<C or not 0<=j<R: return INF # invalid location
+            if i == C-1 and j == R-1: return steps # Reached destination
+            if grid[i][j] == -1: return INF # Encountered the place that I already visited
+            if (C-i-1) + (R-j-1) < life: return steps + (C-i-1) + (R-j-1)# Manhattan distance case
+                
+            # 1. Encountered block 
             if grid[i][j] == 1:
-                if k == 0: return INF# failed to overcome..
-                else: k -= 1
-                    
-            # reached to destination
-            if i == C-1 and j == R-1: 
-                return step 
+                if life < 1: return INF
+                else: life -= 1
             
-            _ = grid[i][j]
+            # 2. Move on to 4-direction
+            gridij = grid[i][j]
             grid[i][j] = -1
-            route1 = gogo(i+1, j, k, step+1)
-            route2 = gogo(i-1, j, k, step+1)
-            route3 = gogo(i, j+1, k, step+1)
-            route4 = gogo(i, j-1, k, step+1)
-            grid[i][j] = _
-            return min([route1, route2, route3, route4])
-            
-        output = gogo(0, 0, k, 0)
+            step1 = gogo(i+1, j, life, steps+1)
+            step2 = gogo(i-1, j, life, steps+1)
+            step3 = gogo(i, j+1, life, steps+1)
+            step4 = gogo(i, j-1, life, steps+1)
+            grid[i][j] = gridij
+            return min([step1, step2, step3, step4])
         
-        if output == float('inf'): 
+        output = gogo(0,0,k,0)
+        if output >= INF:
             return -1
         return output 
+            
+            
