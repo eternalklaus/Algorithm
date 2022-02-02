@@ -8,16 +8,19 @@ class Solution:
         fakehead = ListNode()
         node = fakehead 
         
-        lists = [x for x in lists if x]
+        heap = [(x.val, idx) for idx, x in enumerate(lists) if x]
+        heapify(heap)
         
-        while lists:
-            lists.sort(key=lambda x:x.val)
-            leastnode = lists.pop(0)
+        
+        while heap:
+            (val, idx) = heappop(heap)
+            leastnode = lists[idx]
             
             node.next = leastnode
             node = leastnode 
             
             if leastnode.next:
-                lists.append(leastnode.next) 
+                lists[idx] = leastnode.next
+                heappush(heap, (leastnode.next.val, idx))
         
         return fakehead.next 
