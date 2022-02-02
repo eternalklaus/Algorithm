@@ -6,21 +6,15 @@
 #         self.right = right
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
-        # if node is empty, push 10**4+1
-        INV = 10**4+1
-        def createlist(root):
-            output = []
-            queue = [root]
-            while queue:
-                node = queue.pop(0)
-                if not node:
-                    output.append(INV)
-                    continue 
-                output.append(node.val)
-                queue.append(node.left)
-                queue.append(node.right)
-            return output 
         
-        plist = createlist(p)
-        qlist = createlist(q)
-        return plist==qlist
+        def samenode(node1, node2):
+            if node1 and node2:
+                
+                return (node1.val==node2.val) and samenode(node1.left, node2.left) and samenode(node1.right, node2.right)
+            if not node1 and not node2:
+                return True 
+            return False
+        
+        return samenode(p, q)
+            
+        
