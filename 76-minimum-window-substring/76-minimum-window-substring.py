@@ -1,36 +1,27 @@
 class Solution:
     def minWindow(self, s: str, t: str) -> str:
-        # t including dupliate
-        first, last, L = 0, 0, len(s)
-        leftcnt, match = Counter(t), 0
+        counter = Counter()
+        tcounter = Counter(t)
+        L = len(s)
         
-        INTC = set(t) # interested char
-        NINTC = len(INTC) # number of interested char
+        first, last = 0, 0
+        output = ''
         
-        output, outputlen = s+'$', len(s)+1
+        def satisfy(counter, tcounter): # t = abcccd windows= ccckkk
+            for c in tcounter:
+                if counter[c] < tcounter[c]:
+                    return False 
+            return True 
         
-        # increase window size
+        first, last = 0, 0
         for last in range(L):
-            c = s[last]
-            leftcnt[c] -= 1
-            # update match num
-            if c in INTC and leftcnt[c] == 0: # newbie in zero! 
-                match += 1
-            
-            while match == NINTC: # if all chars collected, decrease window size
-                # update output 
-                if last-first+1 < outputlen:
+            counter[s[last]] += 1
+            while satisfy(counter, tcounter):
+                if output == '' or len(output) > len(s[first:last+1]):
                     output = s[first:last+1]
-                    outputlen = last-first+1
-                # decrease window size 
-                c = s[first]
-                leftcnt[c] += 1
+                counter[s[first]] -= 1
                 first += 1
-                # update match num
-                if c in INTC and leftcnt[c] == 1: # c is no more matched char...bye.. 
-                    match -= 1
-        
-        if outputlen > len(s):
-            return ''
-        return output 
+                
+        return output
+            
                 
