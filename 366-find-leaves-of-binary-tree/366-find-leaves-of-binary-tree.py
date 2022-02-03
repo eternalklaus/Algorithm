@@ -12,10 +12,7 @@ class Solution:
         def getlevel(node):
             # base cases 
             if not node:
-                return -1 ###<- always emit the level
-            
-            if not node.left and not node.right:
-                lv = 0
+                return 0 
             else:
                 lv = max(getlevel(node.left), getlevel(node.right)) + 1
             
