@@ -6,23 +6,17 @@
 #         self.right = right
 class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
-        # can we collect more then 3 nodes?
-        output = root.val 
-
-        # inorder search and collect the maxinum value in node 
-        def inorder(node):
-            nonlocal output 
+        output = root.val
+        
+        def getmaxval(node):
+            nonlocal output
             if not node: return 0
             
-            # we can take only one among the two subway
-            lval = inorder(node.left) 
-            rval = inorder(node.right) 
-            ival = node.val 
+            lchildmax = getmaxval(node.left)
+            rchildmax = getmaxval(node.right) 
+            output = max([output ,lchildmax+rchildmax+node.val, lchildmax+node.val, rchildmax+node.val, node.val])
             
-            currentmax = max([ival, ival+lval, ival+rval, ival+lval+rval])
-            output = max(output, currentmax)
-            
-            return max([lval+node.val, rval+node.val, node.val]) # follow left/right or not follow either. 
-
-        inorder(root)
+            return max(lchildmax+node.val, rchildmax+node.val, node.val)
+        
+        getmaxval(root)
         return output 
