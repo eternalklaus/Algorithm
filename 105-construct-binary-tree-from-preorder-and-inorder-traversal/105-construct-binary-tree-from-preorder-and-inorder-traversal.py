@@ -5,22 +5,21 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
-        
-        def buildtree(preorder, inorder):
-            # base cases
-            if not inorder: return None 
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
+        def retroot(prerder, inorder):
+            if not inorder or not preorder: return None
+            rootval = preorder.pop(0)
             
-            val = preorder.pop(0)
-            idx = inorder.index(val)
-            linorder, rinorder = inorder[:idx], inorder[idx+1:]
+            rootidx = inorder.index(rootval)
+            leftchild  = inorder[:rootidx]
+            rightchild = inorder[rootidx+1:]
             
-            root = TreeNode()
-            root.val = val 
-            root.left = buildtree(preorder, linorder)
-            root.right = buildtree(preorder, rinorder)
-            return root 
-        
-        return buildtree(preorder, inorder)
+            root = TreeNode(rootval) # newly created root node
+            root.left = retroot(preorder, leftchild)
+            root.right = retroot(preorder, rightchild)
             
+            return root
         
+        return retroot(preorder, inorder)
+            
+            
