@@ -6,6 +6,10 @@
 #         self.right = right
 class Solution:
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+        
+        
+        
+        '''
         def serialize(node):
             if not node:
                 serial = '#'
@@ -20,7 +24,9 @@ class Solution:
         
         if serialize(subRoot) in serialize(root): return True 
         return False 
-                
+        '''
+        def sy(nd):return f"A{nd.val}#{sy(nd.left)}{sy(nd.right)}"if nd else"Z"
+        return sy(subRoot)in sy(root)
                 
             
             
