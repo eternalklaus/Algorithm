@@ -8,5 +8,5 @@ class Solution:
     def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
         def serial(node):
             if not node: return '#'
-            return f'|{node.val}|{serial(node.left)}|{serial(node.right)}'
+            return f'|{node.val}{serial(node.left)}{serial(node.right)}'
         return serial(subRoot) in serial(root)
