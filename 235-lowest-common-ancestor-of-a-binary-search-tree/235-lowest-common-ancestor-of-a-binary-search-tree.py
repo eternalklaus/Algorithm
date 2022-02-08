@@ -7,33 +7,11 @@
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        output = None
-        
-        def dfs(node):
-            nonlocal output 
-            if not node: 
-                return False 
-            if output:
-                return False 
-            
-            l, r = dfs(node.left), dfs(node.right)
-            
-            # case 1) p is parant of q
-            if node == p or node == q:
-                if l or r:
-                    output = node 
-                    return False 
-                else:
-                    return True 
-            # case 2) p and q are siblings, so return common parant node. 
-            if l and r:
-                output = node 
-                return False 
-            # case 3) send True to the parant nodes
-            if l or r:
-                return True 
-            
+        # find splitting point 
+        if not root:
             return False 
-        
-        dfs(root)
-        return output 
+        if root.val < p.val and root.val < q.val: # p, q is right side of root
+            return self.lowestCommonAncestor(root.right, p, q)
+        if root.val > p.val and root.val > q.val:
+            return self.lowestCommonAncestor(root.left, p, q)
+        return root 
