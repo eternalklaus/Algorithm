@@ -25,8 +25,7 @@ class Codec:
 
     def deserialize(self, data) -> TreeNode:
         def createnode(valstr):
-            if valstr == '#':
-                return None 
+            if valstr == '#': return None 
             return TreeNode(int(valstr))
 
         vallist = data.split('|')[1:]
@@ -35,12 +34,12 @@ class Codec:
         prevlevel = [root]
 
         while vallist:
-            prevlevel_size = len(prevlevel)
-            for _ in range(prevlevel_size):
+            # prevlevel_size = len(prevlevel)
+            for _ in range(len(prevlevel)): ### <- size!!!wow!
                 prevnode = prevlevel.pop(0)
                 prevnode.left = createnode(vallist.pop(0))
                 prevnode.right = createnode(vallist.pop(0))
-
+                # push it into prevlevel to be used in nextlevel
                 if prevnode.left: 
                     prevlevel.append(prevnode.left)
                 if prevnode.right: 
