@@ -18,9 +18,8 @@ class SnapshotArray:
         
     def get(self, index: int, snap_id: int) -> int:
         history = self.array[index]
-        # print (history, snap_id)
-        idx = bisect.bisect(history, [snap_id, 10**9+1]) # if exist, return idx+1. if not exist, return existclose + 1
-        return history[idx-1][1]
+        idx = bisect.bisect(history, [snap_id, 10**9+1]) - 1# if exist, return idx+1. if not exist, return existclose + 1
+        return history[idx][1]
 
 
 # Your SnapshotArray object will be instantiated and called as such:
