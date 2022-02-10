@@ -1,7 +1,8 @@
 class Trie:
-    def __init__(self):
+    def __init__(self): # 이게 언발란스한 트리보다 큐연산할때 유리함
         self.leaves = {}
         self.end = False 
+
 
 class WordDictionary:
 
@@ -17,30 +18,30 @@ class WordDictionary:
         node.end = True 
             
     def search(self, word: str) -> bool:
-        queue = [self.dictionary, 'QEND']
-        for c in word:
-            if not queue: 
+        
+        def searchnode(idx, node):
+            # print (f'word:{word} idx:{idx} node:{node}')
+            # base case 
+            if idx >= len(word):
+                return node.end 
+            
+            c = word[idx]
+            if c == '.':
+                for leafnode in node.leaves.values(): ###!!!!!!!!
+                    if searchnode(idx+1, leafnode):
+                        return True 
                 return False 
             
-            while queue:
-                node = queue.pop(0)
-                if not node: continue
-                if node == 'QEND': break 
+            else:
+                leafnode = node.leaves.get(c)
+                if not leafnode:
+                    return False 
+                return searchnode(idx+1, leafnode)
                 
-                if c == '.':
-                    nextnodes = list(node.leaves.values())
-                    queue += nextnodes 
-                else:
-                    queue.append(node.leaves.get(c)) # append regardless node is None or not 
-            queue.append('QEND')
             
-        while queue:
-            node = queue.pop(0)
-            if not node: continue 
-            if node == 'QEND': break 
-            if node.end: return True
-        return False
-        
+            
+        node = self.dictionary
+        return searchnode(0, node)
 
 
 # Your WordDictionary object will be instantiated and called as such:
