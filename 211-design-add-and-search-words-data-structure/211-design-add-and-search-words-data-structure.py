@@ -20,24 +20,21 @@ class WordDictionary:
     def search(self, word: str) -> bool:
         
         def searchnode(idx, node):
-            # print (f'word:{word} idx:{idx} node:{node}')
-            # base case 
-            if idx >= len(word):
-                return node.end 
-            
-            c = word[idx]
-            if c == '.':
-                for leafnode in node.leaves.values(): ###!!!!!!!!
-                    if searchnode(idx+1, leafnode):
-                        return True 
-                return False 
-            
-            else:
-                leafnode = node.leaves.get(c)
-                if not leafnode:
-                    return False 
-                return searchnode(idx+1, leafnode)
-                
+            for i in range(idx, len(word)):
+                c = word[i]
+                if c == '.':
+                    for leafnode in node.leaves.values():
+                        if searchnode(i+1, leafnode):
+                            return True 
+                    return False
+                else:
+                    leafnode = node.leaves.get(c)
+                    if not leafnode: 
+                        return False
+                    node = leafnode 
+                    continue 
+                    
+            return node.end 
             
             
         node = self.dictionary
