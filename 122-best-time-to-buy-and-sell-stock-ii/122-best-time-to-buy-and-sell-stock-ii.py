@@ -1,4 +1,11 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        L = len(prices)
-        return sum([max(prices[i]-prices[i-1], 0) for i in range(1, L)])
+        # two state: hold -> sold / sold -> hold 
+        hold, sold = -prices[0], 0
+        
+        for price in prices[1:]:
+            hold_bk = hold 
+            hold = max(hold, sold - price)
+            sold = max(sold, hold_bk + price)
+        return sold
+            
