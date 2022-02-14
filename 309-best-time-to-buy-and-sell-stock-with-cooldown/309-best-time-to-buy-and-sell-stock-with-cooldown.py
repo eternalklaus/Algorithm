@@ -1,12 +1,12 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        L = len(prices)
+        sold, hold, justsold = 0, -prices[0], -prices[0]
         
-        # state = sell, hold, empty
-        hold, justsold, sold = -prices[0], 0, 0
-        for i in range(1, L):
-            hold = max(hold, sold - prices[i])  # hold / buy new one now
-            sold = max(justsold, sold)          # justsold can be taken account into form next step..
-            justsold = hold + prices[i]
+        for price in prices[1:]:
+            hold = max(hold, sold-price)
+            sold = max(justsold, sold) # 이전스텝의 justsold 이거나 sold
+            justsold = hold + price # 현재스텝의 justsold 업데이트
         
-        return max(justsold, sold)
+        return max(sold, justsold)
+            
+            
