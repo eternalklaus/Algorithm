@@ -4,8 +4,8 @@ class Solution:
         hold, sold = -prices[0], 0
         
         for price in prices[1:]:
-            hold_bk = hold 
+            # hold_bk = hold 
             hold = max(hold, sold - price)
-            sold = max(sold, hold_bk + price)
+            sold = max(sold, hold + price)
         return sold
             
