@@ -1,20 +1,15 @@
 class Solution:
     def findOriginalArray(self, changed: List[int]) -> List[int]:
-        changed.sort() # 1 3 9 2 4 18
-        counter, balance, output = Counter(), 0, []
+        counter, output = Counter(changed), []
+        keys = sorted(list(counter.keys()))
         
-        for val in changed:
-            
-            if counter[val] == 0: # on
-                counter[val * 2] += 1
-                balance += 1
-                output.append(val)
-            
-            elif counter[val] >= 1:
-                counter[val] -= 1
-                balance -= 1
+        removed = 0
         
-        # print (balance, output)
-        if balance == 0:
-            return output 
-        return []
+        for val in keys:
+            if val == 0:
+                if counter[val] % 2: return []
+                counter[val] -= counter[val]//2
+            else:
+                counter[val * 2] -= counter[val]
+                if counter[val * 2] < 0: return []
+        return counter.elements()
