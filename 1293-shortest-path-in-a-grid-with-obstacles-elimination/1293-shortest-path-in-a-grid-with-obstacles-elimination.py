@@ -1,35 +1,36 @@
 class Solution:
     def shortestPath(self, grid: List[List[int]], k: int) -> int:
-        # Tip: manhatan distance
-        life = k
-        C, R, INF = len(grid), len(grid[0]), float('inf')
-        
-        @cache
-        def gogo(i, j, life, steps):
-            # base case
-            if not 0<=i<C or not 0<=j<R: return INF # invalid location
-            if i == C-1 and j == R-1: return steps # Reached destination
-            if grid[i][j] == -1: return INF # Encountered the place that I already visited
-            if (C-i-1) + (R-j-1) < life: return steps + (C-i-1) + (R-j-1)# Manhattan distance case
-                
-            # 1. Encountered block 
-            if grid[i][j] == 1:
-                if life < 1: return INF
-                else: life -= 1
-            
-            # 2. Move on to 4-direction
-            gridij = grid[i][j]
-            grid[i][j] = -1
-            step1 = gogo(i+1, j, life, steps+1)
-            step2 = gogo(i-1, j, life, steps+1)
-            step3 = gogo(i, j+1, life, steps+1)
-            step4 = gogo(i, j-1, life, steps+1)
-            grid[i][j] = gridij
-            return min([step1, step2, step3, step4])
-        
-        output = gogo(0,0,k,0)
-        if output >= INF:
-            return -1
-        return output 
-            
-            
+        rows, cols = len(grid), len(grid[0])
+        target = (rows - 1, cols - 1)
+
+        # if we have sufficient quotas to eliminate the obstacles in the worst case,
+        # then the shortest distance is the Manhattan distance
+        if k >= rows + cols - 2:
+            return rows + cols - 2
+
+        # (row, col, remaining quota to eliminate obstacles)
+        state = (0, 0, k)
+        # (steps, state)
+        queue = deque([(0, state)])
+        seen = set([state])
+
+        while queue:
+            steps, (row, col, k) = queue.popleft()
+
+            # we reach the target here
+            if (row, col) == target:
+                return steps
+
+            # explore the four directions in the next step
+            for new_row, new_col in [(row, col + 1), (row + 1, col), (row, col - 1), (row - 1, col)]:
+                # if (new_row, new_col) is within the grid boundaries
+                if (0 <= new_row < rows) and (0 <= new_col < cols):
+                    new_eliminations = k - grid[new_row][new_col]
+                    new_state = (new_row, new_col, new_eliminations)
+                    # add the next move in the queue if it qualifies
+                    if new_eliminations >= 0 and new_state not in seen:
+                        seen.add(new_state)
+                        queue.append((steps + 1, new_state))
+
+        # did not reach the target
+        return -1
