@@ -20,7 +20,7 @@ class Solution:
             heapq.heappush(lrheap, -b)
             
             lrsum[i] = lrsum[i-1] - (-a) + b
-        print (lrsum)
+        
         
         # Left <- Right 
         rlsum[n* 2] = sum(nums[n*2:])
@@ -30,7 +30,6 @@ class Solution:
             heapq.heappush(rlheap, b)
             
             rlsum[i] = rlsum[i+1] - a + b
-        print (rlsum)
         
         output = float('inf')
         for i in range(n-1, n*2):
