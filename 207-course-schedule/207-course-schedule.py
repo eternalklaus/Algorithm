@@ -1,28 +1,24 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        from collections import defaultdict
-        firstnext = defaultdict(list)
         nextfirst = defaultdict(list)
-
-        for [next, first] in prerequisites:
-            firstnext[first].append(next)
+        for next, first in prerequisites:
             nextfirst[next].append(first)
         
-        # initialize queue
-        queue = []
-        for next in range(numCourses): ###<-!!!
-            if not nextfirst[next]: # does not have any prerequist subjects
-                queue.append(next) 
-        # print (queue)
-
-        # conquar subjects from one by one 
-        count = 0
-        while queue:
-            first = queue.pop(0)
-            count += 1
-            for next in firstnext[first]:
-                nextfirst[next].remove(first) # attanded [first], so remove it from prerequisites
-                if not nextfirst[next]: # does not have any preerquist subject. attandable
-                    queue.append(next)
+        visited = [0] * numCourses
         
-        return count == numCourses
+        def dfs(spot):
+            if visited[spot] == -1: 
+                return False 
+            if visited[spot] == 1:
+                return True 
+            
+            visited[spot] = -1 # temporarly make it un-visitable
+            for first in nextfirst[spot]:
+                if not dfs(first): return False
+            visited[spot] = 1
+            return True 
+        
+        for next in range(numCourses):
+            if not dfs(next):
+                return False
+        return True
