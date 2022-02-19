@@ -1,24 +1,24 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        nextfirst = defaultdict(list)
         firstnext = defaultdict(list)
+        nextfirst = defaultdict(list)
         
-        # initialize graph
+        # initialize
         for next, first in prerequisites:
-            nextfirst[next].append(first)
             firstnext[first].append(next)
-        
-        # search for first visit place
+            nextfirst[next].append(first)
+            
+        # queue initialize
         queue = []
         for next in range(numCourses):
             if not nextfirst.get(next):
                 queue.append(next)
         
-        # visit
-        visited = []
+        # pop queue
+        attanded = []
         while queue:
             first = queue.pop(0)
-            visited.append(first)
+            attanded.append(first)
             
             nexts = firstnext[first]
             for next in nexts:
@@ -26,8 +26,6 @@ class Solution:
                 if not nextfirst[next]:
                     queue.append(next)
         
-        if len(visited) == numCourses:
+        if len(attanded) == numCourses:
             return True
-        return False 
-        
-                
+        return False
