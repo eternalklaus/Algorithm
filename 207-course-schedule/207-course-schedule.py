@@ -1,31 +1,29 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        firstnext = defaultdict(list)
+        # A->B->C->A => false
+        
         nextfirst = defaultdict(list)
         
-        # initialize
         for next, first in prerequisites:
-            firstnext[first].append(next)
             nextfirst[next].append(first)
-            
-        # queue initialize
-        queue = []
-        for next in range(numCourses):
-            if not nextfirst.get(next):
-                queue.append(next)
         
-        # pop queue
-        attanded = []
-        while queue:
-            first = queue.pop(0)
-            attanded.append(first)
-            
-            nexts = firstnext[first]
-            for next in nexts:
-                nextfirst[next].remove(first)
-                if not nextfirst[next]:
-                    queue.append(next)
+        visited = [0] * numCourses # 1 = visited // -1 = visited during same coursework
         
-        if len(attanded) == numCourses:
+        def dfs(next):
+            # base cases
+            if visited[next] == 1:
+                return True 
+            if visited[next] == -1: #cycle
+                return False
+            
+            visited[next] = -1 #
+            for first in nextfirst[next]:
+                if dfs(first) == False:
+                    return False 
+            visited[next] = 1
             return True
-        return False
+        
+        for course in range(numCourses):
+            if dfs(course) == False:
+                return False 
+        return True 
