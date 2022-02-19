@@ -1,31 +1,33 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        # circle detact 
         nextfirst = defaultdict(list)
+        firstnext = defaultdict(list)
         
+        # initialize graph
         for next, first in prerequisites:
             nextfirst[next].append(first)
+            firstnext[first].append(next)
         
-        visited = [0] * numCourses # visit: 1, visited in current coursework : -1
-        
-        def dfs(next):
-            if visited[next] == 1:
-                return True 
-            if visited[next] == -1:
-                return False # circle in current coursework
-            
-            firsts = nextfirst[next]
-            visited[next] = -1 # to detect circle
-            for first in firsts:
-                if dfs(first) == False:
-                    return False 
-                
-            visited[next] = 1
-            return True 
-        
+        # search for first visit place
+        queue = []
         for next in range(numCourses):
-            if not dfs(next):
-                return False 
-        return True
-                
+            if not nextfirst.get(next):
+                queue.append(next)
+        
+        # visit
+        visited = []
+        while queue:
+            first = queue.pop(0)
+            visited.append(first)
             
+            nexts = firstnext[first]
+            for next in nexts:
+                nextfirst[next].remove(first)
+                if not nextfirst[next]:
+                    queue.append(next)
+        
+        if len(visited) == numCourses:
+            return True
+        return False 
+        
+                
