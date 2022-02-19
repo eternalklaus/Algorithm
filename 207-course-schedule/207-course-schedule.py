@@ -1,24 +1,33 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         nextfirst = defaultdict(list)
+        firstnext = defaultdict(list)
+        
         for next, first in prerequisites:
             nextfirst[next].append(first)
+            firstnext[first].append(next)
         
-        visited = [0] * numCourses
-        
-        def dfs(spot):
-            if visited[spot] == -1: 
-                return False 
-            if visited[spot] == 1:
-                return True 
-            
-            visited[spot] = -1 # temporarly make it un-visitable
-            for first in nextfirst[spot]:
-                if not dfs(first): return False
-            visited[spot] = 1
-            return True 
-        
+        # find classes don't have any prerequisites
+        queue = []
         for next in range(numCourses):
-            if not dfs(next):
-                return False
-        return True
+            if not nextfirst.get(next):
+                queue.append(next)
+        
+        attanded = []
+        while queue:
+            first = queue.pop(0)
+            attanded.append(first)
+            
+            nexts = firstnext[first]
+            for next in nexts:
+                nextfirst[next].remove(first)
+                if not nextfirst[next]:
+                    queue.append(next)
+        
+        
+        if len(attanded) == numCourses:
+            return True 
+        return False
+            
+            
+            
