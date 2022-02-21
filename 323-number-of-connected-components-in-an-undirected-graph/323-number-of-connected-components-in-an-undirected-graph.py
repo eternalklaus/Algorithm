@@ -1,24 +1,22 @@
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
-        graph = defaultdict(list)
-        for n1, n2 in edges:
-            graph[n1].append(n2)
-            graph[n2].append(n1)
-        
-        visited = set()
-        
-        def conquer(node):
-            if node in visited:
-                return
+        def find(x):
+            if parent[x] != x:
+                parent[x] = find(parent[x])
+            return parent[x]
+            
+        def union(xy):
+            x, y = list(map(find, xy))
+            if rank[x] < rank[y]:
+                parent[x] = y
             else:
-                visited.add(node)
-                for nn in graph[node]:
-                    conquer(nn)
-                return 
+                parent[y] = x
+                if rank[x] == rank[y]:
+                    rank[x] += 1
         
-        output = 0
-        for node in range(n):
-            if node not in visited:
-                output += 1
-                conquer(node)
-        return output 
+        parent, rank = [i for i in range(n)], [0] * n
+        list(map(union, edges))
+        return len({find(x) for x in parent})
+
+        map(union, edges)
+        return len({find(x) for x in parent})
