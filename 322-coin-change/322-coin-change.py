@@ -1,6 +1,6 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        coins.sort(reverse=True)
+        # coins.sort(reverse=True)
         L = len(coins)
         
         @cache
