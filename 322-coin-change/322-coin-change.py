@@ -13,13 +13,9 @@ class Solution:
                 return getcoinnum(idx+1, amount) # pass this coin.
             
             else:
-                # include this coin 
-                num1 = 1 + getcoinnum(idx, amount - coins[idx])
-                # declude this coin
-                num2 = getcoinnum(idx+1, amount)
+                num1 = 1 + getcoinnum(idx, amount - coins[idx]) # include this coin 
+                num2 = getcoinnum(idx+1, amount) # declude this coin
                 return min(num1, num2)
         
         output = getcoinnum(0, amount)
-        if output >= float('inf'):
-            return -1
-        return output
+        return output if output < float('inf') else -1
