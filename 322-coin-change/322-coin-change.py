@@ -1,21 +1,15 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        # coins.sort(reverse=True)
-        L = len(coins)
+        # 금액별 최소코인수 업데이트 
         
-        @cache
-        def getcoinnum(idx, amount):
-            if amount == 0:
-                return 0
-            if idx >= L:
-                return float('inf')
-            if amount < coins[idx]:
-                return getcoinnum(idx+1, amount) # pass this coin.
-            
-            else:
-                num1 = 1 + getcoinnum(idx, amount - coins[idx]) # include this coin 
-                num2 = getcoinnum(idx+1, amount) # declude this coin
-                return min(num1, num2)
+        coinnum = [float('inf')] * (amount+1)
+        coinnum[0] = 0
         
-        output = getcoinnum(0, amount)
-        return output if output < float('inf') else -1
+        for price in range(1, amount+1):
+            for coin in coins: # can use all kind of coins every session 
+                if price - coin < 0: continue
+                coinnum[price] = min(coinnum[price], coinnum[price-coin]+1)
+        
+        return coinnum[-1] if coinnum[-1] < float('inf') else -1
+                
+                
