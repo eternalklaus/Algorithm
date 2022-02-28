@@ -1,23 +1,18 @@
 class Solution:
-    # Time Complexity: O(n!), n == length of s
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        wordDict = set(wordDict) # remove duplicated word
-        output, L = False, len(s) 
+        # 재귀함수 리턴이 bool이도록 만들기
+        # time complexity 계산하기 
+        L, wordDict = len(s), set(wordDict)
         
-        # remove prefix word by word
         @cache
-        def remove(idx) -> None: 
-            nonlocal output
-            # base cases
+        def breakable(idx):
             if idx == L:
-                output = True 
-                return 
+                return True 
+            for i in range(idx+1, L+1): ###
+                word = s[idx:i]
+                if word in wordDict and breakable(i):
+                    return True
+            return False 
+        
+        return breakable(0)
             
-            for i in range(idx+1, L+1): ### index caution
-                prefix = s[idx:i]
-                if prefix in wordDict:
-                    remove(i)
-            return 
-                
-        remove(0)
-        return output 
