@@ -1,19 +1,19 @@
 class Solution:
+    # Time Complexity: O(n!), n == length of s
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
-        wordDict = set(wordDict)
+        wordDict = set(wordDict) # remove duplicated word
+        output, L = False, len(s) 
         
-        # remove word by word from the left part of s
-        output, L = False, len(s)
-        
+        # remove prefix word by word
         @cache
-        def remove(idx): # returns nothing. instead, it changes output, the global variable. 
+        def remove(idx) -> None: 
             nonlocal output
             # base cases
-            if output == True or idx == L:
+            if idx == L:
                 output = True 
                 return 
             
-            for i in range(idx+1, L+1): ###
+            for i in range(idx+1, L+1): ### index caution
                 prefix = s[idx:i]
                 if prefix in wordDict:
                     remove(i)
