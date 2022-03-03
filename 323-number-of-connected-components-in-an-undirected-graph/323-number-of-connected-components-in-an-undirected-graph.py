@@ -1,24 +1,22 @@
 class Solution:
     def countComponents(self, n: int, edges: List[List[int]]) -> int:
+        parent = [i for i in range(n)]
         graph = defaultdict(list)
-        for [src,dst] in edges: # undirectional
-            graph[src].append(dst)
-            graph[dst].append(src)
         
-        visited = set()
-        def visit(point):
-            if point in visited:
-                return False 
+        def find(x):
+            if parent[x] == x: 
+                return x
+            parent[x] = find(parent[x])
+            return parent[x]
+        
+        for [x, y] in edges:
+            px, py = find(x), find(y)
+            px, py = min(px, py), max(px, py)
+            parent[py] = px 
             
-            visited.add(point)
-            for np in graph[point]:
-                visit(np)
-            return True
+        for [x, y] in edges[::-1]:
+            px, py = find(x), find(y)
+            px, py = min(px, py), max(px, py)
+            parent[py] = px 
         
-        output = 0
-        for point in range(n):
-            if visit(point): output += 1
-        return output 
-            
-        
-        
+        return len(set(parent))
