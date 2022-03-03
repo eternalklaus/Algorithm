@@ -2,19 +2,21 @@ class Solution:
     def numDecodings(self, s: str) -> int:
         
         @cache
-        def getnum(s):
-            # base cases
+        def decodeways(s):
             if len(s) == 0: 
                 return 1
-            if s[0] == '0': # invalid string, stop recursive calling. 
+            if s[0] == '0': # invalid input 
                 return 0
+            # s is one-digit number
+            if len(s) == 1: 
+                return 1
             
-            if len(s) >= 2 and int(s[:2]) <= 26:
-                return getnum(s[1:]) + getnum(s[2:])
-            else: # only 1-digit number is strippable
-                return getnum(s[1:])
+            # s is more then two-digit number
+            if int(s[:2]) <= 26:
+                return decodeways(s[1:]) + decodeways(s[2:])
+            else:
+                return decodeways(s[1:])
         
-        return getnum(s)
-                
-                
+        return decodeways(s)
             
+                
