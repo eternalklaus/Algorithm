@@ -1,12 +1,6 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        from collections import Counter
-        L = len(nums)
-        bucket = [[] for i in range(L+1)] ### size = L+1!
+        from collections import Counter 
         counter = Counter(nums)
-
-        for num, cnt in counter.items():
-            bucket[cnt].append(num)
-        
-        output = [n for b in bucket for n in b]
-        return output[-k:]
+        output = counter.most_common(k)
+        return [c[0] for c in output]
