@@ -1,15 +1,17 @@
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
-        L = len(nums)
-        
-        @cache
-        def getlongestsub(minimum, idx):
-            if idx >= L:
-                return 0
-            output = 0
-            for i in range(idx, L):
-                if nums[i] > minimum:
-                    output = max(output, 1 + getlongestsub(nums[i], i+1))
-            return output 
-        
-        return getlongestsub(-10**4-1, 0)
+        output = []
+        for num in nums: # num = 4
+            idx = -1 # 
+            for i, val in enumerate(output): # output = [1,2,3,6,8]
+                if val >= num: # 신흥강자 ### 같은것도 카운팅해서 idx로 쳐줘야 아래else문으로 안감
+                    idx = i
+                    break
+            if idx >= 0:
+                output[idx] = num 
+            
+            else: # output = [1,2,3]
+                output.append(num)
+                
+        return len(output)
+            
