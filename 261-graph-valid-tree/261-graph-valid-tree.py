@@ -1,20 +1,21 @@
 class Solution:
     def validTree(self, n: int, edges: List[List[int]]) -> bool:
-        parent = [i for i in range(n)]
-        def find(v):
-            if v == parent[v]: 
-                return v
-            else:
-                return find(parent[v])
+        root = [i for i in range(n)]
+        def find(x):
+            if root[x] != x: 
+                root[x] = find(root[x])
+            return root[x]
         
-        if len(edges) != n-1: return False 
         
-        for [v1,v2] in edges:
-            p1, p2 = find(v1), find(v2)
-            if p1 == p2:
+        # check "교량" node problem
+        for [v1, v2] in edges:
+            root1, root2 = find(v1), find(v2)
+            if root1 == root2: ### insight
                 return False 
-            parent[p2] = p1
-        return True
+            root[root1] = root2
         
+        # check all nodes are connected
+        if len(edges) == n-1:
+            return True 
+        return False 
         
-                
