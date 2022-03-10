@@ -1,15 +1,17 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        @cache
-        def getmax(t1, t2):
-            if not t1 or not t2: 
-                return 0
-            if t1[0] == t2[0]:
-                return 1 + getmax(t1[1:], t2[1:])
-            else:
-                l1 = getmax(t1[1:], t2) # move t1
-                l2 = getmax(t1, t2[1:]) # move t2
-                return max(l1, l2)
+        # sliding window?
+        # finate state machine?
+        I, J = len(text1), len(text2)
         
-        return getmax(text1, text2)
+        @cache
+        def getmaxsequence(i, j):
+            if i >= I or j >= J: 
+                return 0
+            if text1[i] == text2[j]:
+                return 1 + getmaxsequence(i+1, j+1)
+            else:
+                return max(getmaxsequence(i, j+1), getmaxsequence(i+1, j))
+        
+        return getmaxsequence(0,0)
                 
