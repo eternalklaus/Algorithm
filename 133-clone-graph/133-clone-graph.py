@@ -8,30 +8,27 @@ class Node:
 
 class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
-        investigated = set()
-        nodedict = {}
+        ### cannot solved with dfs since circle exist (function not returns)
+        if not node: 
+            return None 
+        
+        root = node 
+        visited = {node:Node(node.val)}
         queue = [node]
         
-        def getnode(val): # return val node, if not exist, creat it
-            if val not in nodedict:
-                nodedict[val] = Node(val)
-            return nodedict[val] 
-        
-        while queue: # queue follows original node
-            node = queue.pop(0) 
-            if not node: 
-                continue # empty node
-            if node in investigated: # already investigated the relationship between neighbors. skip it. 
-                continue 
-                
-            investigated.add(node) # add into investigared
+        while queue:
+            node = queue.pop(0)
+            clone = visited[node]
             
-            clone_node = getnode(node.val)
-            for neighbor in node.neighbors: 
-                queue.append(neighbor)
-                clone_neighbor = getnode(neighbor.val)
-                clone_node.neighbors.append(clone_neighbor) 
-        
+            # it already checked visited in previous cycle 
+            for neighbor in node.neighbors:
+                if neighbor in visited: 
+                    cloneneighbor = visited[neighbor]
+                else:
+                    cloneneighbor = Node(neighbor.val)
+                    queue.append(neighbor) # go complete neighbor relational graph for neighbor
+                    visited[neighbor] = cloneneighbor # mark as visited 
                 
-        return nodedict.get(1)
-        
+                clone.neighbors.append(visited[neighbor])
+                
+        return visited[root]
