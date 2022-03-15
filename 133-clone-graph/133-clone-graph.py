@@ -8,27 +8,17 @@ class Node:
 
 class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
-        ### cannot solved with dfs since circle exist (function not returns)
-        if not node: 
-            return None 
+        nodedict = {None:None}
         
-        root = node 
-        visited = {node:Node(node.val)}
-        queue = [node]
-        
-        while queue:
-            node = queue.pop(0)
-            clone = visited[node]
+        def dfs(node): 
+            if node in nodedict: return nodedict[node] # including None 
             
-            # it already checked visited in previous cycle 
-            for neighbor in node.neighbors:
-                if neighbor in visited: 
-                    cloneneighbor = visited[neighbor]
-                else:
-                    cloneneighbor = Node(neighbor.val)
-                    queue.append(neighbor) # go complete neighbor relational graph for neighbor
-                    visited[neighbor] = cloneneighbor # mark as visited 
-                
-                clone.neighbors.append(visited[neighbor])
-                
-        return visited[root]
+            newnode = Node(node.val)
+            nodedict[node] = newnode # register it 
+            
+            for neighbor in node.neighbors: 
+                newnode.neighbors.append(dfs(neighbor))
+            
+            return newnode
+            
+        return dfs(node)
