@@ -23,7 +23,7 @@ class LRUCache:
                 while True:
                     k = self.accessed.pop(0)
                     self.counter[k] -= 1
-                    if self.counter[k] == 0 and k in self.lrucache:
+                    if self.counter[k] == 0 and k in self.lrucache: ### 아무생각 없이 get한 경우 
                         break 
                 del self.lrucache[k]
         self.lrucache[key] = value
