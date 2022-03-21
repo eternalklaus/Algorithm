@@ -1,31 +1,28 @@
 class LRUCache:
 
     def __init__(self, capacity: int):
-        self.capacity = capacity
         self.lrucache = {}
-        self.accessed = []
-        self.counter = Counter()
+        self.capacity = capacity 
 
     def get(self, key: int) -> int:
-        if key in self.lrucache:
-            self.accessed.append(key)
-            self.counter[key] += 1
-            return self.lrucache[key]
-        return -1
+        if key not in self.lrucache: 
+            return -1 
+        
+        # move_to_end
+        value = self.lrucache[key]
+        del self.lrucache[key]
+        self.lrucache[key] = value 
+        return value 
 
     def put(self, key: int, value: int) -> None:
-        if len(self.lrucache) == self.capacity:
-            if key not in self.lrucache: 
-                # evict key
-                while True:
-                    k = self.accessed.pop(0)
-                    self.counter[k] -= 1
-                    if self.counter[k] == 0: break 
-                del self.lrucache[k]
-        
-        self.lrucache[key] = value 
-        self.accessed.append(key)
-        self.counter[key] += 1
+        if key in self.lrucache: # duplicated key -> delete key
+            del self.lrucache[key]  
+        elif len(self.lrucache) == self.capacity: # delete LRU key
+            lrukey = next(iter(self.lrucache.items()))[0]
+            del self.lrucache[lrukey]
+        self.lrucache[key] = value
+                
+
 
 # Your LRUCache object will be instantiated and called as such:
 # obj = LRUCache(capacity)
