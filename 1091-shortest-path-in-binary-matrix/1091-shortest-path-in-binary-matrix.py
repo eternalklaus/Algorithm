@@ -1,13 +1,12 @@
 class Solution:
     def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
         L = len(grid)
-        if grid[0][0] == 1: return -1 
-        if L == 1: return 1 
+        visited, queue = {}, [] # if L == 1: return 1 
         
-        visited = {(0,0):1} # form of (loc1, loc2):3 
-        queue  = [(0,0)]
+        if grid[0][0] == 0:
+            visited = {(0,0):1} # form of (loc1, loc2):3 
+            queue  = [(0,0)]
         
-        # 항상 while 에 들어오지않는 엣지케이스를 생각하자. 
         while queue:
             (i, j) = queue.pop(0)
             
