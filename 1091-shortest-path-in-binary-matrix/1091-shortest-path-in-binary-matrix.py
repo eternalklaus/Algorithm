@@ -16,9 +16,10 @@ class Solution:
                     if not (0<=ii<L and 0<=jj<L): continue 
                     if grid[ii][jj] == 1: continue 
                     if (ii, jj) in visited: continue 
-                    if (ii, jj) == (L-1, L-1): return visited[(i, j)] + 1
-                    
+
                     visited[(ii, jj)] = visited[(i, j)] + 1
                     queue.append((ii, jj)) # new world 
         
+        if output := visited.get((L-1, L-1)):
+            return output 
         return -1
