@@ -1,23 +1,20 @@
 class Solution:
-    import random
-    import bisect
     def __init__(self, w: List[int]):
-        # binary search 미쳤나봐 미친놈인가? 
-        self.totals = []
-        self.total = 0
-        
-        self.total = 0
+        self.totals = [] 
+        # [5,3,4] -> [5,8,12] random(12) -> 6 
+        total = 0
         for n in w:
-            self.total += n
-            self.totals.append(self.total)
-        print (self.totals)
-
+            total += n 
+            self.totals.append(total)
+            
+        
+    # O(nlogn) 
     def pickIndex(self) -> int:
-        num = random.randrange(self.total)
-        return bisect.bisect(self.totals, num)
+        # sampling from 0 to totals[-1]
+        r = random.randrange(self.totals[-1])
+        return bisect.bisect(self.totals, r)
         
-        
-        
+
 
 # Your Solution object will be instantiated and called as such:
 # obj = Solution(w)
