@@ -1,19 +1,19 @@
 class Solution:
+
     def __init__(self, w: List[int]):
-        self.totals = [] 
-        # [5,3,4] -> [5,8,12] random(12) -> 6 
-        total = 0
+        # ex) w = [3,4,1] -> totals = [3, 7, 8]
+        # random 0~8 -> 6
+        # 
+        self.totals = []
+        total = 0 
         for n in w:
-            total += n 
+            total += n
             self.totals.append(total)
             
-        
-    # O(nlogn) 
     def pickIndex(self) -> int:
-        # sampling from 0 to totals[-1]
         r = random.randrange(self.totals[-1])
-        return bisect.bisect(self.totals, r)
-        
+        output = bisect.bisect(self.totals, r)
+        return output 
 
 
 # Your Solution object will be instantiated and called as such:
