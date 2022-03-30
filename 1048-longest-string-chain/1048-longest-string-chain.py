@@ -1,25 +1,15 @@
-class Solution(object):
-    def longestStrChain(self, words):
-        """
-        :type words: List[str]
-        :rtype: int
-        """
-        # order words by its length!!
-        words.sort(key=lambda x:len(x))
-        # print (words)
+class Solution:
+    def longestStrChain(self, words: List[str]) -> int:
+        words.sort(key = lambda x:len(x))
+        wordlen, output = {}, 0
         
-        chainlen, output = {}, 0 
         for word in words:
-            wordval = 0
+            bwl = 0 
             for i, c in enumerate(word):
-                befword = word[:i] + word[i+1:]
-                befwordval = chainlen.get(befword) or 0
-                
-                wordval = max(wordval, befwordval + 1)
-                
-            chainlen[word] = wordval
-            output = max(output, wordval)
-        
-        # print (chainlen)
+                bw = word[:i] + word[i+1:] # before word
+                bwl = max(bwl, wordlen.get(bw) or 0) # before word len 
+            wordlen[word] = bwl + 1 
+            output = max(output, wordlen[word])
         return output 
-        
+            
+                
