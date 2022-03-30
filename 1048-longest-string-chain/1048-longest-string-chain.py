@@ -20,6 +20,6 @@ class Solution(object):
             chainlen[word] = wordval
             output = max(output, wordval)
         
-        print (chainlen)
+        # print (chainlen)
         return output 
         
