@@ -5,19 +5,9 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def goodNodes(self, root: TreeNode) -> int:
-        # from the root, recort maximum value until reach to the node 
-        # dfs since maxval is depend on the path from root to node. 
-        output = 0
+    def goodNodes(self, root: TreeNode, maxval=-10000) -> int:
+        if not root:
+            return 0
         
-        def dfs(node, maxval):
-            nonlocal output 
-            if not node: return 
-            if node.val >= maxval: ###TODO!! it not needto be always increasing. 3,1,5 would be possible
-                output += 1
-            maxval = max(node.val, maxval)
-            dfs(node.left, maxval)
-            dfs(node.right, maxval)
-            
-        dfs(root, -10**4-1)
-        return output 
+        newmaxval = max(maxval, root.val)
+        return int(root.val >= maxval) + self.goodNodes(root.left, newmaxval) + self.goodNodes(root.right, newmaxval)
