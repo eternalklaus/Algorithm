@@ -1,19 +1,34 @@
 class MyHashMap:
 
     def __init__(self):
-        self.hashmap = {}
-
+        self.mapsize = 10000
+        self.hashmap = [[] for _ in range(self.mapsize)]
+        
     def put(self, key: int, value: int) -> None:
-        self.hashmap[key] = value 
+        hashkey = key * 31337 % self.mapsize 
+        vallist = self.hashmap[hashkey]
+        for i, (k, v) in enumerate(vallist):
+            if k == key:
+                vallist[i] = (key, value)
+                return 
+        vallist.append((key, value))
 
     def get(self, key: int) -> int:
-        if key in self.hashmap:
-            return self.hashmap[key]
-        return -1
+        hashkey = key * 31337 % self.mapsize 
+        vallist = self.hashmap[hashkey]
+        for i, (k, v) in enumerate(vallist):
+            if k == key:
+                return v 
+        return -1 
 
     def remove(self, key: int) -> None:
-        if key in self.hashmap:
-            del self.hashmap[key]
+        hashkey = key * 31337 % self.mapsize 
+        vallist = self.hashmap[hashkey]
+        for i, (k, v) in enumerate(vallist):
+            if k == key:
+                del vallist[i]
+                return 
+                
 
 
 # Your MyHashMap object will be instantiated and called as such:
