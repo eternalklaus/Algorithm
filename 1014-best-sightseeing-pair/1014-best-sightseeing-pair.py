@@ -1,9 +1,10 @@
 class Solution:
     def maxScoreSightseeingPair(self, values: List[int]) -> int:
-        pick1, output = values[0], values[0] + values[1] - 1
-        
-        for i, pick in enumerate(values[1:], 1):
-            output = max(output, pick1 + pick - i)
-            pick1 = max(pick1, pick + i)
-
-        return output 
+        # i = 0, j = 2, values[i] + values[j] + i - j = 8 + 5 + 0 - 2 = 11
+        # pick1 ~ pick2 
+        # hold -> sold 랑 유사하구나! 
+        hold, sold  = values[0] + 0, 0
+        for i, value in enumerate(values[1:], 1):
+            sold = max(sold, hold + value - i)
+            hold = max(hold, value + i)
+        return sold 
