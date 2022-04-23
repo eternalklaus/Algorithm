@@ -5,7 +5,11 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def goodNodes(self, root: TreeNode) -> int:
+    def goodNodes(self, root: TreeNode, maxval = -10**4 - 1) -> int:
+        if not root: return 0
+        maxval2 = max(maxval, root.val)
+        return int(root.val >= maxval) + self.goodNodes(root.left, maxval2) + self.goodNodes(root.right, maxval2)
+        '''
         output = 0
         
         def dfs(node, maxval):
@@ -21,3 +25,4 @@ class Solution:
         
         dfs(root, -10**4 - 1)
         return output
+        '''
