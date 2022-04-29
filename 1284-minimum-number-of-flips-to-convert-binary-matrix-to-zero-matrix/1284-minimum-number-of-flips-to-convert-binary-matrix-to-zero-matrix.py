@@ -2,36 +2,34 @@ class Solution:
     def minFlips(self, mat: List[List[int]]) -> int:
         I, J = len(mat), len(mat[0])
         points = [(i, j) for i in range(I) for j in range(J)]
-        output = float('inf')
-
-        def allzero(mat):
+        
+        def allzero():
             for i in range(I):
                 for j in range(J):
                     if mat[i][j] == 1: return False 
-            return True 
-
-        def subset(index, current, mat):
-            nonlocal output 
-            # print (mat, index, current)
-            
-            # Case 0. base cases 
-            if allzero(mat):
-                # print (mat)
-                output = min(output, len(current)) # update output 
-                return 
-            if index >= len(points): 
-                return 
-            
-            for idx in range(index, len(points)):
-                newcurrent, newmat = deepcopy(current), deepcopy(mat) ###!!!
-                newcurrent.append(idx)
-                (i, j) = points[idx]
-
-                # flip
-                for ii, jj in [(i, j), (i+1, j), (i-1, j), (i, j+1), (i, j-1)]:
-                    if 0<=ii<I and 0<=jj<J:
-                        newmat[ii][jj] ^= 1 
-                subset(idx+1, newcurrent, newmat)
+            return True
         
-        subset(0, [], mat)
-        return output if output != float('inf') else -1
+        def flip(point):
+            nonlocal mat
+            i, j = point
+            for ii, jj in [(i, j), (i+1, j), (i-1, j), (i, j+1), (i, j-1)]:
+                if 0<=ii<I and 0<=jj<J:
+                    mat[ii][jj] ^= 1
+            
+        self.output = float('inf')
+        def flipit(current, idx):
+            nonlocal mat
+            # check whether current mat is filled with 0 
+            if allzero(): # check mat
+                self.output = min(self.output, len(current))
+                return 
+            
+            for i in range(idx, len(points)):
+                current.append(i)
+                flip(points[i]) # flip mat 
+                flipit(current, i+1)
+                current.pop()
+                flip(points[i]) # unflip
+        
+        flipit([], 0)
+        return self.output if self.output != float('inf') else -1
