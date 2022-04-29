@@ -1,39 +1,30 @@
 class Solution:
     def findAllRecipes(self, recipes: List[str], ingredients: List[List[str]], supplies: List[str]) -> List[str]:
-        # find out initial leaf 
-        '''
-        prereq          next 
-        yeast, flour -> bred
-        bread, meat  -> sandwich 
-        '''
-        firstnext = defaultdict(set)
-        nextfirst = defaultdict(set)
-        supplies, output = set(supplies), set()
+        srcdst = defaultdict(list)
+        dstsrc = defaultdict(list)
+        for dst, srcs in zip(recipes, ingredients):
+            # if dst in supplies: continue ###no
+            for src in srcs:
+                if src in supplies: continue # don't take count into
+                srcdst[src].append(dst)
+                dstsrc[dst].append(src) 
         
-        # Build relationship graph
-        for i, next in enumerate(recipes):
-            for first in ingredients[i]:
-                if first not in supplies: ###!!! 
-                    firstnext[first].add(next)
-                    nextfirst[next].add(first)
-        
-        # Set initial leaves
+        # Get initial leaves
         leaves = []
-        for next in recipes:
-            if len(nextfirst[next]) == 0:
-                leaves.append(next)
-        
-        # Drop leaf one by one 
+        for dst in recipes:
+            if not dstsrc[dst]: 
+                leaves.append(dst)
+        print (leaves)
+        # Topological sort 
+        output = []
         while leaves:
-            leaf = leaves.pop()
-            output.add(leaf)
-            
-            for next in firstnext[leaf]:
-                nextfirst[next].remove(leaf) # remove leaf from To-prerequisite list...
-                if len(nextfirst[next]) == 0:
-                    leaves.append(next)
+            src = leaves.pop(0) # leaf becomes another source 
+            output.append(src)
+            dsts = srcdst[src]
+            # Check if this dst became leaf 
+            for dst in dsts: 
+                dstsrc[dst].remove(src) # remove dependency 
+                if not dstsrc[dst]: 
+                    leaves.append(dst)
         return output 
             
-                
-                
-                
