@@ -1,32 +1,33 @@
 class Solution:
     def tilingRectangle(self, n: int, m: int) -> int:
-        emptyheight = [n] * m
-        self.output = n*m
         
-        def fillit(eh, cnt): # empty height 
-            if cnt > self.output: 
+        output = n * m 
+        
+        def fillit(height, cnt):
+            nonlocal output 
+            if any(height) == False: # all of the spaces are filled, 
+                output = min(cnt, output)
                 return
-            if any(eh) == False: ###!!!
-                self.output = min(self.output, cnt)
+            
+            if cnt > output:
                 return 
             
-            # get maximum height that can e filled 
-            maxh = max(eh)
-            li = eh.index(maxh)
+            # find the biggist square 
+            maxh = max(height) # maxh * maxh 
+            li = height.index(maxh)
             ri = li + 1
-            while ri < m and eh[ri] == maxh:
+            while ri < m and height[ri] == maxh:
                 ri += 1
+            size = min(maxh, ri - li) 
             
-            size = min(maxh, ri-li)#!!!
-            
-            # fill sized box
-            for sz in range(size, 0, -1):
-                eh_copy = deepcopy(eh)
+            # "size" sized square => 1 ~ size 
+            for sz in range(size, 0, -1): ###
+                height_copy = height.copy() 
                 for i in range(li, li+sz):
-                    eh_copy[i] -= sz
-                fillit(eh_copy, cnt+1)
+                    height_copy[i] -= sz
+                fillit(height_copy, cnt+1)
         
-        fillit(emptyheight, 0)
-        return self.output 
-            
-                
+        
+        height = [n] * m # 2 2 2 -> 0,0,0 
+        fillit(height, 0)
+        return output 
