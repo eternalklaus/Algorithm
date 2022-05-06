@@ -1,36 +1,17 @@
 class Solution:
     def canTransform(self, start: str, end: str) -> bool:
-            
-        if len(start) != len(end): return False 
-        N = len(start)
-        si, ei = 0, 0
+        if len(start) != len(end):
+            return False 
+        if start.replace('X','') != end.replace('X',''):
+            return False 
+        n = len(start)
+        sL = [i for i in range(n) if start[i] == 'L']
+        sR = [i for i in range(n) if start[i] == 'R']
+        eL = [i for i in range(n) if end[i] == 'L']
+        eR = [i for i in range(n) if end[i] == 'R']
         
-        def encrease(ei):
-            while ei < N and end[ei] == 'X':
-                ei += 1
-            return ei
-        
-        while si < N:
-            ch = start[si]
-            if ch == 'L':
-                ei = encrease(ei)
-                if ei >= N or end[ei] != 'L' or si < ei:
-                    return False
-                si += 1
-                ei += 1
-                continue 
-            
-            elif ch == 'R':
-                ei = encrease(ei)
-                if ei >= N or end[ei] != 'R' or si > ei:
-                    return False
-                si += 1
-                ei += 1
-                continue
-            
-            si += 1
-        
-        ei = encrease(ei)
-        return ei == si
-            
-        
+        for si, ei in zip(sL, eL):
+            if si < ei: return False
+        for si, ei in zip(sR, eR):
+            if si > ei: return False
+        return True
