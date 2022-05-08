@@ -11,6 +11,7 @@ class Solution:
         for x2 in xy: ###
             for x1 in xy:
                 if x2 <= x1: break
+                if x2-x1 > output: continue ### heuristic optimization
                 ycommon = [y for y in xy[x1] if y in xy[x2]] # 공통 y만 구한다
                 ycommon.sort()
                 dy = INF
