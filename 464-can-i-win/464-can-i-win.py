@@ -1,7 +1,7 @@
 class Solution:
     def canIWin(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
-        remainder = [(maxChoosableInteger-i) for i in range(maxChoosableInteger)]
-        
+        # remainder = [(maxChoosableInteger-i) for i in range(maxChoosableInteger)]
+        remainder = [i+1 for i in range(maxChoosableInteger)]
         @cache
         def can_win(total, remainder):
             # print (total, remainder)
@@ -17,5 +17,4 @@ class Solution:
             return True 
         if sum(remainder) < desiredTotal:
             return False 
-        print (1)
         return can_win(0, tuple(remainder))
