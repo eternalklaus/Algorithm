@@ -3,30 +3,30 @@ class Solution:
         # shortest processing time -> smallest index.
         from collections import defaultdict 
         import heapq
-        jobs = defaultdict(list)
+        # shortest processing time. ->  the smallest index.
+
+        jobs = []
+        for idx, task in enumerate(tasks):
+            task.append(idx) # starttime, duration, idx 
         
-        for tasknum, task in enumerate(tasks):
-            t_start, t_duration = task 
-            jobs[t_start].append(tasknum)
+        tasks.sort() # sort 할때 task num 이 사라지니까 같이 넣고 sort한다. 
+        cpu_release_time = 0
+        queue, output = [], [] 
         
-        starttimes = list(jobs.keys())
-        starttimes.sort()
-        
-        candojob, queue, output = 0, [], []
-        
-        for starttime in starttimes:
-            while candojob < starttime and queue: # 이전시간대에 처리가능했던 것들을 몰아서 처리한다
-                (t_duration, tasknum) = heappop(queue)
-                candojob += t_duration 
-                output.append(tasknum)
-                
-            candojob = max(candojob, starttime) 
-            for tasknum in jobs[starttime]: # 지금시간에 새로 열린 잡들을 풀에 넣는다
-                t_start, t_duration = tasks[tasknum]
-                heappush(queue, (t_duration, tasknum))
+        for starttime, duration, idx in tasks: 
+            while cpu_release_time < starttime and queue: # do jobs until current time comes
+                (__duration, __idx) = heapq.heappop(queue) ### 헷갈리지마..
+                # print (__duration, __idx)
+                output.append(__idx)
+                cpu_release_time += __duration 
             
+            cpu_release_time = max(cpu_release_time, starttime) ### 이게 진짜 중요한 구문이다
+            # after cpu_release_time > duration, cannot do jobs.. just add it on the stack 
+            heapq.heappush(queue, (duration, idx))
+        
         while queue:
-            (t_duration, tasknum) = heappop(queue)
-            output.append(tasknum)
+            (duration, idx) = heapq.heappop(queue)
+            output.append(idx)
         return output 
                 
+            
