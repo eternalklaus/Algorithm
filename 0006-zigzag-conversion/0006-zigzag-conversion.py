@@ -13,12 +13,9 @@ class Solution:
         rowLen = numRows * 2 - 2
         L, output = len(s), ''
         
-            
-        
         for i in range(numRows):
             if i == 0 or i == numRows - 1:
                 row = s[i::rowLen]
-                print (row)
                 output += ''.join(row)
                 
             else:
