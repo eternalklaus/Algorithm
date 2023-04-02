@@ -1,6 +1,8 @@
 class Solution:
     def maximumDetonation(self, bombs: List[List[int]]) -> int:
-        # directed graph
+        # 1. build the graph
+        # 2. dfs it 
+        
         G = defaultdict(list)
         L = len(bombs)
         
@@ -9,27 +11,25 @@ class Solution:
             x2, y2, r2 = bombs[j]
             if (x1-x2)**2 + (y1-y2)**2 <= r1**2:
                 return True
-            return False 
+            return False
         
         for i in range(L):
             for j in range(L):
                 if i == j: continue 
-                if connected(i, j):
-                    G[i].append(j)
-                if connected(j, i):
-                    G[j].append(i)
+                if connected(i, j): G[i].append(j)
+                if connected(j, i): G[j].append(i)
         
-        def dfs(i, S):
-            S.add(i)
+        
+        def dfs(i, exploded):
+            exploded.add(i)
             for nexti in G[i]:
-                if nexti in S: continue 
-                dfs(nexti, S)
-                    
-        # dfs to get the all the connected bombs
+                if nexti in exploded: continue 
+                dfs(nexti, exploded)
+                
+            
         output = 0
         for i in range(L):
-            S = set()
-            dfs(i, S)
-            output = max(output, len(S))
-        return output
-        
+            exploded = set()
+            dfs(i, exploded)
+            output = max(output, len(exploded))
+        return output 
