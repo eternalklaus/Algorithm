@@ -1,6 +1,7 @@
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
-        deq, output = [], []
+        from collections import deque
+        deq, output = deque(), []
         
         # clean useless one <-
         def clean_weak(deq, n):
@@ -16,11 +17,11 @@ class Solution:
         # clean useless one ->
         def clean_dead(deq, newi):
             while deq:
-                oldi = deq.pop(0)
+                oldi = deq.popleft()
                 if newi - oldi >= k: # generation gap.. 
                     continue 
                 else: 
-                    deq.insert(0, oldi)
+                    deq.appendleft(oldi)
                     break
             return 
         
