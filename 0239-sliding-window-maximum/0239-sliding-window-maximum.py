@@ -16,11 +16,11 @@ class Solution:
             while deque:
                 i2 = deque[0]
                 if i - i2 >= k: 
-                    deque.popleft()
+                    deque.pop(0)
                 else:
                     break
         
-        deque = deque() # popleft()
+        deque = list() # popleft()
         output = []
         # for i, n enumerate(nums):
         for i in range(len(nums)):
