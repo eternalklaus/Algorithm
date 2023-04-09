@@ -1,41 +1,31 @@
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         from collections import deque
-        deq, output = deque(), []
         
-        # clean useless one <-
-        def clean_weak(deq, n):
-            while deq:
-                i = deq.pop()
-                if nums[i] < n: # it deserve to be poped
-                    continue 
-                else: 
-                    deq.append(i)
+        def cleanright(n):
+            while idxdeque:
+                i = idxdeque[-1]
+                if nums[i] <= n:
+                    idxdeque.pop()
+                else:
                     break
-            return 
         
-        # clean useless one ->
-        def clean_dead(deq, newi):
-            while deq:
-                oldi = deq.popleft()
-                if newi - oldi >= k: # generation gap.. 
-                    continue 
+        def cleanleft(i):
+            while idxdeque:
+                if i - idxdeque[0] >= k:
+                    idxdeque.popleft()
                 else: 
-                    deq.appendleft(oldi)
                     break
-            return 
         
+        idxdeque = deque()
+        output = []
         for i, n in enumerate(nums):
-            # eliminate older, weaker one
-            clean_weak(deq, n)
-            
-            # take seat in the queue
-            deq.append(i)
-            
+            cleanright(n) # n보다 약한것들 정리
+            idxdeque.append(i)
+            cleanleft(i) # 이미 죽은것들 정리
+            # print (idxdeque)
             if i >= k-1:
-                # pick leftmost element from deq
-                clean_dead(deq, i)
-                output.append(nums[deq[0]])
-            
+                output.append(nums[idxdeque[0]])
         return output
+                
             
