@@ -1,31 +1,36 @@
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         from collections import deque
+        #       [1 5 3 2]
+        # deque [1 2 3 0]
         
-        def cleanright(n):
-            while idxdeque:
-                i = idxdeque[-1]
+        def clean_right(n): # 4
+            while deque:
+                i = deque[-1]
                 if nums[i] <= n:
-                    idxdeque.pop()
-                else:
-                    break
-        
-        def cleanleft(i):
-            while idxdeque:
-                if i - idxdeque[0] >= k:
-                    idxdeque.popleft()
+                    deque.pop()
                 else: 
                     break
         
-        idxdeque = deque()
+        def clean_left(i):
+            while deque:
+                i2 = deque[0]
+                if i - i2 >= k: 
+                    deque.popleft()
+                else:
+                    break
+        
+        deque = deque() # popleft()
         output = []
-        for i, n in enumerate(nums):
-            cleanright(n) # n보다 약한것들 정리
-            idxdeque.append(i)
-            cleanleft(i) # 이미 죽은것들 정리
-            # print (idxdeque)
-            if i >= k-1:
-                output.append(nums[idxdeque[0]])
-        return output
-                
+        # for i, n enumerate(nums):
+        for i in range(len(nums)):
+            # print (deque)
+            n = nums[i]
+            clean_right(n)
+            deque.append(i)
+            clean_left(i)
             
+            if i >= k-1:
+                output.append(nums[deque[0]])
+        
+        return output
