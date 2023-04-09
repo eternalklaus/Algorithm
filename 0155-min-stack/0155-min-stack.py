@@ -1,30 +1,22 @@
 class MinStack:
-    import bisect 
-    from collections import Counter 
-    
-    def __init__(self):
-        self.stack = []
-        self.counter = Counter()
-        self.sorted = []
 
+    def __init__(self):
+        self.stack = [[float('inf'), float('inf')]] # saves [value, minval]
+        
     def push(self, val: int) -> None:
-        self.stack.append(val)
-        self.counter[val] += 1
-        idx = bisect.bisect(self.sorted, val) 
-        self.sorted.insert(idx, val)
+        minval = min(val, self.stack[-1][1])
+        self.stack.append([val, minval])
 
     def pop(self) -> None:
-        val = self.stack.pop()
-        self.counter[val] -= 1
+        val, minval = self.stack.pop()
 
     def top(self) -> int:
-        return self.stack[-1]
+        val, minval = self.stack[-1]
+        return val
 
     def getMin(self) -> int:
-        for val in self.sorted:
-            if self.counter[val]: 
-                return val
-            
+        val, minval = self.stack[-1]
+        return minval
 
 
 # Your MinStack object will be instantiated and called as such:
