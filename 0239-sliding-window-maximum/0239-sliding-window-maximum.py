@@ -13,12 +13,12 @@ class Solution:
             while numbers:
                 i2 = numbers[0]
                 if i - i2 >= k: 
-                    numbers.pop(0)
+                    numbers.popleft() # O(1) [2,3,4]
                 else:
                     break
             
         output = []
-        numbers = []
+        numbers = deque()
         for i in range(len(nums)):
             n = nums[i]
             clean_right(n)
