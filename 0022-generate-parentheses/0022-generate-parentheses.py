@@ -6,7 +6,7 @@ class Solution:
         # usedpush: (()( -> 3. so it used all of the push life!
         output = []
         
-        @cache
+        # @cache
         def dfs(line, state, usedpush): 
             if len(line) == 2*n:
                 output.append(line)
