@@ -6,14 +6,7 @@
 #         self.right = right
 class Solution:
     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
-        from collections import deque
-        heap = deque([root])
-        output = root
-        
-        while heap:
-            node = heap.popleft()
-            output = node           
+        heap = [root]
+        for node in heap:
             heap += filter(None, [node.right, node.left])
-        
-        return output.val
-            
+        return node.val
