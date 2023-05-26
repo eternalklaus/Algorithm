@@ -7,20 +7,13 @@
 class Solution:
     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
         from collections import deque
-        # bfs
+        heap = deque([root])
         output = root
-        deque = deque([output])
-        while deque:
-            node = deque.popleft()
-            if node.right:
-                output = node.right
-                deque.append(node.right) # push right node first,
-            if node.left:
-                output = node.left
-                deque.append(node.left) # and then push left node
+        
+        while heap:
+            node = heap.popleft()
+            output = node           
+            heap += filter(None, [node.right, node.left])
         
         return output.val
-            
-                
-        
             
