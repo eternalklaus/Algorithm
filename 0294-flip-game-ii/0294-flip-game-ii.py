@@ -1,8 +1,5 @@
 class Solution:
     def canWin(self, currentState: str) -> bool:
-        # 나: 최대한 뒤집는다
-        # 상대: (거드름을피우며) 최대한 방해한다
-        
         @cache
         def minimax(currentState, player):
             if '++' not in currentState:
