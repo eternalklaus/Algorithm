@@ -4,8 +4,8 @@ class Solution:
 
         # 1. 진입차수 0인것들을 스택에 차곡차곡 넣는다
         # 2. 1과 연결된 (비-사이클) 노드들을 스택에 차곡차곡 넣는다 
-        # 3. 사이클의 일부인것들의 result를 계산한다
-        # 4. 스택에서 하나씩 pop하며 result를 계산한다. result = 3의 결과 + 1 
+        # 3. 싸이클 일원들의 result를 계산한다
+        # 4. 비싸이클 일원들의 result를 계산한다 (result = 3의 결과 + 1)
         L = len(edges)
         indegree = [0] * L
         for edge in edges:
@@ -28,7 +28,7 @@ class Solution:
             if indegree[ipoint] == 0:
                 queue.append(ipoint)
         
-        # 3. 사이클의 일부인것들의 result를 계산한다
+        # 3. 싸이클 일원들의 result를 계산한다
         result = [0] * L
         def calc_cycle(i):
             visit = set([])
@@ -43,7 +43,7 @@ class Solution:
             if i not in stackset and not result[i]: # 싸이클의 일부이며 & 아직 계산하지 않음
                 calc_cycle(i)
         
-        # 4. 스택에서 하나씩 pop하며 result를 계산한다. result = 3의 결과 + 1 
+        # 4. 비싸이클 일원들의 result를 계산한다 (result = 3의 결과 + 1)
         while stack:
             i = stack.pop()
             ipoint = edges[i]
