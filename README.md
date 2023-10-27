@@ -6,7 +6,7 @@ First Semester 🤔
  - [ ] [Height of Binary Tree After Subtree Removal Queries](https://leetcode.com/problems/height-of-binary-tree-after-subtree-removal-queries/)
  - [ ] [Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
  - [ ] [Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/)
- - [ ] [Finding MK Average](https://leetcode.com/problems/finding-mk-average/)
+ - [x] [Finding MK Average](https://leetcode.com/problems/finding-mk-average/)
  - [ ] [Parallel Courses](https://leetcode.com/problems/parallel-courses/)
  - [ ] [Count K-Subsequences of a String With Maximum Beauty](https://leetcode.com/problems/count-k-subsequences-of-a-string-with-maximum-beauty/)
  - [ ] [Odd Even Jump](https://leetcode.com/problems/odd-even-jump/)
