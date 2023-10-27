@@ -1,56 +1,60 @@
 class MKAverage:
-    
     def __init__(self, m: int, k: int):
         from sortedcontainers import SortedList
         self.m = m
         self.k = k
+        self.slist = SortedList() # sorted list
+        self.tlist = Deque() # timed list 
         self.sum = 0
-        self.numssort = SortedList() # add-O(logn) pop-O(logn) bisect_left-O(logn) index-O(logn) remove-O(logn)
-        self.numstime = Deque() # popleft-O(1)
-        self.initialized = False
-
-    def addElement(self, num: int) -> None:
-        self.numstime.append(num)
-        self.numssort.add(num)
-
-        if len(self.numstime) < self.m:
-            self.sum += num
-
-        elif len(self.numstime) == self.m:
-            self.sum += num
-            # initialize the sort...
-            for i in range(self.k):
-                li = i
-                ri = -i - 1
-                self.sum = self.sum - self.numssort[li] - self.numssort[ri]
-
-        elif len(self.numstime) == self.m + 1:
-            # include the result of inserting num into numssort
-            n = num
-            i = self.numssort.index(n)
-            if i < self.k: # left
-                self.sum += self.numssort[self.k]
-            elif i >= len(self.numssort) - self.k: # right
-                self.sum += self.numssort[-self.k-1]
-            else: # middle
-                self.sum += n
-
-            # delete the stale number
-            n = self.numstime.popleft()
-            i = self.numssort.bisect_left(n)
-            if i < self.k: # left
-                self.sum -= self.numssort[self.k] 
-            elif i >= len(self.numssort) - self.k: # right
-                self.sum -= self.numssort[-self.k-1]
-            else: # middle
-                self.sum -= n
-            self.numssort.remove(n)
-
-    def calculateMKAverage(self) -> int:
-        if len(self.numssort) == self.m:
-            return self.sum // (self.m - 2 * self.k)
-        return -1
         
+    def addElement(self, num: int) -> None:
+        m, k = self.m, self.k
+
+        if len(self.tlist) < m-1:
+            self.tlist.append(num)
+            self.slist.add(num)
+            self.sum += num
+
+        # initialize sum (최초 1회)
+        elif len(self.tlist) == m-1: 
+            self.tlist.append(num)
+            self.slist.add(num)
+            self.sum += num
+            for i in range(k):
+                self.sum -= self.slist[i]
+                self.sum -= self.slist[-i-1]
+
+        # remove oldest one
+        elif len(self.tlist) == m:
+            self.tlist.append(num)
+            self.slist.add(num)
+            
+            # take account of the added one (이미 박혀있음)
+            i = self.slist.index(num)
+            if i < k: 
+                self.sum += self.slist[k]
+            elif i >= len(self.slist) - k: ###
+                self.sum += self.slist[-k-1]
+            else:
+                self.sum += num
+            
+            # take account of the subtracted one (이미 박혀있음)
+            n = self.tlist.popleft()
+            i = self.slist.bisect_left(n)
+            if i < k:
+                self.sum -= self.slist[k]
+            elif i >= len(self.slist) - k:
+                self.sum -= self.slist[-k-1]
+            else:
+                self.sum -= n
+            self.slist.remove(n)
+            
+    def calculateMKAverage(self) -> int:
+        if len(self.slist) < self.m:
+            return -1
+        return self.sum // (self.m - self.k - self.k)
+        
+
 
 # Your MKAverage object will be instantiated and called as such:
 # obj = MKAverage(m, k)
