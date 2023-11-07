@@ -9,7 +9,7 @@ First Semester 🤔
  - [x] [Finding MK Average](https://leetcode.com/problems/finding-mk-average/)
  - [ ] [Parallel Courses](https://leetcode.com/problems/parallel-courses/)
  - [ ] [Count K-Subsequences of a String With Maximum Beauty](https://leetcode.com/problems/count-k-subsequences-of-a-string-with-maximum-beauty/)
- - [ ] [Odd Even Jump](https://leetcode.com/problems/odd-even-jump/)
+ - [x] [Odd Even Jump](https://leetcode.com/problems/odd-even-jump/)
  - [ ] [Count Fertile Pyramids in a Land](https://leetcode.com/problems/count-fertile-pyramids-in-a-land/)
  - [ ] [Minimum Difference Between Largest and Smallest Value in Three Moves](https://leetcode.com/problems/minimum-difference-between-largest-and-smallest-value-in-three-moves/)
  - [ ] [Robot Room Cleaner](https://leetcode.com/problems/robot-room-cleaner/)
