@@ -4,30 +4,22 @@ class Solution:
         quotient, divisor = sum(nums), len(nums)
         gcd = math.gcd(quotient, divisor)
         quotient, divisor = quotient//gcd, divisor//gcd
-        
+        L = len(nums)
+
         def fit(q,d):
             gcd = math.gcd(q, d)
             return q//gcd == quotient and d//gcd == divisor
-
-        if len(nums)==1: return False
         
-        currsum = defaultdict(set) # set = {(100, 2)} => 토탈합이 100이고 갯수는 2개 
-        currsum[0] = {(0,0), (nums[0], 1)}
-        # inline calc
-        if fit(nums[0], 1): return True
-
-        for i, n in enumerate(nums):
-            if i == 0: continue 
-            for befsum, beflen in currsum[i-1]:
-                currsum[i].add((befsum, beflen)) # nums[i]를 더하지 않은경우
-                if beflen >= len(nums)//2: continue ### !!! 
-                currsum[i].add((befsum+nums[i], beflen+1)) # nums[i]를 더한 경우    
-
-                # inline calc
-                if fit(befsum+nums[i], beflen+1): return True
-
-        # for suum, leen in currsum[len(nums)-1]:
-        #     if leen == 0 or leen == len(nums): continue
-        #     if fit(suum, leen): return True
+        sums = defaultdict(set) # sums[원소갯수] = 원소들의합
+        sums[0] = {0}
+        for i in range(L):
+            # nums[i]까지 왔다? 그럼 조합의 최대길이는 i+1
+            # for j in range(i,-1,-1): # sums[3]의 모든것들에 num을더해 sums[4]로 보낸다. 2를3으로 보낸다. 1을 2로보낸다.
+            for j in range(min(i, L//2), -1, -1):
+                for befsum in sums[j]:
+                    sums[j+1].add(befsum+nums[i])
+                    if j+1 != L and fit(befsum+nums[i], j+1): return True
         return False
         
+        
+                
