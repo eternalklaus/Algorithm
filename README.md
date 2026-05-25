@@ -31,7 +31,7 @@
 
 | 상태 | # | LeetCode | 문제 | 난이도 | 토픽 | 비고 |
 |:----:|:-:|:--------:|------|:------:|------|------|
-| ⬜ | 11 | [LC 959](https://leetcode.com/problems/regions-cut-by-slashes/) | Regions Cut By Slashes | Medium | Graph / Union-Find | C사 SDE2 |
+| ✅ | 11 | [LC 959](https://leetcode.com/problems/regions-cut-by-slashes/) | Regions Cut By Slashes | Medium | Graph / Union-Find | C사 SDE2 |
 | ⬜ | 12 | [LC 403](https://leetcode.com/problems/frog-jump/) | Frog Jump | Hard | DP | C사 SDE2 |
 | ⬜ | 13 | [LC 44](https://leetcode.com/problems/wildcard-matching/) | Wildcard Matching | Hard | DP / String | C사 SDE2 |
 | ⬜ | 14 | [LC 1010](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/) | Pairs of Songs Divisible by K | Medium | HashMap / Math | C사 인도 캠퍼스 |
@@ -45,7 +45,7 @@
 | ⬜ | 17 | [LC 34](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | First & Last Position in Sorted Array | Medium | Binary Search | **Feedback1 Q1 단서** |
 | ⬜ | 18 | [LC 560](https://leetcode.com/problems/subarray-sum-equals-k/) | Subarray Sum Equals K | Medium | Prefix Sum + HashMap | O(N²)→O(N) 최적화 패턴 |
 | ⬜ | 19 | [LC 210](https://leetcode.com/problems/course-schedule-ii/) | Course Schedule II | Medium | Graph / Topological Sort | 복구 순서 결정 |
-| ⬜ | 20 | [LC 215](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Kth Largest Element | Medium | Heap | 백업 스케줄러 priority queue |
+| ✅ | 20 | [LC 215](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Kth Largest Element | Medium | Heap | 백업 스케줄러 priority queue |
 
 ---
 
